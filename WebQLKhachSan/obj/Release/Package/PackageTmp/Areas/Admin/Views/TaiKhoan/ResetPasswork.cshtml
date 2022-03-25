@@ -1,0 +1,50 @@
+﻿@model DTO.TaiKhoanObject
+
+@{
+    ViewBag.Title = "Khôi phục mật khẩu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="panel-group">
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <p>Thông tin tài khoản khôi phục</p>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"> Họ tên</label>
+                    <div class="col-md-9">
+                        @Model.HoTen
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"> Chức vụ</label>
+                    <div class="col-md-9">
+                        @Model.ChucVuObjectJoin.TenCV
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"> SDT</label>
+                    <div class="col-md-9">
+                        @Model.SDT
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-body form-horizontal">
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="curent"> Để khôi phục mật khẩu bạn vui lòng nhập mật khẩu hiện tại của bạn</label>
+                    <div class="col-md-9">
+                        <input type="password" id="curent" name="curent" class="form-control" value="" placeholder="Nhập mật khẩu cũ" required />
+                    </div>
+                </div>
+                <p>Sau khi khôi phục thành công, mật khẩu sẽ được đặt thành mặc định là : "12345678"</p>
+                <input type="submit" value="Hoàn tất" class="btn btn-success" />
+                @Html.ActionLink("Quay về quản lí tài khoản", "Index", new { }, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+}

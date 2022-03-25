@@ -1,0 +1,101 @@
+﻿@model DTO.DangKiDatPhongObject
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>Đơn đặt phòng</h2>
+    </div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(q => q.ID_DangKi)
+                @Html.HiddenFor(q => q.ID_Phong)
+
+                <div class="form-group">
+                    @Html.Label("Ngày gửi mail", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.NgayTao, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Họ tên khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.HoTen, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Email", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Email, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Số điện thoại", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Phone, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Tin nhắn của khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Message, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Phòng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Model.PhongObjectJoin.TenPhong - @Model.PhongObjectJoin.GiaPhong
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Thời gian thuê phòng", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Model.TimeStart.Value.ToString("dd/MM/yyyy") - @Model.TimeEnd.Value.ToString("dd/MM/yyyy")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Ghi chú", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.GhiChu, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Trang thái xử lí", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select name="Status" class="form-control">
+                            <option value="0">Chưa xử lí</option>
+                            <option value="1">Đã xử lí</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Lưu" class="btn btn-success" />
+                        @Html.ActionLink("Quay về trang quản lý", "Index", new { }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
+
+        <script>
+            $('#Status').val('@Model.Status');
+        </script>
+
+    </div>
+</div>

@@ -1,0 +1,203 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+</head>
+
+<body>
+    <div id='ads-left'>
+        @*<div style='margin:0 0 5px 0; padding:0; width:100px; position:fixed; left:0; top:122px;'>
+            <a href='Link quảng cáo bên trái' target='_blank'> link quảng cáo<img src="~/Content/images/cam-nang-du-lich/medium_a391504148621.jpg" border='0' height='300'  width='180' /></a>
+        </div>*@
+    </div>
+    <div id='ads-right'>
+        <div style='margin:0 0 5px 0; padding:0; width:180px; position:fixed; right:0; top:222px;'>
+            <a href="/" target='_blank'><img src="~/Content/images/hotel-icon.png" border='0' height='100'  width='180' /></a>
+        </div>
+    </div>
+    <div style="background:url(https://static2.mytour.vn/resources/pictures/banners/slider-home.jpg) center top"></div>
+    <div class="slider-lg outbound-hotel">
+        <div class="container">
+                <div class="row">
+                    <div class="mySlides w3-animate-fading">
+                        <img src="~/Content/images/a2.jpg" style="max-width: 100%;height: 500px;width: 5000px;border-radius: 6px;" />
+                    </div>
+
+                    <div class="mySlides w3-animate-fading">
+                        <img src="~/Content/images/a4.jpg" style="max-width: 100%;height: 500px;width: 5000px;border-radius: 6px;" />
+                    </div>
+
+                    <div class="mySlides w3-animate-fading">
+                        <img src="~/Content/images/a5.jpg" style="max-width: 100%;height: 500px;width: 5000px;border-radius: 6px;" />
+                    </div>
+
+                    <div class="mySlides w3-animate-fading">
+                        <img src="~/Content/images/a3.jpg" style="max-width: 100%;height: 500px;width: 5000px;border-radius: 6px;" />
+                    </div>
+                </div>
+            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                            <div class="search-wrapper">
+                                <ul class="nav nav-tabs" role="tablist"></ul>
+                                <div class="tab-content box-search" style="position: absolute;top: -307px;border-radius: 6px;">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="ibhotel">
+                                        <div class="box-search-header">
+                                            <h1 class="h2 mg-0 mg-bt-5">Hôm nay chúng ta sẽ đi đâu?</h1>
+                                            <p class="text-sm">Hơn 5,000 khách sạn khắp Việt Nam</p>
+                                        </div>
+                                        <div class="form-search">
+                                            @using (Html.BeginForm("Index", "Home"))
+                                        {
+                                        <div class="form-groups">
+                                            <table style="color: black; ">
+                                                <tr>
+                                                    <td>Địa điểm</td>
+                                                    <td colspan="2">Giá tiền</td>
+                                                    <td>Chất lượng</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        @Html.DropDownList("TinhThanh", ViewBag.selectTinhThanh as SelectList, "Tất cả tỉnh thành")
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" name="priceStart" placeholder="Từ" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" name="priceEnd" placeholder="Đến" />
+                                                    </td>
+                                                    <td>
+                                                        <label><input type="checkbox" name="Star" value="1" />1 <i class="fa fa-star" style="color: yellow"></i></label> |
+                                                        <label><input type="checkbox" name="Star" value="2" />2 <i class="fa fa-star" style="color: yellow"></i></label> |
+                                                        <label><input type="checkbox" name="Star" value="3" />3 <i class="fa fa-star" style="color: yellow"></i></label> |
+                                                        <label><input type="checkbox" name="Star" value="4" />4 <i class="fa fa-star" style="color: yellow"></i></label> |
+                                                        <label><input type="checkbox" name="Star" value="5" />5 <i class="fa fa-star" style="color: yellow"></i></label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br />
+                                        <div class="form-group row mg-bt-10" style="padding-left:70px">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <button type="submit" class="events-tracking btn btn-block btn-lg btn-green" style="width:190px"
+                                                        data-category="Home"
+                                                        data-action="Search"
+                                                        data-label="Tìm khách sạn">
+                                                    Tìm khách sạn
+                                                </button>
+                                            </div>
+                                        </div>
+                                        }
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="obhotel">
+                                        <div class="box-search-header">
+                                            <h1 class="h2 mg-0 mg-bt-5">Tìm Khách sạn</h1>
+                                            <p class="text-sm">1,007,490 chỗ ở trên toàn thế giới</p>
+                                        </div>
+                                        <form class="form-search form_global">
+                                            <div class="form-group" id="the-basics">
+                                                <div class="input-group">
+                                                    <label>Nơi bạn muốn đến</label>
+                                                    <input id="home-search-ob" name="ss" type="text" class="form-control" placeholder="Khách sạn, địa danh...">
+                                                </div>
+                                                <p class="alert alert-warning js-alert">
+                                                    Bạn chưa nhập bất kỳ từ khóa nào, vui lòng kiểm tra lại
+                                                </p>
+                                            </div>
+
+                                            <!-- sandbox-container -->
+                                            <div class="form-group date-box">
+                                                <div id="sandbox-container">
+                                                    <div id="datepicker" class="input-daterange">
+                                                        <div class="input-group sandbox-input-group">
+                                                            <label>Ngày nhận phòng</label>
+                                                            <input type="text" class="form-control datepicker-df check-in"
+                                                                   value="07/01/2018" />
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+
+                                                        <div class="input-group sandbox-input-group">
+                                                            <label>Ngày trả phòng</label>
+                                                            <input type="text" class="form-control datepicker-df check-out"
+                                                                   value="08/01/2018" />
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mg-bt-10">
+                                                <div class="col-sm-6 col-sm-offset-3">
+                                                    <button type="button" class="btn btn-block btn-lg btn-yellow submit_international">Tìm khách sạn</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1 }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3500);
+    }
+</script>
+
+<style>
+
+    .form-search input[type="number"], .form-search select {
+        margin-right: 5px;
+        height: 30px;
+    }
+
+    .img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: 500px;
+    width: 2000px;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+</style>
+</body>
+</html>

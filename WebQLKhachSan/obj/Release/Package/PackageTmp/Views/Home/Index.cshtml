@@ -1,0 +1,117 @@
+﻿@model List<DTO.TinhThanhObject>
+
+@{
+    ViewBag.Title = "Trang chủ - Tình thành";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- mytour:css -->
+<link href="~/Content/css/index-home.css" rel="stylesheet" />
+<!-- end -->
+<!-- home slider -->
+@Html.Partial("_seachHome")
+<!-- /home slider -->
+<!-- box-list-thumbnails Popular Destinations -->
+<div class="box-thumbnails mg-bt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title-sm text-uppercase h5" title="Đặt ph&ograve;ng kh&aacute;ch sạn phổ biến Việt Nam">
+                    <strong>ĐIỂM ĐẾN PHỔ BIẾN</strong>
+                </h2>
+            </div>
+            <div class="body-thumbnails">
+                    <ul class="nav-thumbnails">
+                        @foreach (var item in Model)
+                        {
+                            <li class="col-sm-4 col-md-3">
+                                <div class="item-thumbnail">
+                                    <div class="zoom">
+                                        <a href="@Url.Action("KhachSan","Home",new { id = item.IDTinhThanh})" class="events-tracking">
+                                            <img class="img-responsive" src="@item.mHinhAnh.ImageLink"><h3 class="item-name">@item.TenTinh</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+            </div>
+            <!-- /body-thumbnails -->
+        </div>
+    </div>
+</div>
+<!-- /box-list-thumbnails -->
+<!-- box commercial -->
+<div class="container">
+    <div class="row">
+        <div class="bxslider-sm col-sm-6 slider-deal-home">
+            <ul class="bxslider">
+                <li>
+                    <a href="https://mytour.vn/news/135539-mytour-tran-trong-gioi-thieu-chuong-trinh-gioi-thieu-ban-be-2017.html">
+                        <img style="width: 100%" src="~/Content/images/banner-benefit.jpg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /bxslider-sm -->
+        <div class="why-mytour why-mytour-responsive col-sm-6">
+            <div class="why-mytour-content">
+                <img class="img-responsive" style="height: 333px"
+                     src="https://static1.mytour.vn/themes/images/bg-why-mytour.jpg" alt="">
+                <ul class="nav nav-list-icon" style="top: 63px">
+                    <li>TẠI SAO CHỌN KHÁCH SẠN CHÚNG TÔI</li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> <strong>Giá tốt hơn</strong> so với đặt
+                        phòng trực tiếp tại khách sạn
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Đảm bảo
+                        <strong data-toggle="modal" mytour-ext="ajax-modal" modal-name="modal-sure-good-price">
+                            giá tốt nhất
+                            <i class="fa fa-question-circle blue"></i>
+                        </strong>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Đảm bảo
+                        <strong data-toggle="modal" mytour-ext="ajax-modal" modal-name="modal-sure-back-money">
+                            hoàn tiền
+                            <i class="fa fa-question-circle blue"></i>
+                        </strong>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Nhân viên chăm sóc, tư vấn nhiều kinh
+                        nghiệm
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Hơn <strong>5000</strong> khách sạn tại
+                        Việt Nam với đánh giá thực
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Nhiều chương trình khuyến mãi và tích lũy
+                        điểm
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle green text-sm"></i> Thanh toán <strong>
+                            dễ dàng, đa
+                            dạng
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /why-mytour -->
+    </div>
+</div>
+
+<style>
+    .zoom {
+        padding: 0px;
+        transition: transform .2s; /* Animation */
+        
+        margin: 0 auto;
+    }
+
+    .zoom:hover  {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+</style>

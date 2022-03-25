@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using BUS;
+using DTO;
+
+namespace WebQLKhachSan.Areas.Admin.Controllers
+{
+    public class ViTriController : BaseController
+    {
+        // GET: Admin/ViTri
+        public ActionResult Index()
+        {
+            if (!AllowXem) return RedirectToAction("NotPermistion", "Redirect");
+            return View(new ViTriBus().GetAll().Where(q => string.IsNullOrWhiteSpace(q.GhiChu)));
+        }
+
+        public ActionResult Edit(int? id = null)
+        {
+            if (!AllowThemSuaXoa) return RedirectToAction("NotPermistion", "Redirect");
+            ViTriObject ob = new ViTriObject()
+            {
+                ID_ViTri = 0
+            };
+            if (id.HasValue)
+            {
+                ob = new ViTriBus().GetByID_ViTri(id.Value);
+                if (ob == null) return RedirectToAction("Index");
+                return View(ob);
+            }
+            else
+            {
+                return View(ob);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ViTriObject ob, FormCollection collection)
+        {
+            if (!AllowThemSuaXoa) return RedirectToAction("NotPermistion", "Redirect");
+            if (ob.ID_ViTri == 0) new ViTriBus().Insert(ob);
+            else new ViTriBus().Update(ob);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public JsonResult Delete(int id)
+        {
+            if (!AllowThemSuaXoa) return Json(false);
+            return Json(new ViTriBus().Delete(id));
+        }
+
+    }
+}

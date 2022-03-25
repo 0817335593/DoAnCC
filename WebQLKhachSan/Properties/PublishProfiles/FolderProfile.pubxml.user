@@ -1,0 +1,1484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Gia Dinh\Desktop\somee</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Admin/Content/css/list-khach-san.css">
+      <publishTime>10/09/2017 17:15:49</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/fonts/Roboto-Bold.ttf">
+      <publishTime>10/08/2017 10:32:32</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/fonts/Roboto-Light.ttf">
+      <publishTime>10/08/2017 10:32:25</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/fonts/Roboto-Regular.ttf">
+      <publishTime>10/08/2017 10:32:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/images/loader.gif">
+      <publishTime>10/09/2017 17:04:22</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/images/phong-khach-san.jpg">
+      <publishTime>10/08/2017 09:40:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/setting.png">
+      <publishTime>09/10/2021 16:58:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/dist/css/sb-admin-2.css">
+      <publishTime>10/01/2017 16:09:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/dist/css/sb-admin-2.min.css">
+      <publishTime>10/01/2017 16:09:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/dist/js/sb-admin-2.js">
+      <publishTime>10/01/2017 16:09:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/dist/js/sb-admin-2.min.js">
+      <publishTime>10/01/2017 16:09:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap-social/bootstrap-social.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap-social/bootstrap-social.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap-social/bootstrap-social.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-plugins/dataTables.bootstrap.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-plugins/dataTables.bootstrap.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-plugins/dataTables.bootstrap.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-plugins/index.html">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap4.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap4.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.foundation.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.foundation.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.jqueryui.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.jqueryui.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.material.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.material.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.semanticui.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.semanticui.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.uikit.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/dataTables.uikit.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/jquery.dataTables.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/jquery.dataTables.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/css/jquery.dataTables_themeroller.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/favicon.ico">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/Sorting icons.psd">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/sort_asc.png">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/sort_asc_disabled.png">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/sort_both.png">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/sort_desc.png">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/images/sort_desc_disabled.png">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap4.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap4.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.foundation.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.foundation.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.jqueryui.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.jqueryui.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.material.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.material.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.semanticui.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.semanticui.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.uikit.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/dataTables.uikit.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/datatables/js/jquery.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot-tooltip/jquery.flot.tooltip.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot-tooltip/jquery.flot.tooltip.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot-tooltip/jquery.flot.tooltip.source.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/excanvas.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/excanvas.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.colorhelpers.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.canvas.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.categories.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.crosshair.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.errorbars.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.fillbetween.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.image.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.navigate.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.pie.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.resize.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.selection.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.stack.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.symbol.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.threshold.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.flot.time.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/flot/jquery.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/css/font-awesome.css">
+      <publishTime>10/07/2017 10:06:58</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/css/font-awesome.css.map">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/css/font-awesome.min.css">
+      <publishTime>10/07/2017 10:09:30</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/HELP-US-OUT.txt">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/animated.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/bordered-pulled.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/core.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/extras.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/fixed-width.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/font-awesome.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/icons.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/larger.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/list.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/mixins.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/path.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/rotated-flipped.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/screen-reader.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/spinning.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/stacked.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/less/variables.less">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/font-awesome.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_animated.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_core.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_extras.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_fixed-width.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_icons.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_larger.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_list.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_mixins.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_path.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_screen-reader.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_spinning.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_stacked.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/font-awesome/scss/_variables.scss">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-icons_222222_256x240.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-icons_228ef1_256x240.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/images/ui-icons_ffffff_256x240.png">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/jquery-ui.min.css">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery-ui/jquery-ui.min.js">
+      <publishTime>10/28/2017 16:28:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery/jquery.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/jquery/jquery.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/metisMenu/metisMenu.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/metisMenu/metisMenu.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/metisMenu/metisMenu.min.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/metisMenu/metisMenu.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/morrisjs/morris.css">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/morrisjs/morris.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/morrisjs/morris.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/raphael/raphael.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Content/theme/vendor/raphael/raphael.min.js">
+      <publishTime>10/01/2017 16:07:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Report/doanh-thu.xlsx">
+      <publishTime>09/11/2021 12:20:54</publishTime>
+    </File>
+    <File Include="Areas/Admin/Report/email-kh.xlsx">
+      <publishTime>09/11/2021 12:20:54</publishTime>
+    </File>
+    <File Include="Areas/Admin/Report/Hoa-don-khach-hang.xlsx">
+      <publishTime>09/11/2021 12:20:54</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ChucVu/Edit.cshtml">
+      <publishTime>01/13/2018 07:11:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ChucVu/Index.cshtml">
+      <publishTime>01/13/2018 07:11:49</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DangKiDatPhong/Index.cshtml">
+      <publishTime>01/13/2018 07:10:33</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DangKiDatPhong/Report.cshtml">
+      <publishTime>01/13/2018 07:14:46</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DangKiDatPhong/ViewDetail.cshtml">
+      <publishTime>01/13/2018 07:11:19</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DatPhong/Edit.cshtml">
+      <publishTime>10/28/2017 01:44:23</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DatPhong/Index.cshtml">
+      <publishTime>01/13/2018 07:30:50</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DatPhong/Report.cshtml">
+      <publishTime>01/13/2018 07:08:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DatPhong/TraPhong.cshtml">
+      <publishTime>01/13/2018 07:08:37</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DichVu/Edit.cshtml">
+      <publishTime>01/13/2018 07:12:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DichVu/Index.cshtml">
+      <publishTime>11/11/2021 18:34:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HinhAnh/ImagePhong.cshtml">
+      <publishTime>10/30/2017 23:33:35</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HinhAnh/Index.cshtml">
+      <publishTime>01/08/2018 23:24:36</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HinhAnh/LoadImage.cshtml">
+      <publishTime>01/06/2018 23:09:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Homes/DichVu.cshtml">
+      <publishTime>01/08/2018 23:12:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Homes/DSPhong.cshtml">
+      <publishTime>01/13/2018 06:59:00</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Homes/Index.cshtml">
+      <publishTime>01/13/2018 07:32:38</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/KhachHang/Edit.cshtml">
+      <publishTime>01/13/2018 07:07:31</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/KhachHang/Index.cshtml">
+      <publishTime>01/13/2018 07:07:35</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/KhachSan/Edit.cshtml">
+      <publishTime>11/11/2021 18:22:53</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/KhachSan/Index.cshtml">
+      <publishTime>01/13/2018 07:05:53</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/LoaiPhong/Edit.cshtml">
+      <publishTime>01/13/2018 07:13:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/LoaiPhong/Index.cshtml">
+      <publishTime>01/13/2018 07:12:59</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Login/Index.cshtml">
+      <publishTime>10/01/2017 21:44:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/PhanQuyen/Index.cshtml">
+      <publishTime>12/27/2017 22:30:19</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Phong/Edit.cshtml">
+      <publishTime>01/13/2018 07:42:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Phong/Index.cshtml">
+      <publishTime>01/13/2018 07:38:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Phong/ThemPhong.cshtml">
+      <publishTime>01/13/2018 07:36:06</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Quyen/Index.cshtml">
+      <publishTime>01/13/2018 07:12:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Redirect/NotPermistion.cshtml">
+      <publishTime>10/15/2017 15:17:47</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
+      <publishTime>01/13/2018 10:14:56</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TaiKhoan/DoiMatKhau.cshtml">
+      <publishTime>10/15/2017 17:20:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TaiKhoan/Edit.cshtml">
+      <publishTime>10/17/2017 00:42:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TaiKhoan/Index.cshtml">
+      <publishTime>01/08/2018 22:00:45</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TaiKhoan/ResetPasswork.cshtml">
+      <publishTime>10/28/2017 18:23:32</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TinhThanh/Edit.cshtml">
+      <publishTime>11/11/2021 18:22:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/TinhThanh/Index.cshtml">
+      <publishTime>12/17/2018 14:18:59</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ViTri/Edit.cshtml">
+      <publishTime>01/13/2018 07:13:21</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ViTri/Index.cshtml">
+      <publishTime>01/13/2018 07:13:25</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/web.config">
+      <publishTime>09/11/2021 16:04:02</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/BUS.dll">
+      <publishTime>11/14/2021 21:11:36</publishTime>
+    </File>
+    <File Include="bin/BUS.pdb">
+      <publishTime>11/14/2021 21:11:36</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.dll">
+      <publishTime>04/03/2017 10:10:06</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.pdb">
+      <publishTime>04/03/2017 10:10:06</publishTime>
+    </File>
+    <File Include="bin/DAL.dll">
+      <publishTime>11/14/2021 21:11:36</publishTime>
+    </File>
+    <File Include="bin/DAL.dll.config">
+      <publishTime>09/13/2021 11:45:43</publishTime>
+    </File>
+    <File Include="bin/DAL.pdb">
+      <publishTime>11/14/2021 21:11:36</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>08/04/2013 13:21:24</publishTime>
+    </File>
+    <File Include="bin/DTO.dll">
+      <publishTime>09/12/2021 11:23:01</publishTime>
+    </File>
+    <File Include="bin/DTO.pdb">
+      <publishTime>09/12/2021 11:23:01</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/01/2017 16:41:00</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/01/2017 16:41:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/01/2017 16:03:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>10/01/2017 16:03:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>10/01/2017 16:03:34</publishTime>
+    </File>
+    <File Include="bin/WebQLKhachSan.dll">
+      <publishTime>11/14/2021 21:11:37</publishTime>
+    </File>
+    <File Include="bin/WebQLKhachSan.pdb">
+      <publishTime>11/14/2021 21:11:37</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datetimepicker.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datetimepicker.min.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="Content/css/cam-nang-du-lich-ct.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/chi-tiet-phong.css">
+      <publishTime>10/31/2017 10:24:18</publishTime>
+    </File>
+    <File Include="Content/css/ct.css">
+      <publishTime>10/15/2017 19:37:43</publishTime>
+    </File>
+    <File Include="Content/css/fonts/flexslider-icon.woff">
+      <publishTime>10/31/2017 10:37:29</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/css.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/custom-other.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/custom-style.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/flexslider.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/layerslider.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/owl.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/hoi-thao/skin.css">
+      <publishTime>10/15/2017 20:13:48</publishTime>
+    </File>
+    <File Include="Content/css/images/bx_loader.gif">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/index-home.css">
+      <publishTime>01/09/2018 02:02:18</publishTime>
+    </File>
+    <File Include="Content/css/layerslider.css">
+      <publishTime>10/15/2017 19:50:15</publishTime>
+    </File>
+    <File Include="Content/css/list-khach-san.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/list-khach-san.css.map">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/list-khach-san.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/photoswipe-default-skin.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/photoswipe.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap/glyphicons-halflings-regular.eot">
+      <publishTime>10/28/2017 01:54:56</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap/glyphicons-halflings-regular.svg">
+      <publishTime>10/28/2017 01:54:56</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap/glyphicons-halflings-regular.ttf">
+      <publishTime>10/28/2017 01:54:56</publishTime>
+    </File>
+    <File Include="Content/fonts/bootstrap/glyphicons-halflings-regular.woff">
+      <publishTime>10/28/2017 01:54:56</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/css/font-awesome.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/css/font-awesome.min.css">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fontawesome-webfont.eot">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fontawesome-webfont.svg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fontawesome-webfont.ttf">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fontawesome-webfont.woff">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fontawesome-webfont.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/FontAwesome.otf">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/animated.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/bordered-pulled.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/core.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/fixed-width.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/font-awesome.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/icons.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/larger.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/list.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/mixins.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/path.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/rotated-flipped.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/screen-reader.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/stacked.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/less/variables.less">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/font-awesome.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_animated.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_core.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_fixed-width.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_icons.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_larger.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_list.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_mixins.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_path.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_screen-reader.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_stacked.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-awesome/scss/_variables.scss">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/latin-400.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/latin-700.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/latin-ext-400.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/latin-ext-700.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/vietnamese-400.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/fonts/font-opensans/vietnamese-700.woff2">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/a1.jpg">
+      <publishTime>11/10/2018 22:00:55</publishTime>
+    </File>
+    <File Include="Content/images/a2.jpg">
+      <publishTime>11/10/2018 22:07:40</publishTime>
+    </File>
+    <File Include="Content/images/a3.jpg">
+      <publishTime>11/10/2018 22:07:43</publishTime>
+    </File>
+    <File Include="Content/images/a4.jpg">
+      <publishTime>11/10/2018 22:07:45</publishTime>
+    </File>
+    <File Include="Content/images/a5.jpg">
+      <publishTime>11/10/2018 22:11:07</publishTime>
+    </File>
+    <File Include="Content/images/banner-benefit.jpg">
+      <publishTime>01/06/2018 17:58:19</publishTime>
+    </File>
+    <File Include="Content/images/bannerfpt.jpg">
+      <publishTime>01/12/2019 13:55:26</publishTime>
+    </File>
+    <File Include="Content/images/bg-why-mytour.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-10.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-13.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-14.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-15.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-16.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-17.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-18.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-18bis.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-19.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-20.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-21.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-22.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-23.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-24.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-25.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-26.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-27.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-8.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/du-lich-the-gioi-dia-diem-doc-dao-2-mytour-9.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/logo-congthuong-w165.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_dky1440991338.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_eaz1437030050.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_h1j1484291373.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_lmj1432956666.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_mjd1410920267.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_nhj1444798756.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_oun1444278901.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_qqx1386819555.JPG">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_rwl1378890160.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_tro1432544330.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_wau1450843135.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/medium_zai1414765369.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_ewg1390186623_khach-san-cosiana-sapa-sua-chua-toi-15-1.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_hox1404874506_khach-san-u-sapa.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_ice1421661853_khach-san-panorama-sapa.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_ieg1434005236_khach-san-ruby-dien-bien.JPG">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_sip1399404956_khach-san-chau-long-2.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_uws1496136709_khach_san_sapa_summit.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_ybb1413890483_khach-san-asiana-sapa.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich-ct/small_yii1389257133_khach-san-muong-thanh-dien-bien-phu.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_0p61504064551.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_a391504148621.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_cm21504079030.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_fyz1504153596.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_ixt1503979240.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_k5i1506069498.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_mio1506740518.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_pnx1506410722.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_sht1506739291.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_t0i1506486123.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_tlt1505896244.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/cam-nang-du-lich/medium_zxb1505966981.jpg">
+      <publishTime>10/31/2017 11:09:56</publishTime>
+    </File>
+    <File Include="Content/images/chi-tiet-ct/advertising1502078077.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/chi-tiet-ct/advertising1504847063.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/chi-tiet-ct/advertising1504862160.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/hb-floating-banner.jpg">
+      <publishTime>10/17/2017 00:29:48</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/1.JPG">
+      <publishTime>10/15/2017 19:52:21</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/11.jpg">
+      <publishTime>10/15/2017 21:10:50</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/1468805898_IMG_85671.jpg">
+      <publishTime>10/15/2017 20:53:49</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/2.jpg">
+      <publishTime>10/15/2017 19:53:07</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/22.JPG">
+      <publishTime>10/15/2017 21:12:04</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/23.JPG">
+      <publishTime>10/15/2017 21:13:34</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/24.JPG">
+      <publishTime>10/15/2017 21:13:41</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/25.JPG">
+      <publishTime>10/15/2017 21:13:46</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/3.jpg">
+      <publishTime>10/15/2017 19:53:15</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/4.jpg">
+      <publishTime>10/15/2017 19:53:48</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/5.jpg">
+      <publishTime>10/15/2017 20:51:24</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/6.jpg">
+      <publishTime>10/15/2017 21:01:26</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/7.jpg">
+      <publishTime>10/15/2017 21:03:12</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/8.jpg">
+      <publishTime>10/15/2017 21:04:05</publishTime>
+    </File>
+    <File Include="Content/images/hoi-thao/IMG_40871.jpg">
+      <publishTime>10/15/2017 20:53:44</publishTime>
+    </File>
+    <File Include="Content/images/home/advertising1502078050.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/advertising1504847099.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/advertising1504862178.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/bg-why-mytour.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/logo-1.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/logo-congthuong-w165.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/logo-why-mytour.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_bra1410924494.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_bxx1410927330.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_cny1410861773.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_country1504063686.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_ddu1410861929.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_lnd1410861981.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_rfe1410923641.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_rtm1410926750.JPG">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_ttg1410920786.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_uxr1410924786.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_xfl1410861287.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/medium_xxn1410927535.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/no-image-240-180.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/topbar-close.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/tr.gif">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/home/wjh1454316080.jpg">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/hotel-icon.png">
+      <publishTime>01/12/2019 13:41:38</publishTime>
+    </File>
+    <File Include="Content/images/hotel.gif">
+      <publishTime>10/15/2017 18:02:20</publishTime>
+    </File>
+    <File Include="Content/images/hotel.png">
+      <publishTime>10/17/2017 00:22:05</publishTime>
+    </File>
+    <File Include="Content/images/icons/controls-t.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/ico_dam_bao_hoan_tien.png">
+      <publishTime>01/03/2018 11:37:29</publishTime>
+    </File>
+    <File Include="Content/images/khach-san-riverside-quang-binh-8.jpg">
+      <publishTime>10/28/2017 10:54:03</publishTime>
+    </File>
+    <File Include="Content/images/logo-1.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/logo-congthuong-w165.png">
+      <publishTime>10/15/2017 18:00:04</publishTime>
+    </File>
+    <File Include="Content/images/logo-why-mytour.png">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/images/pc-listing-default.png">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/images/spinner.gif">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/images/Thiet ke banner doc.jpg">
+      <publishTime>10/17/2017 00:30:51</publishTime>
+    </File>
+    <File Include="Content/images/ui-icon.png">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/js/cam-nang-du-lich-ct/photoswipe-ui-default.js">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/js/cam-nang-du-lich-ct/photoswipe.js">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/js/chi-tiet-ct/conversion.js">
+      <publishTime>10/15/2017 18:00:05</publishTime>
+    </File>
+    <File Include="Content/js/chi-tiet-phong.js">
+      <publishTime>10/31/2017 10:25:47</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/all.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/bootstrap.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/common.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/datepicker.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/datepicker_002.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/greensock.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/imagesloaded.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/jquery.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/jquery_002.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/jquery_003.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/layerslider.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/layerslider_002.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/masonry.js">
+      <publishTime>10/15/2017 20:21:44</publishTime>
+    </File>
+    <File Include="Content/js/hoi-thao/owl.js">
+      <publishTime>10/15/2017 20:21:45</publishTime>
+    </File>
+    <File Include="Content/js/jquery-3.2.1.min.js">
+      <publishTime>10/15/2017 20:43:21</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/11/2021 12:22:00</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/11/2021 12:15:55</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/11/2021 12:22:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/11/2021 12:22:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/11/2021 12:22:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/11/2021 12:22:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/11/2021 12:15:55</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/11/2021 12:15:55</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/npm.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>09/11/2021 12:23:07</publishTime>
+    </File>
+    <File Include="Views/CamNangDuLich/ChiTiet.cshtml">
+      <publishTime>09/12/2021 16:30:38</publishTime>
+    </File>
+    <File Include="Views/CamNangDuLich/Index.cshtml">
+      <publishTime>10/22/2021 16:40:32</publishTime>
+    </File>
+    <File Include="Views/DatPhong/Index.cshtml">
+      <publishTime>01/09/2018 00:52:01</publishTime>
+    </File>
+    <File Include="Views/DatPhong/thong_bao.cshtml">
+      <publishTime>01/13/2018 06:48:24</publishTime>
+    </File>
+    <File Include="Views/GioiThieu/Index.cshtml">
+      <publishTime>09/10/2021 20:46:04</publishTime>
+    </File>
+    <File Include="Views/HoiThao/HoiThao.cshtml">
+      <publishTime>10/31/2017 11:34:49</publishTime>
+    </File>
+    <File Include="Views/HoiThao/Index.cshtml">
+      <publishTime>11/12/2018 11:13:24</publishTime>
+    </File>
+    <File Include="Views/HoiThao/TiecCuoi.cshtml">
+      <publishTime>11/12/2018 11:17:28</publishTime>
+    </File>
+    <File Include="Views/Home/ChiTiet.cshtml">
+      <publishTime>09/12/2021 12:50:42</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/10/2018 23:46:12</publishTime>
+    </File>
+    <File Include="Views/Home/KhachSan.cshtml">
+      <publishTime>01/13/2018 09:52:39</publishTime>
+    </File>
+    <File Include="Views/Home/Phong.cshtml">
+      <publishTime>01/12/2019 14:04:48</publishTime>
+    </File>
+    <File Include="Views/Home/_seachHome.cshtml">
+      <publishTime>10/29/2021 20:34:17</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>10/01/2017 16:03:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/10/2021 20:47:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuLayout.cshtml">
+      <publishTime>01/12/2019 13:35:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>09/20/2021 16:03:30</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/14/2021 21:11:39</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

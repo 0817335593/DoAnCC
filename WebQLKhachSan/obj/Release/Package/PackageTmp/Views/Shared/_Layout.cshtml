@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/images/hotel-icon.png" rel="icon" />
+</head>
+<body>
+
+    <div id="bannerApp">
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="/"><img src="~/Content/images/hotel-icon.png" style="width:100px" /></a>
+                    <h4><strong>Đặt Phòng Khách Sạn Trên Toàn Quốc</strong></h4>
+                </div>
+                <div class="col-sm-8">
+                   
+                </div>
+            </div>
+        </div>
+    </div>    <!-- navbar + bg-blue -->
+    <nav class="navbar bg-blue">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <ul class="nav navbar-nav navbar-right text-uppercase">
+                        <li class="dropdown">
+                            <a href="#" class="notification" mytour-ext="ajax-modal" modal-name="modal-feed-back">
+                                <i class="fa fa-comments-o"></i>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="notification dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell-o"></i>
+                            </a>
+                            <ul class="dropdown-menu cart-count scroll-y update" id="id-cart-count" role="menu" js-t="js-toggle-hide" data-notify="0">
+                                <li class="cart-count-content-scroll">
+                                    <p class="device-mb-show mg-t-40"></p>
+                                    <p class="unNotify ">Bạn không có thông báo nào</p>
+                                    <div class="alert-fh" data-count-notify=0>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><span class="line"></span></li>
+
+                        <li class="device-pc-none" style=''>
+                            <a class="click-search" id="box_search_header" js-t="js-toggle-click">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="device-pc-none" style=''><span class="line">|</span></li>
+                        <li class="device-pc-none"><span class="line">|</span></li>
+
+                        @*<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <i class="fa fa-user"></i>
+                                    tài khoản
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="p_login btn-show-login" data-page="hotel-listing">
+                                        <a href="javascript:;" mytour-ext="ajax-modal" modal-name="modal-login">đăng nhập</a>
+                                    </li>
+                                    <li class="p_login" data-page="hotel-listing"><a href="/sign-up">đăng ký</a></li>
+                                    <li>
+                                        <a href="/favorite-hotels"
+                                           class="events-tracking"
+                                           data-category="menu"
+                                           data-action="item click"
+                                           data-label="khách sạn yêu thích">khách sạn yêu thích</a>
+                                    </li>
+                                </ul>
+                            </li>*@
+                    </ul>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    @Html.Partial("_MenuLayout")
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /navbar + bg-blue -->
+    @RenderBody()
+    <div class="footer">
+        <!-- menu-footer -->
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a rel="nofollow" href="#">Giới thiệu Mytour</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">Đối t&aacute;c kh&aacute;ch sạn</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">Đăng nhập HMS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">T&iacute;ch lũy Vpoint</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">Điều khoản sử dụng</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">Quy chế hoạt động</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a rel="nofollow" href="#">Tuyển dụng</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">Li&ecirc;n hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row mg-t-25">
+                            <a class="logo" href="#">
+                                <img class="img-responsive" src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="contact-mytour">
+                            <p><strong>Công ty TNHH Khách sạn Việt Nam</strong></p>
+
+                            <p>Số ĐKKD: 0105983269 cấp ngày 9/11/2021</p>
+
+                            <p>Văn phòng Phú Yên:&nbsp;Tầng 5, tòa nhà số 8, Phan Văn Trường, Tuy Hòa</p>
+
+                            <p>Văn phòng HCM:&nbsp;Tầng 5, Tòa Nhà HDTC, Số 36 Bùi Thị Xuân, Q.1</p>
+                            <ul class="list-inline mg-t-20">
+                                <li>
+                                    <a href="#" class="btn btn-block btn-facebook">
+                                        <i class="fa fa-facebook"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-block btn-instaram">
+                                        <i class="fa fa-instagram"></i> Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-block btn-google">
+                                        <i class="fa fa-google-plus"></i> Google
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /menu-footer -->
+    </div>
+</body>
+</html>

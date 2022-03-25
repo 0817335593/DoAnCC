@@ -1,0 +1,327 @@
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll.config
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll.config
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+C:\Users\leduc\Downloads\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+C:\Users\leduc\Desktop\KS-06\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+E:\EPU\ks-final\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojResolveAssemblyReference.cache
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+D:\QLKS\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll.config
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\WebQLKhachSan.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\BUS.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DocumentFormat.OpenXml.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DTO.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\WebGrease.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\BUS.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DTO.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\ClosedXML.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\EntityFramework.SqlServer.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Helpers.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Mvc.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Optimization.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.Razor.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\Antlr3.Runtime.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\Newtonsoft.Json.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DAL.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\bin\DAL.dll.config
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csprojAssemblyReference.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.csproj.CopyComplete
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\WebQLKhachSan\obj\Debug\WebQLKhachSan.pdb

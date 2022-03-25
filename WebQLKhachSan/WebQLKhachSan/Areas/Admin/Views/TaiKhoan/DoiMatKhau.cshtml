@@ -1,0 +1,43 @@
+﻿@model DTO.TaiKhoanObject
+@{
+    ViewBag.Title = "Đổi mật khẩu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">Đổi mật khẩu</div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body form-horizontal">
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="curent"> Mật khẩu cũ</label>
+                    <div class="col-md-9">
+                        <input type="password" id="curent" name="curent" class="form-control" value="" placeholder="Nhập mật khẩu cũ" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="newpass"> Mật khẩu mới</label>
+                    <div class="col-md-9">
+                        <input type="password" id="newpass" name="newpass" class="form-control" value="" placeholder="Mật khẩu ít nhất 8 kí tự" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="repass"> Xác nhận mật khẩu mới</label>
+                    <div class="col-md-9">
+                        <input type="password" id="repass" name="repass" class="form-control" value="" placeholder="Nhập lại mật khẩu mới" required />
+                    </div>
+                </div>
+
+                <input type="submit" value="Hoàn tất" class="btn btn-success" />
+                @Html.ActionLink("Quay về quản lí tài khoản", "Index", new { }, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+}

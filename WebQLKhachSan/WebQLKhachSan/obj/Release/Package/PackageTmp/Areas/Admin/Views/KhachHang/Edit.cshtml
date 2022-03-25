@@ -1,0 +1,124 @@
+﻿@model DTO.KhachHangObject
+
+@{
+    string ViewName = Model.IDKhachHang == null ? "Thêm mới Khách hàng" : "Chỉnh sửa Khách hàng";
+    ViewBag.Title = ViewName;
+    var phong = ViewBag.Phong as DTO.PhongObject;
+    if (phong != null)
+    {
+        ViewName += string.Format(" tại phòng <b>{0}</b> vị trí <b>{1}</b>", phong.TenPhong, phong.ViTriObjectJoin.TenViTri);
+    }
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .r-r{
+        color: red;
+        font-style: italic;
+    }
+</style>
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <b>@Html.Raw(ViewName) </b>
+    </div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(q => q.IDKhachHang)
+            @Html.HiddenFor(q => q.IsDelete)
+            @Html.Hidden("idPhong", phong != null ? phong.IDPhong : 0)
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.Label("Họ tên khách hàng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.HoTen, new { @class = "form-control", required = "required", placeholder = "Họ tên khách hàng" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Giới tính", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <label>@Html.RadioButtonFor(q => q.IsMale, true, new { required = "required" }) Nam</label>
+                            <br />
+                            <label>@Html.RadioButtonFor(q => q.IsMale, false, new { required = "required" }) Nữ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Số chứng minh", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.CMT, new { @class = "form-control", required = "required" })
+                        <p class="r-r"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Địa chỉ", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.DiaChi, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Ngày sinh", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.NgaySinh, new { @class = "form-control", @Value = (Model.NgaySinh.HasValue ? Model.NgaySinh.Value.ToString("yyyy/MM/dd") : "") })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Số điện thoại", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.SDT, new { @class = "form-control", required = "required" })
+                        <p class="r-r"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Ghi chú", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.GhiChu, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Hoàn thành" onclick="return validation();" class="btn btn-success" />
+                        <a href="@Url.Action("", "", new { back = 0 })" class="btn btn-primary">Quay lại</a>
+                        @Html.ActionLink("Quay về trang quản lí", "Index", new { }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<link href="~/Areas/Admin/Content/theme/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#NgaySinh').datepicker({
+                dateFormat: "yy/mm/dd"
+            });
+        });
+
+        function validation() {
+            r = true;
+            $('.r-r').empty();
+
+            e = $('#SDT');
+            if (/^\d{10,11}$/.test(e.val()) == false) {
+                $(e).siblings('.r-r').text('Vui lòng nhập Số điện thoại chính xác trong khoảng 10 - 11 số.');
+                r = false;
+            }
+
+
+            e = $('#CMT');
+            if (/^\d{9,12}$/.test(e.val()) == false) {
+                $(e).siblings('.r-r').text('Vui lòng nhập Số chứng minh nhân dân chính xác trong khoảng 9 - 12 số.');
+                r = false;
+            }
+
+            return r;
+        }
+    </script>
+}

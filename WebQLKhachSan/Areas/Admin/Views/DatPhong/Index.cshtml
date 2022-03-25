@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DTO.DatPhongObject>
+
+@{
+    string ViewName = "Lịch sử đặt phòng";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>@ViewName</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>
+                        Phòng
+                    </th>
+                    <th>
+                        Thời gian đặt phòng
+                    </th>
+                    <th>
+                        Thời gian trả phòng
+                    </th>
+                    <th>
+                        Họ tên khách hàng
+                    </th>
+                    <th>
+                        Số tiền đã thanh toán
+                    </th>
+                    <th>
+                        Số tiền phải thanh toán
+                    </th>
+                    <th>
+                        Người đặt phòng
+                    </th>
+                    <th>
+                        Thanh toán thành công
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr @(item.Status == true ? "style='background: green'" : "")>
+                        <td>
+                            @item.PhongObjectJoin.TenPhong
+                        </td>
+                        <td>
+                            @item.BatDau.Value.ToString("yyyy/dd/mm")
+                        </td>
+                        <td>
+                            @(item.KetThuc.HasValue ? item.KetThuc.Value.ToString("yyyy/dd/mm") : "")
+                        </td>
+                        <td>
+                            @item.KhachHangObjectJoin.HoTen
+                        </td>
+                        <td>
+                            @(item.ThanhToan.HasValue ? item.ThanhToan.Value.ToString("c") : "0")
+                        </td>
+                        <td>
+                            @(item.TongTien.HasValue ? item.TongTien.Value.ToString("c") : "0")
+                        </td>
+                        <td>
+                            @item.TaiKhoanObjectJoin.HoTen
+                        </td>
+                        <td>
+                            @(item.Status == true ? "Đã thanh toán" : "Chưa thanh toán")
+                        </td>
+                        <td>
+                            @Html.ActionLink("Xem hóa đơn", "TraPhong", "DatPhong", new { id = item.IDDatPhong }, new { })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true,
+                order: [[1, 'desc']]
+            });
+        });
+    </script>
+}

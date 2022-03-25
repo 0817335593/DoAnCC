@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DTO.DichVuObject>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Chọn dịch vụ</h4>
+            </div>
+            <div class="modal-body">
+                <p>Tích chọn các dịch vụ mà khách hàng lựa chọn và nhập số lượng sản phẩm.</p>
+                <div id="lstDichVu">
+                    @foreach (var item in Model)
+                    {
+                        <p>
+                            <label><input type="checkbox" name="@item.TenDichVu" value="@item.IDDichVu" onchange="toggleInput(this)" /> @item.TenDichVu - @item.GiaTien.Value đ/@item.DonVi</label>
+                            <input type="number" class="form-control input" style="display: none" name="txtSoLuong" value="" min="0" />
+                        </p>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSubmit" onclick="return goiDichVu()" class="btn btn-success">Hoàn thành</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

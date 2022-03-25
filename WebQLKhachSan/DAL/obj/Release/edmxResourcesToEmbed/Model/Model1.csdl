@@ -1,0 +1,1328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbKhachSanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="IDChucVu" />
+    </Key>
+    <Property Name="IDChucVu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaiKhoans" Relationship="Self.FK_TaiKhoan_ChucVu" FromRole="ChucVu" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="DangKiDatPhong">
+    <Key>
+      <PropertyRef Name="ID_DangKi" />
+    </Key>
+    <Property Name="ID_DangKi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Byte" />
+    <Property Name="ID_Phong" Type="Int32" />
+    <Property Name="TimeStart" Type="DateTime" Precision="3" />
+    <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Phong" Relationship="Self.FK_DangKiDatPhong_Phong" FromRole="DangKiDatPhong" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="DatPhong">
+    <Key>
+      <PropertyRef Name="IDDatPhong" />
+    </Key>
+    <Property Name="IDDatPhong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDKhachHang" Type="Guid" Nullable="false" />
+    <Property Name="IDPhong" Type="Int32" />
+    <Property Name="IDTaiKhoan" Type="Int32" />
+    <Property Name="BatDau" Type="DateTime" Precision="3" />
+    <Property Name="KetThuc" Type="DateTime" Precision="3" />
+    <Property Name="TongTien" Type="Int64" />
+    <Property Name="ThanhToan" Type="Int64" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_DatPhong_KhachHang" FromRole="DatPhong" ToRole="KhachHang" />
+    <NavigationProperty Name="Phong" Relationship="Self.FK_DatPhong_Phong" FromRole="DatPhong" ToRole="Phong" />
+    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_DatPhong_TaiKhoan" FromRole="DatPhong" ToRole="TaiKhoan" />
+    <NavigationProperty Name="GiaoDiches" Relationship="Self.FK_GiaoDich_DatPhong" FromRole="DatPhong" ToRole="GiaoDich" />
+  </EntityType>
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="IDDichVu" />
+    </Key>
+    <Property Name="IDDichVu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDichVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTien" Type="Int64" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="DonVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="GiaoDiches" Relationship="Self.FK_GiaoDich_DichVu" FromRole="DichVu" ToRole="GiaoDich" />
+  </EntityType>
+  <EntityType Name="GiaoDich">
+    <Key>
+      <PropertyRef Name="IDGiaoDich" />
+    </Key>
+    <Property Name="IDGiaoDich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDatPhong" Type="Int32" />
+    <Property Name="IDTaiKhoan" Type="Int32" />
+    <Property Name="IDDichVu" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="BuyTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DatPhong" Relationship="Self.FK_GiaoDich_DatPhong" FromRole="GiaoDich" ToRole="DatPhong" />
+    <NavigationProperty Name="DichVu" Relationship="Self.FK_GiaoDich_DichVu" FromRole="GiaoDich" ToRole="DichVu" />
+    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_GiaoDich_TaiKhoan" FromRole="GiaoDich" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="HinhAnh">
+    <Key>
+      <PropertyRef Name="IDHinhAnh" />
+    </Key>
+    <Property Name="IDHinhAnh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Rank" Type="Int32" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="KhachSans" Relationship="Self.FK_KhachSan_HinhAnh" FromRole="HinhAnh" ToRole="KhachSan" />
+    <NavigationProperty Name="Phong_HinhAnh" Relationship="Self.FK_Phong_HinhAnh_HinhAnh" FromRole="HinhAnh" ToRole="Phong_HinhAnh" />
+    <NavigationProperty Name="TinhThanhs" Relationship="Self.FK_TinhThanh_HinhAnh" FromRole="HinhAnh" ToRole="TinhThanh" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="IDKhachHang" />
+    </Key>
+    <Property Name="IDKhachHang" Type="Guid" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsMale" Type="Boolean" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="DatPhongs" Relationship="Self.FK_DatPhong_KhachHang" FromRole="KhachHang" ToRole="DatPhong" />
+  </EntityType>
+  <EntityType Name="KhachSan">
+    <Key>
+      <PropertyRef Name="IDKhachSan" />
+    </Key>
+    <Property Name="IDKhachSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDTinhThanh" Type="Int32" />
+    <Property Name="IDHinhAnh" Type="Int32" />
+    <Property Name="MaKhachSan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenKhachSan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiThieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TieuDe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="Star" Type="Int32" />
+    <NavigationProperty Name="HinhAnh" Relationship="Self.FK_KhachSan_HinhAnh" FromRole="KhachSan" ToRole="HinhAnh" />
+    <NavigationProperty Name="TinhThanh" Relationship="Self.FK_KhachSan_TinhThanh" FromRole="KhachSan" ToRole="TinhThanh" />
+    <NavigationProperty Name="Phongs" Relationship="Self.FK_Phong_KhachSan" FromRole="KhachSan" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="LoaiPhong">
+    <Key>
+      <PropertyRef Name="ID_LoaiPhong" />
+    </Key>
+    <Property Name="ID_LoaiPhong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Phongs" Relationship="Self.FK_Phong_LoaiPhong" FromRole="LoaiPhong" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="IDPhong" />
+    </Key>
+    <Property Name="IDPhong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPhong" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ID_ViTri" Type="Int32" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaPhong" Type="Int64" />
+    <Property Name="ID_LoaiPhong" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IDKhachSan" Type="Int32" />
+    <Property Name="GiaKM" Type="Int32" />
+    <Property Name="Star" Type="Int32" />
+    <NavigationProperty Name="DangKiDatPhongs" Relationship="Self.FK_DangKiDatPhong_Phong" FromRole="Phong" ToRole="DangKiDatPhong" />
+    <NavigationProperty Name="DatPhongs" Relationship="Self.FK_DatPhong_Phong" FromRole="Phong" ToRole="DatPhong" />
+    <NavigationProperty Name="KhachSan" Relationship="Self.FK_Phong_KhachSan" FromRole="Phong" ToRole="KhachSan" />
+    <NavigationProperty Name="LoaiPhong" Relationship="Self.FK_Phong_LoaiPhong" FromRole="Phong" ToRole="LoaiPhong" />
+    <NavigationProperty Name="Phong_HinhAnh" Relationship="Self.FK_Phong_HinhAnh_Phong" FromRole="Phong" ToRole="Phong_HinhAnh" />
+    <NavigationProperty Name="ViTri" Relationship="Self.FK_Phong_ViTri" FromRole="Phong" ToRole="ViTri" />
+  </EntityType>
+  <EntityType Name="Phong_HinhAnh">
+    <Key>
+      <PropertyRef Name="IDPhong_HinhAnh" />
+    </Key>
+    <Property Name="IDPhong_HinhAnh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDHinhAnh" Type="Int32" />
+    <Property Name="IDPhong" Type="Int32" />
+    <Property Name="Rank" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HinhAnh" Relationship="Self.FK_Phong_HinhAnh_HinhAnh" FromRole="Phong_HinhAnh" ToRole="HinhAnh" />
+    <NavigationProperty Name="Phong" Relationship="Self.FK_Phong_HinhAnh_Phong" FromRole="Phong_HinhAnh" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="Quyen">
+    <Key>
+      <PropertyRef Name="IDQuyen" />
+    </Key>
+    <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaiKhoans" Relationship="Self.PhanQuyen" FromRole="Quyen" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDChucVu" Type="Int32" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="ChucVu" Relationship="Self.FK_TaiKhoan_ChucVu" FromRole="TaiKhoan" ToRole="ChucVu" />
+    <NavigationProperty Name="DatPhongs" Relationship="Self.FK_DatPhong_TaiKhoan" FromRole="TaiKhoan" ToRole="DatPhong" />
+    <NavigationProperty Name="GiaoDiches" Relationship="Self.FK_GiaoDich_TaiKhoan" FromRole="TaiKhoan" ToRole="GiaoDich" />
+    <NavigationProperty Name="Quyens" Relationship="Self.PhanQuyen" FromRole="TaiKhoan" ToRole="Quyen" />
+  </EntityType>
+  <EntityType Name="TinhThanh">
+    <Key>
+      <PropertyRef Name="IDTinhThanh" />
+    </Key>
+    <Property Name="IDTinhThanh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDHinhAnh" Type="Int32" />
+    <Property Name="MaTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="HinhAnh" Relationship="Self.FK_TinhThanh_HinhAnh" FromRole="TinhThanh" ToRole="HinhAnh" />
+    <NavigationProperty Name="KhachSans" Relationship="Self.FK_KhachSan_TinhThanh" FromRole="TinhThanh" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="ViTri">
+    <Key>
+      <PropertyRef Name="ID_ViTri" />
+    </Key>
+    <Property Name="ID_ViTri" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenViTri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Phongs" Relationship="Self.FK_Phong_ViTri" FromRole="ViTri" ToRole="Phong" />
+  </EntityType>
+  <Association Name="FK_TaiKhoan_ChucVu">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1" />
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="IDChucVu" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="IDChucVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DangKiDatPhong_Phong">
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+    <End Role="DangKiDatPhong" Type="Self.DangKiDatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="IDPhong" />
+      </Principal>
+      <Dependent Role="DangKiDatPhong">
+        <PropertyRef Name="ID_Phong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatPhong_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="IDKhachHang" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatPhong_Phong">
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="IDPhong" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="IDPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatPhong_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaoDich_DatPhong">
+    <End Role="DatPhong" Type="Self.DatPhong" Multiplicity="0..1" />
+    <End Role="GiaoDich" Type="Self.GiaoDich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatPhong">
+        <PropertyRef Name="IDDatPhong" />
+      </Principal>
+      <Dependent Role="GiaoDich">
+        <PropertyRef Name="IDDatPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaoDich_DichVu">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="0..1" />
+    <End Role="GiaoDich" Type="Self.GiaoDich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="IDDichVu" />
+      </Principal>
+      <Dependent Role="GiaoDich">
+        <PropertyRef Name="IDDichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaoDich_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="GiaoDich" Type="Self.GiaoDich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Principal>
+      <Dependent Role="GiaoDich">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_HinhAnh">
+    <End Role="HinhAnh" Type="Self.HinhAnh" Multiplicity="0..1" />
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HinhAnh">
+        <PropertyRef Name="IDHinhAnh" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="IDHinhAnh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_HinhAnh_HinhAnh">
+    <End Role="HinhAnh" Type="Self.HinhAnh" Multiplicity="0..1" />
+    <End Role="Phong_HinhAnh" Type="Self.Phong_HinhAnh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HinhAnh">
+        <PropertyRef Name="IDHinhAnh" />
+      </Principal>
+      <Dependent Role="Phong_HinhAnh">
+        <PropertyRef Name="IDHinhAnh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhThanh_HinhAnh">
+    <End Role="HinhAnh" Type="Self.HinhAnh" Multiplicity="0..1" />
+    <End Role="TinhThanh" Type="Self.TinhThanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HinhAnh">
+        <PropertyRef Name="IDHinhAnh" />
+      </Principal>
+      <Dependent Role="TinhThanh">
+        <PropertyRef Name="IDHinhAnh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_TinhThanh">
+    <End Role="TinhThanh" Type="Self.TinhThanh" Multiplicity="0..1" />
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhThanh">
+        <PropertyRef Name="IDTinhThanh" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="IDTinhThanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_KhachSan">
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="0..1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachSan">
+        <PropertyRef Name="IDKhachSan" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="IDKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_LoaiPhong">
+    <End Role="LoaiPhong" Type="Self.LoaiPhong" Multiplicity="0..1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhong">
+        <PropertyRef Name="ID_LoaiPhong" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="ID_LoaiPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_HinhAnh_Phong">
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+    <End Role="Phong_HinhAnh" Type="Self.Phong_HinhAnh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="IDPhong" />
+      </Principal>
+      <Dependent Role="Phong_HinhAnh">
+        <PropertyRef Name="IDPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_ViTri">
+    <End Role="ViTri" Type="Self.ViTri" Multiplicity="0..1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViTri">
+        <PropertyRef Name="ID_ViTri" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="ID_ViTri" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PhanQuyen">
+    <End Role="Quyen" Type="Self.Quyen" Multiplicity="*" />
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="dbKhachSanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChucVus" EntityType="Self.ChucVu" />
+    <EntitySet Name="DangKiDatPhongs" EntityType="Self.DangKiDatPhong" />
+    <EntitySet Name="DatPhongs" EntityType="Self.DatPhong" />
+    <EntitySet Name="DichVus" EntityType="Self.DichVu" />
+    <EntitySet Name="GiaoDiches" EntityType="Self.GiaoDich" />
+    <EntitySet Name="HinhAnhs" EntityType="Self.HinhAnh" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="KhachSans" EntityType="Self.KhachSan" />
+    <EntitySet Name="LoaiPhongs" EntityType="Self.LoaiPhong" />
+    <EntitySet Name="Phongs" EntityType="Self.Phong" />
+    <EntitySet Name="Phong_HinhAnh" EntityType="Self.Phong_HinhAnh" />
+    <EntitySet Name="Quyens" EntityType="Self.Quyen" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <EntitySet Name="TinhThanhs" EntityType="Self.TinhThanh" />
+    <EntitySet Name="ViTris" EntityType="Self.ViTri" />
+    <AssociationSet Name="FK_TaiKhoan_ChucVu" Association="Self.FK_TaiKhoan_ChucVu">
+      <End Role="ChucVu" EntitySet="ChucVus" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DangKiDatPhong_Phong" Association="Self.FK_DangKiDatPhong_Phong">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="DangKiDatPhong" EntitySet="DangKiDatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatPhong_KhachHang" Association="Self.FK_DatPhong_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatPhong_Phong" Association="Self.FK_DatPhong_Phong">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatPhong_TaiKhoan" Association="Self.FK_DatPhong_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaoDich_DatPhong" Association="Self.FK_GiaoDich_DatPhong">
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+      <End Role="GiaoDich" EntitySet="GiaoDiches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaoDich_DichVu" Association="Self.FK_GiaoDich_DichVu">
+      <End Role="DichVu" EntitySet="DichVus" />
+      <End Role="GiaoDich" EntitySet="GiaoDiches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaoDich_TaiKhoan" Association="Self.FK_GiaoDich_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="GiaoDich" EntitySet="GiaoDiches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_HinhAnh" Association="Self.FK_KhachSan_HinhAnh">
+      <End Role="HinhAnh" EntitySet="HinhAnhs" />
+      <End Role="KhachSan" EntitySet="KhachSans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_HinhAnh_HinhAnh" Association="Self.FK_Phong_HinhAnh_HinhAnh">
+      <End Role="HinhAnh" EntitySet="HinhAnhs" />
+      <End Role="Phong_HinhAnh" EntitySet="Phong_HinhAnh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhThanh_HinhAnh" Association="Self.FK_TinhThanh_HinhAnh">
+      <End Role="HinhAnh" EntitySet="HinhAnhs" />
+      <End Role="TinhThanh" EntitySet="TinhThanhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_TinhThanh" Association="Self.FK_KhachSan_TinhThanh">
+      <End Role="TinhThanh" EntitySet="TinhThanhs" />
+      <End Role="KhachSan" EntitySet="KhachSans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_KhachSan" Association="Self.FK_Phong_KhachSan">
+      <End Role="KhachSan" EntitySet="KhachSans" />
+      <End Role="Phong" EntitySet="Phongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_LoaiPhong" Association="Self.FK_Phong_LoaiPhong">
+      <End Role="LoaiPhong" EntitySet="LoaiPhongs" />
+      <End Role="Phong" EntitySet="Phongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_HinhAnh_Phong" Association="Self.FK_Phong_HinhAnh_Phong">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="Phong_HinhAnh" EntitySet="Phong_HinhAnh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_ViTri" Association="Self.FK_Phong_ViTri">
+      <End Role="ViTri" EntitySet="ViTris" />
+      <End Role="Phong" EntitySet="Phongs" />
+    </AssociationSet>
+    <AssociationSet Name="PhanQuyen" Association="Self.PhanQuyen">
+      <End Role="Quyen" EntitySet="Quyens" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ChucVu_Delete">
+      <Parameter Name="IDChucVu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ChucVu_GetAll" ReturnType="Collection(dbKhachSanModel.SP_ChucVu_GetAll_Result)" />
+    <FunctionImport Name="SP_ChucVu_GetByIDChucVu" ReturnType="Collection(dbKhachSanModel.SP_ChucVu_GetByIDChucVu_Result)">
+      <Parameter Name="IDChucVu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ChucVu_Insert">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenCV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ChucVu_Update">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="IDChucVu" Mode="In" Type="Int32" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenCV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DangKiDatPhong_Delete">
+      <Parameter Name="ID_DangKi" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DangKiDatPhong_GetAll" ReturnType="Collection(dbKhachSanModel.SP_DangKiDatPhong_GetAll_Result)" />
+    <FunctionImport Name="SP_DangKiDatPhong_GetByID_DangKi" ReturnType="Collection(dbKhachSanModel.SP_DangKiDatPhong_GetByID_DangKi_Result)">
+      <Parameter Name="ID_DangKi" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DangKiDatPhong_Insert">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="ID_Phong" Mode="In" Type="Int32" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+      <Parameter Name="NgayTao" Mode="In" Type="DateTime" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Byte" />
+      <Parameter Name="TimeEnd" Mode="In" Type="DateTime" />
+      <Parameter Name="TimeStart" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DangKiDatPhong_Update">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="ID_DangKi" Mode="In" Type="Int32" />
+      <Parameter Name="ID_Phong" Mode="In" Type="Int32" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+      <Parameter Name="NgayTao" Mode="In" Type="DateTime" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Byte" />
+      <Parameter Name="TimeEnd" Mode="In" Type="DateTime" />
+      <Parameter Name="TimeStart" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DatPhong_Delete">
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DatPhong_GetAll" ReturnType="Collection(dbKhachSanModel.SP_DatPhong_GetAll_Result)" />
+    <FunctionImport Name="SP_DatPhong_GetByIDDatPhong" ReturnType="Collection(dbKhachSanModel.SP_DatPhong_GetByIDDatPhong_Result)">
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DatPhong_Insert">
+      <Parameter Name="BatDau" Mode="In" Type="DateTime" />
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="KetThuc" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="ThanhToan" Mode="In" Type="Int64" />
+      <Parameter Name="TongTien" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DatPhong_Update">
+      <Parameter Name="BatDau" Mode="In" Type="DateTime" />
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="KetThuc" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="ThanhToan" Mode="In" Type="Int64" />
+      <Parameter Name="TongTien" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DichVu_Delete">
+      <Parameter Name="IDDichVu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DichVu_GetAll" ReturnType="Collection(dbKhachSanModel.SP_DichVu_GetAll_Result)" />
+    <FunctionImport Name="SP_DichVu_GetByIDDichVu" ReturnType="Collection(dbKhachSanModel.SP_DichVu_GetByIDDichVu_Result)">
+      <Parameter Name="IDDichVu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DichVu_Insert">
+      <Parameter Name="Active" Mode="In" Type="Boolean" />
+      <Parameter Name="DonVi" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="GiaTien" Mode="In" Type="Int64" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenDichVu" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DichVu_Update">
+      <Parameter Name="Active" Mode="In" Type="Boolean" />
+      <Parameter Name="DonVi" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="GiaTien" Mode="In" Type="Int64" />
+      <Parameter Name="IDDichVu" Mode="In" Type="Int32" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenDichVu" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GiaoDich_Delete">
+      <Parameter Name="IDGiaoDich" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GiaoDich_GetAll" ReturnType="Collection(dbKhachSanModel.SP_GiaoDich_GetAll_Result)" />
+    <FunctionImport Name="SP_GiaoDich_GetBy_IDDatPhong" ReturnType="Collection(dbKhachSanModel.SP_GiaoDich_GetBy_IDDatPhong_Result)">
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GiaoDich_GetByIDGiaoDich" ReturnType="Collection(dbKhachSanModel.SP_GiaoDich_GetByIDGiaoDich_Result)">
+      <Parameter Name="IDGiaoDich" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GiaoDich_Insert">
+      <Parameter Name="BuyTime" Mode="In" Type="DateTime" />
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDDichVu" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="SoLuong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GiaoDich_Update">
+      <Parameter Name="BuyTime" Mode="In" Type="DateTime" />
+      <Parameter Name="IDDatPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDDichVu" Mode="In" Type="Int32" />
+      <Parameter Name="IDGiaoDich" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="SoLuong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_HinhAnh_Delete">
+      <Parameter Name="IDHinhAnh" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_HinhAnh_GetAll" ReturnType="Collection(dbKhachSanModel.SP_HinhAnh_GetAll_Result)" />
+    <FunctionImport Name="SP_HinhAnh_GetByIDHinhAnh" ReturnType="Collection(dbKhachSanModel.SP_HinhAnh_GetByIDHinhAnh_Result)">
+      <Parameter Name="IDHinhAnh" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_HinhAnh_Insert">
+      <Parameter Name="ImageLink" Mode="In" Type="String" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="Rank" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_HinhAnh_Update">
+      <Parameter Name="IDHinhAnh" Mode="In" Type="Int32" />
+      <Parameter Name="ImageLink" Mode="In" Type="String" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="Rank" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KhachHang_Delete">
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KhachHang_GetAll" ReturnType="Collection(dbKhachSanModel.SP_KhachHang_GetAll_Result)" />
+    <FunctionImport Name="SP_KhachHang_GetByIDKhachHang" ReturnType="Collection(dbKhachSanModel.SP_KhachHang_GetByIDKhachHang_Result)">
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KhachHang_Insert">
+      <Parameter Name="CMT" Mode="In" Type="String" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="IsMale" Mode="In" Type="Boolean" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_KhachHang_Update">
+      <Parameter Name="CMT" Mode="In" Type="String" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="IDKhachHang" Mode="In" Type="Guid" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="IsMale" Mode="In" Type="Boolean" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LoaiPhong_Delete">
+      <Parameter Name="ID_LoaiPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LoaiPhong_GetAll" ReturnType="Collection(dbKhachSanModel.SP_LoaiPhong_GetAll_Result)" />
+    <FunctionImport Name="SP_LoaiPhong_GetByID_LoaiPhong" ReturnType="Collection(dbKhachSanModel.SP_LoaiPhong_GetByID_LoaiPhong_Result)">
+      <Parameter Name="ID_LoaiPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LoaiPhong_Insert">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="TenLoai" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_LoaiPhong_Update">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="ID_LoaiPhong" Mode="In" Type="Int32" />
+      <Parameter Name="TenLoai" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PhanQuyen_Delete">
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PhanQuyen_GetAll" ReturnType="Collection(dbKhachSanModel.SP_PhanQuyen_GetAll_Result)" />
+    <FunctionImport Name="SP_PhanQuyen_GetByIDQuyen" ReturnType="Collection(dbKhachSanModel.SP_PhanQuyen_GetByIDQuyen_Result)">
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PhanQuyen_GetByIDTaiKhoan" ReturnType="Collection(dbKhachSanModel.SP_PhanQuyen_GetByIDTaiKhoan_Result)">
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PhanQuyen_Insert">
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_Delete">
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_GetAll" ReturnType="Collection(dbKhachSanModel.SP_Phong_GetAll_Result)" />
+    <FunctionImport Name="SP_Phong_GetByIDPhong" ReturnType="Collection(dbKhachSanModel.SP_Phong_GetByIDPhong_Result)">
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_HinhAnh_Delete">
+      <Parameter Name="IDPhong_HinhAnh" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_HinhAnh_GetAll" ReturnType="Collection(dbKhachSanModel.SP_Phong_HinhAnh_GetAll_Result)" />
+    <FunctionImport Name="SP_Phong_HinhAnh_GetByIDPhong" ReturnType="Collection(dbKhachSanModel.SP_Phong_HinhAnh_GetByIDPhong_Result)">
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_HinhAnh_GetByIDPhong_HinhAnh" ReturnType="Collection(dbKhachSanModel.SP_Phong_HinhAnh_GetByIDPhong_HinhAnh_Result)">
+      <Parameter Name="IDPhong_HinhAnh" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_HinhAnh_Insert">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="IDHinhAnh" Mode="In" Type="Int32" />
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+      <Parameter Name="Rank" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_HinhAnh_Update">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="IDHinhAnh" Mode="In" Type="Int32" />
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDPhong_HinhAnh" Mode="In" Type="Int32" />
+      <Parameter Name="Rank" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_Insert">
+      <Parameter Name="Active" Mode="In" Type="Boolean" />
+      <Parameter Name="GiaPhong" Mode="In" Type="Int64" />
+      <Parameter Name="ID_LoaiPhong" Mode="In" Type="Int32" />
+      <Parameter Name="ID_ViTri" Mode="In" Type="Int32" />
+      <Parameter Name="IDKhachSan" Mode="In" Type="Int32" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenPhong" Mode="In" Type="String" />
+      <Parameter Name="TrangThai" Mode="In" Type="String" />
+      <Parameter Name="GiaKM" Mode="In" Type="Int32" />
+      <Parameter Name="Star" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Phong_Update">
+      <Parameter Name="Active" Mode="In" Type="Boolean" />
+      <Parameter Name="GiaPhong" Mode="In" Type="Int64" />
+      <Parameter Name="ID_LoaiPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IDKhachSan" Mode="In" Type="Int32" />
+      <Parameter Name="ID_ViTri" Mode="In" Type="Int32" />
+      <Parameter Name="IDPhong" Mode="In" Type="Int32" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="TenPhong" Mode="In" Type="String" />
+      <Parameter Name="TrangThai" Mode="In" Type="String" />
+      <Parameter Name="GiaKM" Mode="In" Type="Int32" />
+      <Parameter Name="Star" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Quyen_Delete">
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Quyen_GetAll" ReturnType="Collection(dbKhachSanModel.SP_Quyen_GetAll_Result)" />
+    <FunctionImport Name="SP_Quyen_GetByIDQuyen" ReturnType="Collection(dbKhachSanModel.SP_Quyen_GetByIDQuyen_Result)">
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Quyen_Insert">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="TenQuyen" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Quyen_Update">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="IDQuyen" Mode="In" Type="Int32" />
+      <Parameter Name="TenQuyen" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_CheckLogin" ReturnType="Collection(dbKhachSanModel.SP_TaiKhoan_CheckLogin_Result)">
+      <Parameter Name="TenDangNhap" Mode="In" Type="String" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_Delete">
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_DoiMatKhau" ReturnType="Collection(dbKhachSanModel.SP_TaiKhoan_DoiMatKhau_Result)">
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="MatKhauCu" Mode="In" Type="String" />
+      <Parameter Name="MatKhauMoi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_GetAll" ReturnType="Collection(dbKhachSanModel.SP_TaiKhoan_GetAll_Result)" />
+    <FunctionImport Name="SP_TaiKhoan_GetByIDTaiKhoan" ReturnType="Collection(dbKhachSanModel.SP_TaiKhoan_GetByIDTaiKhoan_Result)">
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_Insert">
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="IDChucVu" Mode="In" Type="Int32" />
+      <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+      <Parameter Name="TenDangNhap" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_TaiKhoan_Update">
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="IDChucVu" Mode="In" Type="Int32" />
+      <Parameter Name="IDTaiKhoan" Mode="In" Type="Int32" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+      <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+      <Parameter Name="TenDangNhap" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_ViTri_Delete">
+      <Parameter Name="ID_ViTri" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ViTri_GetAll" ReturnType="Collection(dbKhachSanModel.SP_ViTri_GetAll_Result)" />
+    <FunctionImport Name="SP_ViTri_GetByID_ViTri" ReturnType="Collection(dbKhachSanModel.SP_ViTri_GetByID_ViTri_Result)">
+      <Parameter Name="ID_ViTri" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ViTri_Insert">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="TenViTri" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ViTri_Update">
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+      <Parameter Name="ID_ViTri" Mode="In" Type="Int32" />
+      <Parameter Name="TenViTri" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_ChucVu_GetAll_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="String" Name="TenCV" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_ChucVu_GetByIDChucVu_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="String" Name="TenCV" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DangKiDatPhong_GetAll_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DangKi" Nullable="false" />
+    <Property Type="Int32" Name="ID_Phong" Nullable="true" />
+    <Property Type="String" Name="Message" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Status" Nullable="true" />
+    <Property Type="DateTime" Name="TimeEnd" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TimeStart" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DangKiDatPhong_GetByID_DangKi_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_DangKi" Nullable="false" />
+    <Property Type="Int32" Name="ID_Phong" Nullable="true" />
+    <Property Type="String" Name="Message" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="NgayTao" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Status" Nullable="true" />
+    <Property Type="DateTime" Name="TimeEnd" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TimeStart" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DatPhong_GetAll_Result">
+    <Property Type="DateTime" Name="BatDau" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IDDatPhong" Nullable="false" />
+    <Property Type="Guid" Name="IDKhachHang" Nullable="false" />
+    <Property Type="Int32" Name="IDPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="true" />
+    <Property Type="DateTime" Name="KetThuc" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Int64" Name="ThanhToan" Nullable="true" />
+    <Property Type="Int64" Name="TongTien" Nullable="true" />
+    <Property Type="String" Name="CMT_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_KhachHangJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="HoTen_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete_KhachHangJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsMale_KhachHangJoin" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh_KhachHangJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="IDKhachSan_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenKhachSan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenViTri" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DatPhong_GetByIDDatPhong_Result">
+    <Property Type="DateTime" Name="BatDau" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IDDatPhong" Nullable="false" />
+    <Property Type="Guid" Name="IDKhachHang" Nullable="false" />
+    <Property Type="Int32" Name="IDPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="true" />
+    <Property Type="DateTime" Name="KetThuc" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="true" />
+    <Property Type="Int64" Name="ThanhToan" Nullable="true" />
+    <Property Type="Int64" Name="TongTien" Nullable="true" />
+    <Property Type="String" Name="CMT_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_KhachHangJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="HoTen_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete_KhachHangJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsMale_KhachHangJoin" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh_KhachHangJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_KhachHangJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDKhachSan_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenViTri" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DichVu_GetAll_Result">
+    <Property Type="Boolean" Name="Active" Nullable="true" />
+    <Property Type="String" Name="DonVi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="GiaTien" Nullable="true" />
+    <Property Type="Int32" Name="IDDichVu" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="String" Name="TenDichVu" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_DichVu_GetByIDDichVu_Result">
+    <Property Type="Boolean" Name="Active" Nullable="true" />
+    <Property Type="String" Name="DonVi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="GiaTien" Nullable="true" />
+    <Property Type="Int32" Name="IDDichVu" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="String" Name="TenDichVu" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GiaoDich_GetAll_Result">
+    <Property Type="DateTime" Name="BuyTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IDDatPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDDichVu" Nullable="true" />
+    <Property Type="Int32" Name="IDGiaoDich" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="true" />
+    <Property Type="Int32" Name="SoLuong" Nullable="true" />
+    <Property Type="DateTime" Name="BatDau_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="IDKhachHang_DatPhongJoin" Nullable="false" />
+    <Property Type="Int32" Name="IDPhong_DatPhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan_DatPhongJoin" Nullable="true" />
+    <Property Type="DateTime" Name="KetThuc_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="ThanhToan_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="TongTien_DatPhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="DonVi_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_DichVuJoin" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="GiaTien_DichVuJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenDichVu_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GiaoDich_GetBy_IDDatPhong_Result">
+    <Property Type="DateTime" Name="BuyTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IDDatPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDDichVu" Nullable="true" />
+    <Property Type="Int32" Name="IDGiaoDich" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="true" />
+    <Property Type="Int32" Name="SoLuong" Nullable="true" />
+    <Property Type="DateTime" Name="BatDau_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="IDKhachHang_DatPhongJoin" Nullable="false" />
+    <Property Type="Int32" Name="IDPhong_DatPhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan_DatPhongJoin" Nullable="true" />
+    <Property Type="DateTime" Name="KetThuc_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="ThanhToan_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="TongTien_DatPhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="DonVi_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_DichVuJoin" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="GiaTien_DichVuJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenDichVu_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GiaoDich_GetByIDGiaoDich_Result">
+    <Property Type="DateTime" Name="BuyTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IDDatPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDDichVu" Nullable="true" />
+    <Property Type="Int32" Name="IDGiaoDich" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="true" />
+    <Property Type="Int32" Name="SoLuong" Nullable="true" />
+    <Property Type="DateTime" Name="BatDau_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="IDKhachHang_DatPhongJoin" Nullable="false" />
+    <Property Type="Int32" Name="IDPhong_DatPhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan_DatPhongJoin" Nullable="true" />
+    <Property Type="DateTime" Name="KetThuc_DatPhongJoin" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Status_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="ThanhToan_DatPhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="TongTien_DatPhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="DonVi_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_DichVuJoin" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="GiaTien_DichVuJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_DichVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenDichVu_DichVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_HinhAnh_GetAll_Result">
+    <Property Type="Int32" Name="IDHinhAnh" Nullable="false" />
+    <Property Type="String" Name="ImageLink" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Int32" Name="Rank" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_HinhAnh_GetByIDHinhAnh_Result">
+    <Property Type="Int32" Name="IDHinhAnh" Nullable="false" />
+    <Property Type="String" Name="ImageLink" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Int32" Name="Rank" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_KhachHang_GetAll_Result">
+    <Property Type="String" Name="CMT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="IDKhachHang" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Boolean" Name="IsMale" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_KhachHang_GetByIDKhachHang_Result">
+    <Property Type="String" Name="CMT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="IDKhachHang" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Boolean" Name="IsMale" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_LoaiPhong_GetAll_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_LoaiPhong" Nullable="false" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_LoaiPhong_GetByID_LoaiPhong_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_LoaiPhong" Nullable="false" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_PhanQuyen_GetAll_Result">
+    <Property Type="Int32" Name="IDQuyen" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="String" Name="GhiChu_QuyenJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TenQuyen_QuyenJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_PhanQuyen_GetByIDQuyen_Result">
+    <Property Type="Int32" Name="IDQuyen" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="String" Name="GhiChu_QuyenJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TenQuyen_QuyenJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_PhanQuyen_GetByIDTaiKhoan_Result">
+    <Property Type="Int32" Name="IDQuyen" Nullable="false" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="String" Name="GhiChu_QuyenJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TenQuyen_QuyenJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HoTen_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu_TaiKhoanJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="MatKhau_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh_TaiKhoanJoin" Nullable="true" />
+    <Property Type="String" Name="SDT_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap_TaiKhoanJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Phong_GetAll_Result">
+    <Property Type="Boolean" Name="Active" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDKhachSan" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="GiaKM" Nullable="true" />
+    <Property Type="Int32" Name="Star" Nullable="true" />
+    <Property Type="String" Name="TrangThai" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenKhachSan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_LoaiPhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenLoai_LoaiPhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_ViTriJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenViTri_ViTriJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Phong_GetByIDPhong_Result">
+    <Property Type="Boolean" Name="Active" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDKhachSan" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="Int32" Name="GiaKM" Nullable="true" />
+    <Property Type="Int32" Name="Star" Nullable="true" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenKhachSan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenTinh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_LoaiPhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenLoai_LoaiPhongJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_ViTriJoin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenViTri_ViTriJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Phong_HinhAnh_GetAll_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDHinhAnh" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong_HinhAnh" Nullable="false" />
+    <Property Type="Int32" Name="Rank" Nullable="true" />
+    <Property Type="String" Name="ImageLink_HinhAnhJoin" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsDelete_HinhAnhJoin" Nullable="true" />
+    <Property Type="Int32" Name="Rank_HinhAnhJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Phong_HinhAnh_GetByIDPhong_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDHinhAnh" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong_HinhAnh" Nullable="false" />
+    <Property Type="Int32" Name="Rank" Nullable="true" />
+    <Property Type="String" Name="ImageLink_HinhAnhJoin" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsDelete_HinhAnhJoin" Nullable="true" />
+    <Property Type="Int32" Name="Rank_HinhAnhJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Phong_HinhAnh_GetByIDPhong_HinhAnh_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDHinhAnh" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong" Nullable="true" />
+    <Property Type="Int32" Name="IDPhong_HinhAnh" Nullable="false" />
+    <Property Type="Int32" Name="Rank" Nullable="true" />
+    <Property Type="String" Name="ImageLink_HinhAnhJoin" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsDelete_HinhAnhJoin" Nullable="true" />
+    <Property Type="Int32" Name="Rank_HinhAnhJoin" Nullable="true" />
+    <Property Type="Boolean" Name="Active_PhongJoin" Nullable="true" />
+    <Property Type="Int64" Name="GiaPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_LoaiPhong_PhongJoin" Nullable="true" />
+    <Property Type="Int32" Name="ID_ViTri_PhongJoin" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete_PhongJoin" Nullable="true" />
+    <Property Type="String" Name="TenPhong_PhongJoin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrangThai_PhongJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Quyen_GetAll_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="IDQuyen" Nullable="false" />
+    <Property Type="String" Name="TenQuyen" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_Quyen_GetByIDQuyen_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="IDQuyen" Nullable="false" />
+    <Property Type="String" Name="TenQuyen" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_TaiKhoan_CheckLogin_Result">
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="TenDangNhap" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="true" />
+    <Property Type="String" Name="TenCV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_TaiKhoan_DoiMatKhau_Result">
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_ChucVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete_ChucVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenCV_ChucVuJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_TaiKhoan_GetAll_Result">
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_ChucVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete_ChucVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenCV_ChucVuJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_TaiKhoan_GetByIDTaiKhoan_Result">
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IDChucVu" Nullable="true" />
+    <Property Type="Int32" Name="IDTaiKhoan" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TenDangNhap" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GhiChu_ChucVuJoin" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDelete_ChucVuJoin" Nullable="true" />
+    <Property Type="String" Name="TenCV_ChucVuJoin" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_ViTri_GetAll_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_ViTri" Nullable="false" />
+    <Property Type="String" Name="TenViTri" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_ViTri_GetByID_ViTri_Result">
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID_ViTri" Nullable="false" />
+    <Property Type="String" Name="TenViTri" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

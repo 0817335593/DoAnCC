@@ -1,0 +1,128 @@
+﻿@model IEnumerable<DTO.KhachHangObject>
+
+@{
+    ViewBag.Title = "Danh sách Khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>Danh sách Khách hàng</h2>
+        @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+        {
+            @Html.ActionLink("Thêm mới", "Edit", new { }, new { @class = "btn btn-success" })
+        }
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>
+                        Họ và tên
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
+                        Ngày sinh
+                    </th>
+                    <th>
+                        Giới tính
+                    </th>
+                    <th>
+                        Số chứng minh
+                    </th>
+                    <th>
+                        SDT
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                    @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                    {
+                        <th>
+                            Thao tác
+                        </th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoTen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChi)
+                        </td>
+                        <td>
+                            @(item.NgaySinh.HasValue ? item.NgaySinh.Value.ToString("dd/MM/yyyy") : "")
+                        </td>
+                        <td>
+                            @(item.IsMale ? "Nam" : "Nữ")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CMT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GhiChu)
+                        </td>
+                        <td>
+                            @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                            {
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.IDKhachHang }, new { @class = "btn btn-primary" }) <span>|</span>
+                                <a href="javascrip:;" onclick="delete_khachHang('@item.IDKhachHang',this)" class="btn btn-warning">Xóa</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        var e_delete = "";
+        function delete_khachHang(value, target) {
+            if (value) {
+                if (confirm('Bạn có muốn xóa?') != true) return;
+                e_delete = target;
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: "POST",
+                    data: { id: value },
+                    success: function (d) {
+                        if (d == true) $(e_delete).closest('tr').remove();
+                        else alert("Xóa thất bại.");
+                        e_delete = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần xóa.")
+            }
+        }
+
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true
+            });
+        });
+
+    </script>
+}

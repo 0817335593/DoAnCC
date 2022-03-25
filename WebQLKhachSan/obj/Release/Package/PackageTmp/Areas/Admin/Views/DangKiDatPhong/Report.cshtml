@@ -1,0 +1,116 @@
+﻿@model IEnumerable<DTO.DangKiDatPhongObject>
+@{
+    ViewBag.Title = "BÁO CÁO ĐĂNG KÍ ĐẶT PHÒNG";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-info" style="margin-top: 15px">
+    <div class="panel-heading">@ViewBag.Title</div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-md-4" style="margin-bottom: 15px">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i> Từ ngày</span>
+                        <input value="@ViewBag.stimeStart" name="timeStart" type="date" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i> Đến ngày</span>
+                        <input value="@ViewBag.stimeEnd" name="timeEnd" type="date" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4" >
+                    <button class="btn btn-primary" name="filter" value="filter"> <i class="fa fa-filter"></i> Lọc</button>
+                    <button class="btn btn-success" name="excel" value="excel"> <i class="fa fa-file-excel-o"></i> Xuất Excel</button>
+                </div>
+            </div>
+        }
+        <table class="table table-bordered" id="mtable">
+            <thead>
+                <tr>
+                    <td>
+                        MÃ ĐĂNG KÍ
+                    </td>
+                    <td>
+                        HỌ TÊN KHÁCH HÀNG
+                    </td>
+                    <td>
+                        EMAIL
+                    </td>
+                    <td>
+                        NGÀY GỬI
+                    </td>
+                    <td>
+                        SĐT
+                    </td>
+                    <td>
+                        PHÒNG
+                    </td>
+                    <td>
+                        KHÁCH SẠN
+                    </td>
+                    <td>
+                        TỈNH THÀNH
+                    </td>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("ViewDetail",new { id = item.ID_DangKi })">@item.ID_DangKi</a>
+                        </td>
+                        <td>
+                            @item.HoTen
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayTao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.TenPhong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.KhachSanObjectJoin.TenKhachSan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.TinhThanhObjectJoin.TenTinh)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @*<div id="placeholder" style="width:100%;height:300px"></div>*@
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/flot/jquery.flot.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#mtable').DataTable({
+                responsive: true
+            });
+        });
+        $.plot($("#placeholder"), [[[0, 0], [1, 1]]], { yaxis: { max: 1 } });
+    </script>
+}

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<DTO.DangKiDatPhongObject>
+
+@{
+    ViewBag.Title = "Đơn dặt phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>Đơn đặt phòng</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>Thời gian gửi mail</th>
+                    <th>Họ tên khách hàng</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Phòng khách hàng đặt</th>
+                    <th>Giá phòng</th>
+                    <th>Thời gian thuê phòng</th>
+                    <th>Trang thái</th>
+                    <th>Tin nhắn</th>
+                    <th></th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.NgayTao.Value.ToString("yyyy/MM/dd")</td>
+                        <td>@item.HoTen </td>
+                        <td><a href="mailto:@item.Email">@item.Email</a></td>
+                        <td>@item.Phone </td>
+                        <td>@item.PhongObjectJoin.TenPhong </td>
+                        <td>@item.PhongObjectJoin.GiaPhong đ</td>
+                        <td>@item.TimeStart.Value.ToString("dd/MM/yyyy") - @item.TimeEnd.Value.ToString("dd/MM/yyyy")</td>
+                        <td>@(item.Status == 0 ? "Chưa xử lý" : "Đã xử lý")</td>
+                        <td>@item.GhiChu</td>
+                        <td>
+                            @Html.ActionLink("Xem", "ViewDetail", new { id = item.ID_DangKi }, new { @class = "btn btn-primary" })
+                            <a href="javascrip:;" onclick="delete_khachHang('@item.ID_DangKi',this)" class="btn btn-warning">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true,
+                order: [[0, 'desc']]
+            });
+        });
+
+        var e_delete = "";
+        function delete_khachHang(value, target) {
+            if (value) {
+                if (confirm('Bạn có muốn xóa?') != true) return;
+                e_delete = target;
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: "POST",
+                    data: { id: value },
+                    success: function (d) {
+                        if (d == true) $(e_delete).closest('tr').remove();
+                        else alert("Xóa thất bại.");
+                        e_delete = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần xóa.")
+            }
+        }
+    </script>
+}

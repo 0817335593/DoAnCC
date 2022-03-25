@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.list-phong {
+  display: block;
+  clear: both; }
+  .list-phong .trangthai-sansang {
+    background: #9AEFC0; }
+  .list-phong .trangthai-cokhach {
+    background: #92CBC9; }
+  .list-phong .trangthai-dondep {
+    background: #EBEE9E; }
+  .list-phong .item {
+    height: 200px;
+    width: 32%;
+    min-width: 333px;
+    float: left;
+    margin: 10px;
+    padding: 3px;
+    border: 1px #58D578 dashed; }
+    .list-phong .item .item-img {
+      height: 100%;
+      position: relative;
+      width: 47%;
+      float: left; }
+      .list-phong .item .item-img img {
+        height: 100%;
+        width: 100%; }
+      .list-phong .item .item-img .item-price {
+        height: 50px;
+        width: 99px;
+        line-height: 50px;
+        background: rgba(255, 28, 28, 0.73);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        border-radius: 50%;
+        color: white;
+        padding: 0px 5px; }
+    .list-phong .item .item-info {
+      float: left;
+      width: 53%;
+      padding: 5px;
+      line-height: 35px; }
+      .list-phong .item .item-info .name {
+        font-size: 22px; }
+      .list-phong .item .item-info .action {
+        text-align: center; }
+        .list-phong .item .item-info .action .option {
+          position: relative; }
+          .list-phong .item .item-info .action .option .select {
+            position: absolute;
+            bottom: 99%;
+            height: 55px;
+            line-height: 44px;
+            width: 194px;
+            right: -80%;
+            text-align: center;
+            display: none; }
+          .list-phong .item .item-info .action .option:hover .select {
+            display: block; }
+          .list-phong .item .item-info .action .option .select-btn {
+            background: #93beca; }
+
+/*# sourceMappingURL=list-khach-san.css.map */

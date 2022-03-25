@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DTO.ChucVuObject>
+
+@{
+    string ViewName = "Danh sách Chức vụ";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>@ViewName</h2>
+        @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+        {
+            @Html.ActionLink("Thêm mới", "Edit", new { }, new { @class = "btn btn-success" })
+        }
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>
+                        Tên Chức vụ
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                    @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                    {
+                        <th>
+                            Thao tác
+                        </th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.TenCV
+                        </td>
+                        <td>
+                            @item.GhiChu
+                        </td>
+                        <td>
+                            @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                            {
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.IDChucVu }, new { @class = "btn btn-primary" }) <span>|</span>
+                                <a href="javascrip:;" onclick="delete_ChucVu('@item.IDChucVu',this)" class="btn btn-warning">Xóa</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        var e_delete = "";
+        function delete_ChucVu(value, target) {
+            if (value) {
+                if (confirm('Bạn có muốn xóa?') != true) return;
+                e_delete = target;
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: "POST",
+                    data: { id: value },
+                    success: function (d) {
+                        if (d == true) $(e_delete).closest('tr').remove();
+                        else alert("Xóa thất bại.");
+                        e_delete = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần xóa.")
+            }
+        }
+
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true
+            });
+        });
+
+    </script>
+}

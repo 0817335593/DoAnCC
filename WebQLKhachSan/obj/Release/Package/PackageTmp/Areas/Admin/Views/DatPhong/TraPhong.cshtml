@@ -1,0 +1,128 @@
+﻿@model IEnumerable<DTO.GiaoDichObject>
+@{
+    ViewBag.Title = "TraPhong";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var DatPhong = ViewBag.DatPhong as DTO.DatPhongObject;
+    var khachsan = ViewBag.khachsan as DTO.KhachSanObject;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.Hidden("IDDatPhong", DatPhong.IDDatPhong)
+    <div class="panel-group">
+        <div class="panel panel-default" style="margin-top: 15px">
+            <div class="panel-heading">
+                <h2>Hóa đơn thành toán phòng <span style="color: red;">@DatPhong.PhongObjectJoin.TenPhong - Vị trí: @DatPhong.PhongObjectJoin.ViTriObjectJoin.TenViTri - Giá @DatPhong.PhongObjectJoin.GiaPhong.Value đ/ giờ</span></h2>
+            </div>
+            <div class="panel-body">
+                <div class="panel panel-green">
+                    <div class="panel-heading">Thông tin khách hàng:</div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Thông tin khách hàng</td>
+                                    <td>Giá trị</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tỉnh thành</td>
+                                    <td>@khachsan.TinhThanh.TenTinh</td>
+                                </tr>
+                                <tr>
+                                    <td>Tên khách sạn</td>
+                                    <td>@khachsan.TenKhachSan</td>
+                                </tr>
+                                <tr>
+                                    <td>Họ và tên khách</td>
+                                    <td>@DatPhong.KhachHangObjectJoin.HoTen</td>
+                                </tr>
+                                <tr>
+                                    <td>SDT</td>
+                                    <td>@DatPhong.KhachHangObjectJoin.SDT</td>
+                                </tr>
+                                <tr>
+                                    <td>CMT</td>
+                                    <td>@DatPhong.KhachHangObjectJoin.CMT</td>
+                                </tr>
+                                <tr>
+                                    <td>Thuê phòng lúc</td>
+                                    <td>@DatPhong.BatDau</td>
+                                </tr>
+                                <tr>
+                                    <td>Trả phòng lúc</td>
+                                    <td>@DatPhong.KetThuc</td>
+                                </tr>
+                                <tr>
+                                    <td>Tổng thời gian thuê phòng</td>
+                                    <td>@(((TimeSpan)(DatPhong.KetThuc.Value - DatPhong.BatDau.Value)).ToString(@"hh\:mm")) phút</td>
+                                </tr>
+                                <tr>
+                                    <td>Nhân viên đặt phòng</td>
+                                    <td>@DatPhong.TaiKhoanObjectJoin.HoTen</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-info" style="margin-top: 15px">
+                    <div class="panel-heading">Các dịch vụ sử sụng:</div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Thông tin</td>
+                                    <td>Đơn giá</td>
+                                    <td>Số lượng</td>
+                                    <td>Thành tiền</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Phòng</td>
+                                    <td>@DatPhong.PhongObjectJoin.GiaPhong.Value đ/giờ</td>
+                                    <td>@(((TimeSpan)(DatPhong.KetThuc.Value - DatPhong.BatDau.Value)).ToString(@"hh\:mm")) phút</td>
+                                    <td><b>@(((int)(DatPhong.PhongObjectJoin.GiaPhong.Value * ((TimeSpan)(DatPhong.KetThuc.Value - DatPhong.BatDau.Value)).TotalMinutes) / 60).ToString("#,###")) đ</b></td>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.DichVuObjectJoin.TenDichVu</td>
+                                        <td>@item.DichVuObjectJoin.GiaTien.Value.ToString("#,###")</td>
+                                        <td>@item.SoLuong @item.DichVuObjectJoin.DonVi</td>
+                                        <td><b>@((item.DichVuObjectJoin.GiaTien.Value * item.SoLuong.Value)) đ</b></td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Tổng tiền</td>
+                                    <td><b>@DatPhong.TongTien.Value.ToString("#,###") đ</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        @if (DatPhong.Status != true)
+                        {
+                            <p>Nhân viên cần phải nhập số tiền khách hàng thanh toán để kiểm tra.</p>
+                            <p>Số tiền khách hàng thanh toán: <input type="number" required name="ThanhToan" value="@DatPhong.ThanhToan.Value" step="1" min="0" class="form-control" /></p>
+                        }
+                        else
+                        {
+                            <p>Khách hàng đã thanh toán thành công: <b>@DatPhong.ThanhToan.Value.ToString("#,###") đ</b></p>
+                        }
+                    </div>
+                </div>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                @if (DatPhong.Status != true)
+                {
+                    <input type="submit" name="submit" value="Thanh toán" class="btn btn-success" />
+                }
+                <a href="@Url.Action("ExpertReport",new { IDDatPhong = DatPhong.IDDatPhong})" class="btn btn-primary">Xuất hóa đơn</a>
+                <a href="@Url.Action("", "", new { back = 0 })" class="btn btn-primary">Quay lại</a>
+            </div>
+        </div>
+    </div>
+}

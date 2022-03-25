@@ -1,0 +1,142 @@
+﻿@model IEnumerable<DTO.PhongObject>
+
+@{
+    ViewBag.Title = "Danh sách Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <h2>Danh sách Phòng</h2>
+        @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+        {
+            @Html.ActionLink("Thêm mới", "Edit", new { IDKhachSan = ViewBag.IDKhachSan }, new { @class = "btn btn-success" })
+        }
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>
+                        Khách sạn
+                    </th>
+                    <th>
+                        Tên phòng
+                    </th>
+                    <th>
+                        Loại phòng
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th>
+                        Vị trí
+                    </th>
+                    <th>
+                        Giá phòng
+                    </th>
+                    <th>
+                        Giá khuyến mãi
+                    </th>
+                    <th>
+                        Đánh giá chất lượng
+                    </th>
+                    <th>
+                        Hoạt động
+                    </th>
+                    @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa() && new WebQLKhachSan.Areas.Admin.Models.LoginHelper().GetTaiKhoan().ChucVuObjectJoin.TenCV.ToUpper() == "ADMIN")
+                    {
+                        <th>
+                            Thao tác
+                        </th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr style="background: @(item.Active==true ? "#7fe098" : "#d4c7d6")">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IDKhachSan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenPhong)
+                        </td>
+                        <td>
+                            @item.LoaiPhongObjectJoin.TenLoai
+                        </td>
+                        <td>
+                            @(new WebQLKhachSan.Areas.Admin.Models.TrangThaiPhongHelper().GetName(item.TrangThai))
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViTriObjectJoin.TenViTri)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaPhong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaKM)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Star) <i class="fa fa-star"></i>
+                        </td>
+                        <td>
+                            @(item.Active == true ? "Cho phép sử sụng" : "Tạm ngừng sử dụng")
+                        </td>
+                        <td>
+                            @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa() && new WebQLKhachSan.Areas.Admin.Models.LoginHelper().GetTaiKhoan().ChucVuObjectJoin.TenCV.ToUpper() == "ADMIN")
+                            {
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.IDPhong }, new { @class = "btn btn-primary" }) <span>|</span>
+                                @Html.ActionLink("Bộ sưu tập hình ảnh", "Index", "HinhAnh", new { id_phong = item.IDPhong }, new { @class = "btn btn-primary" }) <span>|</span>
+                                <a href="javascrip:;" onclick="delete_Phong('@item.IDPhong',this)" class="btn btn-warning">Xóa</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        var e_delete = "";
+        function delete_Phong(value, target) {
+            if (value) {
+                if (confirm('Bạn có muốn xóa?') != true) return;
+                e_delete = target;
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: "POST",
+                    data: { id: value },
+                    success: function (d) {
+                        if (d == true) $(e_delete).closest('tr').remove();
+                        else alert("Xóa thất bại.");
+                        e_delete = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần xóa.")
+            }
+        }
+
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true,
+                order: [[1, 'asc'], [4, 'desc']]
+            });
+        });
+
+    </script>
+}

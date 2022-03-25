@@ -1,0 +1,15 @@
+#footer .social-block li a i.fa{margin-top: 9px;}
+.booking-step{padding: 10px;border-bottom: 2px solid #CCCCCC;}
+.booking-step-selected{border-bottom: 2px solid red;}
+.top-bg{background-color: #2da5a4; width: 100%; float: left;}
+.top .com-top-right li::after {background-color:#FFFFF;}
+.top-right-link::after{background-color:#FFFFFF;}
+.your-information .form-group{width: 100%;margin-bottom: 10px;}
+.total-price-info{margin-top: 20px;}
+.total-price-info .total-price-title{ font-weight: bold;}
+.total-price-info .total-price-label{margin-top: 5px;background-color: #CCCCCC; float: left; color: white; width: 100%; padding: 5px;}
+.total-price{font-weight: bold;}
+.booking-policy{margin-top: 20px;}
+.booking-policy .other-title{font-weight: bold;}
+.room-item .info{margin-top: 5px;}
+.room-name, .room-name:hover{font-size: 16px; color: black;}

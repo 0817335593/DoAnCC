@@ -1,0 +1,1470 @@
+﻿@model IEnumerable<DTO.Phong_HinhAnhObject>
+@{
+    ViewBag.Title = "Chi tiết phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var phong = ViewBag.Phong as DTO.PhongObject;
+}
+<link href="~/Content/css/chi-tiet-phong.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="page-header">
+                <h1 class="title-lg">
+                    @phong.TenPhong
+                    <span class="star">
+                        <span class="star-2">@phong.Star</span>
+                    </span>
+                    <div class="pull-right" -ext="ajax-modal" modal-name="modal-sure-back-money">
+                        <img class="img-responsive logo-hoantien" src="/Content/images/ico_dam_bao_hoan_tien.png" width="100">
+                    </div>
+                </h1>
+                <p class="text-df">
+                    <a href="javascript:;">
+                        <i class="fa fa-map-marker"></i> @phong.ViTriObjectJoin.TenViTri
+                    </a>
+                </p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="events-tracking btn btn-yellow pull-right device-mb-none" href="@Url.Action("Index", "DatPhong", new { id = @phong.IDPhong })">
+                            Đặt phòng ngay giữ giá tốt
+                        </a>
+                        <div data-flags="true"
+                             id="like-heart"
+                             class="events-tracking text-lg pull-right like-heart "
+                             data-hotid="11005"
+                             data-hotname="Kh&aacute;ch Sạn "
+                             data-urlfh="/favorite-hotels"
+                             data-category="Detail"
+                             data-action="Bookmark click"
+                             data-label="guest">
+                            <i class="fa fa-heart"></i>
+                            <span class="nofi-liked ">Đã thích</span>
+                        </div>
+                        <div class="box-review">
+                            <a href="#cus_rate">
+                                <span class="rate">8</span>
+                                <p class="rate-number-info">
+                                    (461
+                                    đánh giá)
+                                </p>
+                            </a>
+                        </div>
+                        <!-- /.box-review -->
+                        <div class="tripad_rating_fil pull-left">
+                            <img class="" src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-21004-5.svg">
+                            <p class="mg-0">
+                                <a href="#anchor_tripad">
+                                    (21 Reviews)
+                                </a>
+                            </p>
+                        </div>
+                        <!-- social -->
+                        <ul class="list-inline">
+                            <li class="fb-button">
+                                <div class="fb-like" data-href="https://.vn/11005-khach-san-tuan-phong.html"
+                                     data-layout="button_count"
+                                     data-action="like" data-show-faces="false" data-share="true"></div>
+                            </li>
+                            <li class="gp-button">
+                                <div class="g-plusone" data-size="medium"
+                                     data-href="https://.vn/11005-khach-san-tuan-phong.html"></div>
+                            </li>
+                        </ul>
+                        <!-- /.social -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.page-header -->
+            <!-- slider -->
+            <div class="slider-sm">
+                <p style="text-align: center;" id="loading-slider">
+                    <!--                             <img style="width: 40px; height: 40px;"
+                        class="lazyload" data-src="https://static1..vn/themes/images/mloading.gif"/>
+                        -->
+                <p>
+                    <div id="slider" class="flexslider">
+                        <ul class="slides">
+                            @foreach (var item in Model)
+                            {
+                                <li data-thumb="@item.HinhAnhObjectJoin.ImageLink">
+                                    <a href="#">  <img class="img-slider" src="@item.HinhAnhObjectJoin.ImageLink">                                        </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div id="navslider" class="flexslider">
+                        <ul class="slides">
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <img class="img-slider" src="@item.HinhAnhObjectJoin.ImageLink">
+                                </li>
+                            }
+                        </ul>
+                    </div>
+            </div>
+            <!-- Giới thiệu khách sạn -->
+            <div class="box box-toggle">
+                <div class="box-header" js-t="js-toggle">
+                    <h2 class="box-title"
+                        title="Giới thiệu về Khách Sạn">
+                        Giới thiệu về Khách Sạn<i class="fa fa-chevron-up pull-right"></i>
+                    </h2>
+                </div>
+                <div class="box-body">
+                    <div class="decription-about-hotel">
+                        <div class="decription-about-hotel-content box-description-hotel"
+                             js-data-height="auto-height">
+                            <p>
+                            <p style="text-align: justify;line-height: 150%;"><strong><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">Kh&aacute;ch Sạn </span></strong><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;"> Được thiết kế cho cả c&aacute;c chuyến du lịch nghỉ ngơi v&agrave; c&ocirc;ng t&aacute;c, tọa lạc 17 H&agrave; Bổng, quận Sơn Tr&agrave;, Đ&agrave; Nẵng; một trong những khu vực nổi tiếng của th&agrave;nh phố. Kh&aacute;ch sạn n&agrave;y n&agrave;y c&oacute; vị tr&iacute; v&ocirc; c&ugrave;ng thuận lợi v&agrave; dễ tiếp cận c&aacute;c địa điểm lớn của th&agrave;nh phố n&agrave;y.&nbsp;</span></p>
+                            <p style="text-align: justify;line-height: 150%;"><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">Thiết bị v&agrave; dịch vụ cung cấp bởi <strong>Kh&aacute;ch Sạn </strong> bảo đảm k&igrave; nghỉ dễ chịu cho du kh&aacute;ch. Kh&aacute;ch sạn cung cấp Wi-Fi ở khu vực c&ocirc;ng cộng, đưa đ&oacute;n kh&aacute;ch sạn/s&acirc;n bay, dịch vụ giặt l&agrave;/giặt&thinsp;kh&ocirc;, dịch vụ du lịch, ph&ograve;ng gia đ&igrave;nh để đảm bảo kh&aacute;ch của họ được thoải m&aacute;i nhất.&nbsp;</span></p>
+                            <p style="text-align: justify;line-height: 150%;"><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">Chất lượng <strong>Kh&aacute;ch Sạn </strong> được phản &aacute;nh qua mỗi ph&ograve;ng. truy cập internet kh&ocirc;ng d&acirc;y, truy cập internet kh&ocirc;ng d&acirc;y (miễn ph&iacute;), v&ograve;i hoa sen, b&agrave;n, truyền h&igrave;nh c&aacute;p l&agrave; một số thiết bị m&agrave; bạn c&oacute; thể sử dụng v&agrave; h&agrave;i l&ograve;ng. B&ecirc;n cạnh đ&oacute;, kh&aacute;ch sạn c&ograve;n gợi &yacute; cho bạn những hoạt động vui chơi giải tr&iacute; bảo đảm bạn lu&ocirc;n thấy hứng th&uacute; trong suốt k&igrave; nghỉ. <strong>Kh&aacute;ch Sạn </strong> l&agrave; một sự lựa chọn th&ocirc;ng minh cho du kh&aacute;ch khi đến Đ&agrave; Nẵng, nơi mang lại cho họ một k&igrave; nghỉ thư gi&atilde;n v&agrave; thoải m&aacute;i.</span></p>
+                            <p style="text-align: justify;line-height: 150%;"><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">Nếu bạn l&agrave; người th&iacute;ch kh&aacute;m ph&aacute; những di sản phi vật thể hay t&igrave;m hiểu trải nghiệm với thi&ecirc;n nhi&ecirc;n, <strong>Kh&aacute;ch Sạn </strong>&nbsp; c&oacute; những dịch vụ đặt tour tham quan phố cổ Hội An, c&ugrave; lao Ch&agrave;m, cố đ&ocirc; Huế, th&aacute;nh địa Mỹ Sơn...</span></p>
+                            <p style="text-align: justify;line-height: 150%;"><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">Với phong cảnh hữu t&igrave;nh, n&ecirc;n thơ, ph&ograve;ng nghỉ hiện đại, cao cấp v&agrave; phong c&aacute;ch phục vụ chu đ&aacute;o, chuy&ecirc;n nghiệp, đặt ph&ograve;ng<strong> Kh&aacute;ch Sạn  </strong>ch&iacute;nh l&agrave; lựa chọn đ&uacute;ng đắn cho kỳ nghỉ ngơi v&agrave; thư gi&atilde;n của bạn. </span></p>
+                            <p style="text-align: justify;line-height: 150%;"><span style="font-size: 10.0pt;line-height: 150%;font-family: &#039;Arial&#039;,&#039;sans-serif&#039;;">V</span><span style="font-size: 10pt;line-height: 150%;font-family: Arial, sans-serif;">ới sự hỗ trợ của , bạn sẽ c&oacute; cơ hội đặt ph&ograve;ng gi&aacute; rẻ nhất c&ugrave;n<a name="_GoBack"></a>g nhiều chương tr&igrave;nh khuyến mại d&agrave;nh ri&ecirc;ng cho kh&aacute;ch h&agrave;ng của .&nbsp;</span></p>
+                            </p>
+                        </div>
+                        <div class="text-right">
+                            <button id="more_click" class="btn btn-link pd-0 mg-bt-20 blue text-df"
+                                    js-tu="auto-height" data-more="">
+                                Xem thêm <i class="fa fa-angle-down fa-angle-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Giới thiệu khách sạn -->
+            <!-- /Box Khuyến mãi Gói-->
+            <!-- Tiện nghi khách sạn -->
+            <div class="box">
+                <div class="box-header" js-t="js-toggle">
+                    <h2 title="Tiện nghi Kh&aacute;ch Sạn " class="box-title">
+                        Tiện nghi Kh&aacute;ch Sạn  <i class="fa fa-chevron-up pull-right"></i>
+                    </h2>
+                </div>
+                <div class="box-body">
+                    <div class="attribute-hotel">
+                        <ul class="attribute-hotel-list row">
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-car"></i>
+                                </span>
+                                <span class="attribute-value">Đưa đ&oacute;n kh&aacute;ch sạn s&acirc;n bay</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-parking"></i>
+                                </span>
+                                <span class="attribute-value">B&atilde;i đỗ xe</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-internet"></i>
+                                </span>
+                                <span class="attribute-value">Internet</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-internet"></i>
+                                </span>
+                                <span class="attribute-value">internet ( miễn ph&iacute; )</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-smoking"></i>
+                                </span>
+                                <span class="attribute-value">Ph&ograve;ng h&uacute;t thuốc</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-elevator"></i>
+                                </span>
+                                <span class="attribute-value">Thang m&aacute;y</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-tv"></i>
+                                </span>
+                                <span class="attribute-value">Truyền h&igrave;nh c&aacute;p/vệ tinh</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-wifi"></i>
+                                </span>
+                                <span class="attribute-value">Wifi miễn ph&iacute;</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-laundry"></i>
+                                </span>
+                                <span class="attribute-value">Giặt l&agrave;</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-reception"></i>
+                                </span>
+                                <span class="attribute-value">Hỗ trợ đặt tour</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-taxi"></i>
+                                </span>
+                                <span class="attribute-value">Thu&ecirc; xe, taxi</span>
+                            </li>@*src="/Content/images/hb-floating-banner.jpg"*@
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-reception"></i>
+                                </span>
+                                <span class="attribute-value">Tiếp t&acirc;n 24/24</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-ticket"></i>
+                                </span>
+                                <span class="attribute-value">v&eacute; t&agrave;u xe, m&aacute;y bay</span>
+                            </li>
+                            <li class="col-sm-4">
+                                <span class="attribute-icon">
+                                    <i class="ui-swim"></i>
+                                </span>
+                                <span class="attribute-value">Bể bơi</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <strong>Ghi chú</strong>: Ăn sáng miễn phí (nếu có) có thể thay đổi theo phòng và ngày
+                </div>
+            </div>
+            <!-- /.Tiện nghi khách sạn -->
+            <!-- Chính sách khách sạn -->
+            <!-- /Chính sách khách sạn -->
+            <!-- Đánh giá khách sạn -->
+            <!-- Đánh giá khách sạn -->
+            <div class="box" id="cus_rate">
+                <div class="box-header">
+                    <h2 class="box-title" title="Đánh giá Kh&aacute;ch Sạn ">
+                        Đánh giá Kh&aacute;ch Sạn
+                    </h2>
+                </div>
+                <div class="box-body">
+                    <div class="clearfix"></div>
+                    <div class="tab-blue">
+                        <!-- Nav tabs -->
+                        <ul id="type_filter" class="nav nav-tabs col-sm-3" role="tablist">
+                            <li class="active">
+                                <a href="#all" data-toggle="tab" data-value='0'>
+                                    <i class="fa fa-folder-open"></i>
+                                    <span>Tất cả ( 461 )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#congtac" data-toggle="tab" data-value='5'>
+                                    <i class="fa fa-suitcase"></i>
+                                    <span>Công tác ( 0 )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#capdoi" data-toggle="tab" data-value='2'>
+                                    <i class="fa fa-heart"></i>
+                                    <span>Cặp đôi ( 27 )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#giadinh" data-toggle="tab" data-value='3'>
+                                    <i class="fa fa-home"></i>
+                                    <span>Gia đình ( 29 )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#banbe" data-toggle="tab" data-value='4'>
+                                    <i class="fa fa-group"></i>
+                                    <span>Bạn bè ( 12 )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#canhan" data-toggle="tab" data-value='1'>
+                                    <i class="fa fa-male"></i>
+                                    <span>Cá nhân ( 367 )</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.Nav tabs -->
+                        <!-- Tab-content -->
+                        <div class="tab-content col-sm-9" import-html="review-tab-content">
+                            <div class="tab-pane active" id="all">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Xuất sắc
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    8
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-folder-open"></i> <span>Tất cả</span>
+                                            </div>
+                                            <span>(Từ <strong>461</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">8.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 81%;">
+                                                        <span class="sr-only">
+                                                            8.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 80%;">
+                                                        <span class="sr-only">
+                                                            8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 80%;">
+                                                        <span class="sr-only">
+                                                            8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">8.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 81%;">
+                                                        <span class="sr-only">
+                                                            8.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 80%;">
+                                                        <span class="sr-only">
+                                                            8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="congtac">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Đ&aacute;nh gi&aacute;
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    0
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-suitcase"></i> <span>C&ocirc;ng t&aacute;c</span>
+                                            </div>
+                                            <span>(Từ <strong>0</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">0</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 0%;">
+                                                        <span class="sr-only">
+                                                            0
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">0</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 0%;">
+                                                        <span class="sr-only">
+                                                            0
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">0</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 0%;">
+                                                        <span class="sr-only">
+                                                            0
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">0</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 0%;">
+                                                        <span class="sr-only">
+                                                            0
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">0</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 0%;">
+                                                        <span class="sr-only">
+                                                            0
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="capdoi">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Rất tốt
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    7.5
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-heart"></i> <span>Cặp đ&ocirc;i</span>
+                                            </div>
+                                            <span>(Từ <strong>27</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">7.7</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 77%;">
+                                                        <span class="sr-only">
+                                                            7.7
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">7.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 71%;">
+                                                        <span class="sr-only">
+                                                            7.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">7.7</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 77%;">
+                                                        <span class="sr-only">
+                                                            7.7
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">7.4</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 74%;">
+                                                        <span class="sr-only">
+                                                            7.4
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">7.6</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 76%;">
+                                                        <span class="sr-only">
+                                                            7.6
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="giadinh">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Xuất sắc
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    8
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-home"></i> <span>Gia đ&igrave;nh</span>
+                                            </div>
+                                            <span>(Từ <strong>29</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">8.2</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 82%;">
+                                                        <span class="sr-only">
+                                                            8.2
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">7.6</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 76%;">
+                                                        <span class="sr-only">
+                                                            7.6
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">8.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 81%;">
+                                                        <span class="sr-only">
+                                                            8.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">8.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 81%;">
+                                                        <span class="sr-only">
+                                                            8.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 80%;">
+                                                        <span class="sr-only">
+                                                            8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="banbe">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Xuất sắc
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    8.2
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-group"></i> <span>Bạn b&egrave;</span>
+                                            </div>
+                                            <span>(Từ <strong>12</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">7.9</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 79%;">
+                                                        <span class="sr-only">
+                                                            7.9
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">8.1</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 81%;">
+                                                        <span class="sr-only">
+                                                            8.1
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">7.8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 78%;">
+                                                        <span class="sr-only">
+                                                            7.8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">8.7</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 87%;">
+                                                        <span class="sr-only">
+                                                            8.7
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">8.3</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 83%;">
+                                                        <span class="sr-only">
+                                                            8.3
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="canhan">
+                                <div class="tab-page-body row">
+                                    <div class="col-sm-4 tab-page-left">
+                                        <div class="rate-rounded">
+                                            <div class="rate-rounded-info">
+                                                <span class="rate-rounded-title">
+                                                    Rất tốt
+                                                </span>
+                                                <br>
+                                                <span class="rate-rounded-number">
+                                                    7.9
+                                                </span>
+                                            </div>
+                                            <svg class="rounded-show">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                            <svg class="rounded-disable">
+                                                <circle r="70" cx="80" cy="80"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="rate-info-tab">
+                                            <div class="text-df">
+                                                <i class="fa fa-male"></i> <span>C&aacute; nh&acirc;n</span>
+                                            </div>
+                                            <span>(Từ <strong>367</strong> nhận xét)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <ul class="progress-list nav">
+                                            <li>
+                                                <span class="pull-left">Vị trí</span>
+                                                <span class="rate">7.9</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 79%;">
+                                                        <span class="sr-only">
+                                                            7.9
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Phục vụ</span>
+                                                <span class="rate">7.9</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 79%;">
+                                                        <span class="sr-only">
+                                                            7.9
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Tiện nghi</span>
+                                                <span class="rate">7.8</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 78%;">
+                                                        <span class="sr-only">
+                                                            7.8
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Giá cả</span>
+                                                <span class="rate">7.9</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 79%;">
+                                                        <span class="sr-only">
+                                                            7.9
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="pull-left">Vệ sinh</span>
+                                                <span class="rate">7.9</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                         aria-valuemax="100"
+                                                         style="width: 79%;">
+                                                        <span class="sr-only">
+                                                            7.9
+                                                            % Complete
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- /.progress-list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Tab-content -->
+                        <div id="tab_review" class="tab-content-info row">
+                            <input class="filter" type="hidden" value="">
+                            <input class="sorter" type="hidden" value="sorter">
+                            <input class="fvalue" type="hidden" value="0">
+                            <input class="svalue" type="hidden" value="6">
+                            <div class="col-sm-9 col-sm-offset-3">
+                                <ul id="type_sort" class="nav nav-radio-list">
+                                    <li class="active">
+                                        <a href="#" data-value="6">
+                                            <i class="ui-radio"></i>
+                                            Từ ngày mới đến cũ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-value="7">
+                                            <i class="ui-radio"></i>
+                                            Từ ngày cũ đến mới
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-value="8">
+                                            <i class="ui-radio"></i>
+                                            Điểm từ thấp đến cao
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-value="9">
+                                            <i class="ui-radio"></i>
+                                            Điểm từ cao đến thấp
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul id="review_content" class="nav">
+                                <li>
+                                    <div class="col-sm-3">
+                                        <div class="user-quote">
+                                            <i class="fa fa-male text-lg mg-r-5"></i>
+                                            <strong>Nguyễn Ngọc Trinh</strong>
+                                            <hr class="mg-t-5 mg-bt-0">
+                                            <span class="text-xs">27 - 10 - 2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-page-gray">
+                                            <div class="tab-page-header row">
+                                                <div class="col-xs-12">
+                                                    <div class="box-review">
+                                                        <span class="rate">9.0</span>
+                                                        <span class="rate-info">Xuất sắc</span>
+                                                    </div>
+                                                    <span class="text-sm mg-l-10 review">"Gi&aacute; tốt "</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-page-body row">
+                                                <div class="col-sm-6">
+                                                    <ul class="progress-list nav">
+                                                        <li>
+                                                            <span class="pull-left">Vị trí</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Phục vụ</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Tiện nghi</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Giá cả</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Vệ sinh</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="well">
+                                                        <div class="review">
+                                                            <small>&#8220;T&ocirc;i đ&atilde; bỏ ra một mức ph&iacute; hợp l&yacute; để nghỉ ngơi tại kh&aacute;ch sạn n&agrave;y. Th&aacute;i độ c&aacute;c bạn nh&acirc;n vi&ecirc;n phục vụ kh&aacute;ch h&agrave;ng h&ograve;a nh&atilde;, lịch sự. Kh&acirc;u vệ sinh được ch&uacute; &yacute; sạch sẽ. Tiện nghi, nội thất được cung cấp đầy đủ.&#8221; </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-sm-3">
+                                        <div class="user-quote">
+                                            <i class="fa fa-male text-lg mg-r-5"></i>
+                                            <strong>Nguyễn Quyết Thắng</strong>
+                                            <hr class="mg-t-5 mg-bt-0">
+                                            <span class="text-xs">27 - 10 - 2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-page-gray">
+                                            <div class="tab-page-header row">
+                                                <div class="col-xs-12">
+                                                    <div class="box-review">
+                                                        <span class="rate">7.0</span>
+                                                        <span class="rate-info">Rất tốt</span>
+                                                    </div>
+                                                    <span class="text-sm mg-l-10 review">"Tivi kh&ocirc;ng sử dụng được "</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-page-body row">
+                                                <div class="col-sm-6">
+                                                    <ul class="progress-list nav">
+                                                        <li>
+                                                            <span class="pull-left">Vị trí</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Phục vụ</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Tiện nghi</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Giá cả</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Vệ sinh</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="well">
+                                                        <div class="review">
+                                                            <small>&#8220;Nh&igrave;n chung th&igrave; t&ocirc;i thấy Kh&aacute;ch Sạn  n&agrave;y cũng được. Ph&ograve;ng được vệ sinh sạch sẽ, gọn g&agrave;ng, nh&acirc;n vi&ecirc;n cũng th&acirc;n thiện, vui vẻ với kh&aacute;ch h&agrave;ng. Tuy nhi&ecirc;n th&igrave; hơi bất tiện với t&ocirc;i khi tivi ở đ&acirc;y kh&ocirc;ng sử dụng được.&#8221; </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-sm-3">
+                                        <div class="user-quote">
+                                            <i class="fa fa-male text-lg mg-r-5"></i>
+                                            <strong>Nguyễn Thắng</strong>
+                                            <hr class="mg-t-5 mg-bt-0">
+                                            <span class="text-xs">26 - 10 - 2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-page-gray">
+                                            <div class="tab-page-header row">
+                                                <div class="col-xs-12">
+                                                    <div class="box-review">
+                                                        <span class="rate">7.0</span>
+                                                        <span class="rate-info">Rất tốt</span>
+                                                    </div>
+                                                    <span class="text-sm mg-l-10 review">"Gần biển "</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-page-body row">
+                                                <div class="col-sm-6">
+                                                    <ul class="progress-list nav">
+                                                        <li>
+                                                            <span class="pull-left">Vị trí</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Phục vụ</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Tiện nghi</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Giá cả</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Vệ sinh</span>
+                                                            <span class="rate">7 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 70%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="well">
+                                                        <div class="review">
+                                                            <small>&#8220;Trong chuyến đi vừa qua, t&ocirc;i c&oacute; chọn kh&aacute;ch sạn n&agrave;y để đặt ph&ograve;ng v&agrave; c&oacute; một số đ&aacute;nh gi&aacute; như sau: nh&acirc;n vi&ecirc;n phục vụ kh&aacute;ch h&agrave;ng b&igrave;nh thường, trong ph&ograve;ng n&ecirc;n cung cấp th&ecirc;m nước uống, kh&aacute;ch sạn được điểm cộng l&agrave; gần biển.&#8221; </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-sm-3">
+                                        <div class="user-quote">
+                                            <i class="fa fa-male text-lg mg-r-5"></i>
+                                            <strong>Vũ Ngọc Trinh</strong>
+                                            <hr class="mg-t-5 mg-bt-0">
+                                            <span class="text-xs">25 - 10 - 2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-page-gray">
+                                            <div class="tab-page-header row">
+                                                <div class="col-xs-12">
+                                                    <div class="box-review">
+                                                        <span class="rate">9.0</span>
+                                                        <span class="rate-info">Xuất sắc</span>
+                                                    </div>
+                                                    <span class="text-sm mg-l-10 review">"Nh&acirc;n vi&ecirc;n th&aacute;i độ h&ograve;a nh&atilde; "</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-page-body row">
+                                                <div class="col-sm-6">
+                                                    <ul class="progress-list nav">
+                                                        <li>
+                                                            <span class="pull-left">Vị trí</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Phục vụ</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Tiện nghi</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Giá cả</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Vệ sinh</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="well">
+                                                        <div class="review">
+                                                            <small>&#8220;C&aacute;c bạn nh&acirc;n vi&ecirc;n tại kh&aacute;ch sạn  c&oacute; th&aacute;i độ phục vụ kh&aacute; h&ograve;a nh&atilde; v&agrave; lịch sự trong thời gian t&ocirc;i lưu tr&uacute; vừa qua. C&ograve;n về ph&ograve;ng ốc th&igrave; dọn dẹp ngăn nắp v&agrave; sạch sẽ, tiện nghi đi k&egrave;m đủ. Vị tr&iacute; th&igrave; dễ d&agrave;ng di chuyển v&agrave; gi&aacute; cả th&igrave; ph&ugrave; hợp với t&uacute;i tiền n&ecirc;n nh&igrave;n chung l&agrave; t&ocirc;i ưng &yacute; về nơi n&agrave;y.&nbsp;&#8221; </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-sm-3">
+                                        <div class="user-quote">
+                                            <i class="fa fa-male text-lg mg-r-5"></i>
+                                            <strong>Mr. Phồng Tôm</strong>
+                                            <hr class="mg-t-5 mg-bt-0">
+                                            <span class="text-xs">24 - 10 - 2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-page-gray">
+                                            <div class="tab-page-header row">
+                                                <div class="col-xs-12">
+                                                    <div class="box-review">
+                                                        <span class="rate">9.0</span>
+                                                        <span class="rate-info">Xuất sắc</span>
+                                                    </div>
+                                                    <span class="text-sm mg-l-10 review">"Kh&ocirc;ng c&oacute; g&igrave; ph&agrave;n n&agrave;n "</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-page-body row">
+                                                <div class="col-sm-6">
+                                                    <ul class="progress-list nav">
+                                                        <li>
+                                                            <span class="pull-left">Vị trí</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Phục vụ</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Tiện nghi</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Giá cả</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="pull-left">Vệ sinh</span>
+                                                            <span class="rate">9 .0</span>
+                                                            <div class="progress progress-mini">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                     aria-valuenow="60" aria-valuemin="0"
+                                                                     aria-valuemax="100"
+                                                                     style="width: 90%;">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="well">
+                                                        <div class="review">
+                                                            <small>&#8220;T&ocirc;i cũng kh&ocirc;ng c&oacute; g&igrave; ph&agrave;n n&agrave;n khi chọn nghỉ ngơi tại kh&aacute;ch sạn  vừa qua v&igrave; mọi dịch vụ đều tốt v&agrave; đ&aacute;p ứng đủ nhu cầu từ vệ sinh, tiện nghi ph&ograve;ng ốc đến nh&acirc;n vi&ecirc;n phục vụ cũng như vị tr&iacute; đi lại v&agrave; mức gi&aacute; cả. Nh&igrave;n chung mọi thứ đều tốt.&nbsp; &#8221; </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.Tab-content-info -->
+                    </div>
+                </div>
+            </div>
+            <!-- /Đánh giá khách sạn -->
+            <div id="showReview">
+            </div>
+            <!-- /Đánh giá khách sạn -->
+            <div class="text-right mg-bt-20">
+                <a href="@Url.Action("Index", "DatPhong", new { id = phong.IDPhong })" class="btn btn-yellow">
+                    Đặt phòng ngay giữ giá tốt
+                </a>
+            </div>
+            <input type="hidden" id="refer-hotel-box"
+                   value="[]" />
+            <input type="hidden" id="lowest_price_cache" value="231840">
+            <input type="hidden" id="similar-conveiences"
+                   three-conveniences="eyIxIjoiPGEgaHJlZj1cIlwvYzY1XC9raGFjaC1zYW4tY28tZHVhLWRvbi1raGFjaC1zYW5zYW4tYmF5LXRhaS1kYS1uYW5nLmh0bWxcIiB0aXRsZT1cIktoXHUwMGUxY2ggc1x1MWVhMW4gY1x1MDBmMyBcdTAxMTBcdTAxYjBhIFx1MDExMVx1MDBmM24ga2hcdTAwZTFjaCBzXHUxZWExbiBzXHUwMGUybiBiYXkgdFx1MWVhMWkgXHUwMTEwXHUwMGUwIE5cdTFlYjVuZ1wiPktoXHUwMGUxY2ggc1x1MWVhMW4gY1x1MDBmMyBcdTAxMTBcdTAxYjBhIFx1MDExMVx1MDBmM24ga2hcdTAwZTFjaCBzXHUxZWExbiBzXHUwMGUybiBiYXkgdFx1MWVhMWkgXHUwMTEwXHUwMGUwIE5cdTFlYjVuZzxcL2E+IiwiNDUiOiI8YSBocmVmPVwiXC9jNjVcL2toYWNoLXNhbi1jby1naWF0LWxhLXRhaS1kYS1uYW5nLmh0bWxcIiB0aXRsZT1cIktoXHUwMGUxY2ggc1x1MWVhMW4gY1x1MDBmMyBnaVx1MWViN3QgbFx1MDBlMCB0XHUxZWExaSBcdTAxMTBcdTAwZTAgTlx1MWViNW5nXCI+S2hcdTAwZTFjaCBzXHUxZWExbiBjXHUwMGYzIGdpXHUxZWI3dCBsXHUwMGUwIHRcdTFlYTFpIFx1MDExMFx1MDBlMCBOXHUxZWI1bmc8XC9hPiIsIjQ0IjoiPGEgaHJlZj1cIlwvYzY1XC9raGFjaC1zYW4tY28td2lmaS1taWVuLXBoaS10YWktZGEtbmFuZy5odG1sXCIgdGl0bGU9XCJLaFx1MDBlMWNoIHNcdTFlYTFuIGNcdTAwZjMgd2lmaSBtaVx1MWVjNW4gcGhcdTAwZWQgdFx1MWVhMWkgXHUwMTEwXHUwMGUwIE5cdTFlYjVuZ1wiPktoXHUwMGUxY2ggc1x1MWVhMW4gY1x1MDBmMyB3aWZpIG1pXHUxZWM1biBwaFx1MDBlZCB0XHUxZWExaSBcdTAxMTBcdTAwZTAgTlx1MWViNW5nPFwvYT4ifQ=="
+                   value="[10749,6379,11957,11180,8484]" />
+            <div class="box similar-hotels hidden-box">
+                <div class="box-header">
+                    <h2 class="box-title h3">
+                        Được đề xuất cho bạn
+                    </h2>
+                </div>
+                <div class="box-body">
+                    <h3 class="col-xs-12 title-simple h2">Khách sạn 2 sao có cùng tiện nghi</h3>
+                    <ul class="nav-thumbnails nav-thumbnails-list recommendation-list"></ul>
+                    <ul class="nav-thumbnails nav-thumbnails-list box-list">
+                        <h3 class="mg-t-10 col-xs-12 title-simple h2">Có thể bạn muốn xem</h3>
+                        <li class="col-xs-6">
+                            <a title="Khách sạn 2 sao tại Đ&agrave; Nẵng" href="/c65/khach-san-2-sao-tai-da-nang.html ">Khách sạn 2 sao tại Đ&agrave; Nẵng</a>
+                        </li>
+                        <li class="col-xs-6">
+                            <a href="/c65/khach-san-co-dua-don-khach-sansan-bay-tai-da-nang.html" title="Kh&aacute;ch sạn c&oacute; Đưa đ&oacute;n kh&aacute;ch sạn s&acirc;n bay tại Đ&agrave; Nẵng">Kh&aacute;ch sạn c&oacute; Đưa đ&oacute;n kh&aacute;ch sạn s&acirc;n bay tại Đ&agrave; Nẵng</a>
+                        </li>
+                        <li class="col-xs-6">
+                            <a href="/c65/khach-san-co-giat-la-tai-da-nang.html" title="Kh&aacute;ch sạn c&oacute; giặt l&agrave; tại Đ&agrave; Nẵng">Kh&aacute;ch sạn c&oacute; giặt l&agrave; tại Đ&agrave; Nẵng</a>
+                        </li>
+                        <li class="col-xs-6">
+                            <a href="/c65/khach-san-co-wifi-mien-phi-tai-da-nang.html" title="Kh&aacute;ch sạn c&oacute; wifi miễn ph&iacute; tại Đ&agrave; Nẵng">Kh&aacute;ch sạn c&oacute; wifi miễn ph&iacute; tại Đ&agrave; Nẵng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <input id="count_hotel" type="hidden" value="0"></input>
+            <input type="hidden" id="show_best_price_email" value="0" />
+            <input type="hidden" id="current_route" value="hotel-detail" />
+            <input type="hidden" id="data-flags" data-flags="true">
+        </div>
+    </div>
+    <div id="notification_room_book" class="alert alert-warning" role="alert" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Standard Double</strong> vừa được
+        đặt 41 ph&uacute;t trước
+    </div>
+</div>
+<script src="~/Content/js/chi-tiet-phong.js"></script>

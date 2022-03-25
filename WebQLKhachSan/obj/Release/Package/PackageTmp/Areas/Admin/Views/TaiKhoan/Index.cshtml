@@ -1,0 +1,119 @@
+﻿@model IEnumerable<DTO.TaiKhoanObject>
+
+@{
+    string ViewName = "Danh sách tài khoản người dùng";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>@ViewName</h2>
+        @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+        {
+            @Html.ActionLink("Thêm mới", "Edit", new { }, new { @class = "btn btn-success" })
+        }
+    </div>
+    <div class="panel-body">
+        <table class="table" id="table-data">
+            <thead>
+                <tr>
+                    <th>
+                        Tên người dùng
+                    </th>
+                    <th>
+                        Chức vụ
+                    </th>
+                    <th>
+                        Ngày sinh
+                    </th>
+                    <th>
+                        Tên đăng nhập
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                    {
+                        <th>
+                            Thao tác
+                        </th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.HoTen
+                        </td>
+                        <td>
+                            @item.ChucVuObjectJoin.TenCV
+                        </td>
+                        <td>
+                            @item.NgaySinh.Value.ToString("dd/mm/yyyy")
+                        </td>
+                        <td>
+                            @item.TenDangNhap
+                        </td>
+                        <td>
+                            @item.SDT
+                        </td>
+                        <td>
+                            @if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                            {
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.IDTaiKhoan }, new { @class = "btn btn-primary" }) <span>|</span>
+                                @Html.ActionLink("Khôi phục mật khẩu", "ResetPasswork", new { id = item.IDTaiKhoan }, new { @class = "btn btn-primary" }) <span>|</span>
+                                <a href="javascrip:;" onclick="delete_TaiKhoan('@item.IDTaiKhoan',this)" class="btn btn-warning">Xóa</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true
+            });
+        });
+
+        var e_delete = "";
+        function delete_TaiKhoan(value, target) {
+            if (value) {
+                if (confirm('Bạn có muốn xóa?') != true) return;
+                e_delete = target;
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: "POST",
+                    data: { id: value },
+                    success: function (d) {
+                        if (d == true) $(e_delete).closest('tr').remove();
+                        else alert("Xóa thất bại.");
+                        e_delete = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần xóa.")
+            }
+        }
+
+
+    </script>
+}

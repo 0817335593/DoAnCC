@@ -1,0 +1,271 @@
+﻿@model DTO.PhongObject
+
+@{
+    ViewBag.Title = "Đăt phòng trước";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .re-check {
+        color: red;
+        font-style: italic;
+    }
+</style>
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<div class="panel panel-primary">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        <div class="col-md-7 col-md-offset-1">
+            <div class="box box-blue">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="alert alert-info alert-none-radius text-center mg-bt-10">
+                                Giá tốt nhất dành cho bạn
+                            </div>
+                            <div class="alert alert-warning alert-none-radius text-center mg-bt-10">
+                                Rất dễ hết phòng vào cuối tuần
+                            </div>
+                            <div class="alert alert-warning alert-none-radius text-center mg-bt-10">
+                                Giữ phòng ngay cho kì nghỉ sắp tới
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-block-wrapper">
+                        <div class="col-md-7">
+                            <h3 class="title-sm">
+                                @Model.TenPhong - @Model.LoaiPhongObjectJoin.TenLoai - @Model.ViTriObjectJoin.TenViTri
+                                <br>
+                                <span class="star">
+                                    <span class="star-4"></span>
+                                </span>
+                            </h3>
+                            <p class="text-df">
+                                <i class="fa fa-map-marker"></i>
+                                <span class="gray"> @Model.GiaKM.Value.ToString("#,###") đ/h</span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="info-block-wrapper top-border">
+                            <div class="contact-info-wrapper">
+                                @using (Html.BeginForm("DatPhongTruoc", "DatPhong"))
+                                {
+                                    @Html.Hidden("ID_Phong", Model.IDPhong)
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Email của bạn:</b></div>
+                                                <div>
+                                                    @Html.TextBox("Email", null, new { @class = "form-control", required = "required" })
+                                                    <p class="re-check"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Họ và tên:</b></div>
+                                                <div>
+                                                    @Html.TextBox("HoTen", null, new { @class = "form-control", required = "required" })
+                                                    <p class="re-check"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Thời gian thuê phòng:</b></div>
+                                                <div>
+                                                    @Html.TextBox("sTimeStart", null, new { @class = "form-control", required = "required" })
+                                                    <p class="re-check"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Thời gian trả phòng dự kiến:</b></div>
+                                                <div>
+                                                    @Html.TextBox("sTimeEnd", null, new { @class = "form-control", required = "required", onchange = "getMoney()" })
+                                                    <p class="re-check"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Tin nhắn của bạn:</b></div>
+                                                <div>
+                                                    @Html.TextArea("Message", null, new { @class = "form-control", rows = "4" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div><b>Số điện thoại:</b></div>
+                                                <div>
+                                                    @Html.TextBox("Phone", null, new { @class = "form-control", required = "required" })
+                                                    <p class="re-check"></p>
+                                                </div>
+                                            </div>
+                                            <input type="submit" class="btn btn-success" style="float: right" name="submit" value="Đặt phòng trước" onclick=" return checkForm();" />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function checkForm() {
+                            $('.re-check').text('');
+                            validation = true;
+                            e = $('#Email');
+                            if (/^(([^<>()\[\]\\.,;:\s@@"]+(\.[^<>()\[\]\\.,;:\s@@"]+)*)|(".+"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e.val()) == false) {
+                                validation = false;
+                                $(e).siblings('.re-check').text('Vui lòng nhập chính xác Email của bạn để chúng tôi có thể liên hệ với bạn');
+                            }
+                            e = $('#HoTen');
+                            if (/^.{5,}$/.test(e.val()) == false) {
+                                validation = false;
+                                $(e).siblings('.re-check').text('Vui lòng nhập Họ tên ít nhất 5 kí tự');
+                            }
+                            e = $('#Phone');
+                            if (/^\d{10,11}$/.test(e.val()) == false) {
+                                validation = false;
+                                $(e).siblings('.re-check').text('Vui lòng nhập chính xác Số điện thoại 10-11 số của bạn để chúng tôi có thể liên hệ với bạn');
+                            }
+
+                            if (new Date($('#TimeStart').val()) < new Date() || new Date($('#TimeEnd').val()) <= new Date($('#TimeStart').val())) {
+                                validation = false;
+                                $('#sTimeStart').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+                                $('#sTimeEnd').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+                            }
+                            return validation;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="booking-bill">
+                <h3 class="title-sm title-sm-green">
+                    <strong>Đặt ngay!</strong> Phòng có thể hết trong giây lát!
+                </h3>
+
+                <!-- table-none-border list room-list -->
+                <table class="table table-none-border">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table class="table table-none-border room-list">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <strong>
+                                                    Hóa đơn
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1 phòng
+                                                <br>
+                                                <ul>
+
+                                                    <li>
+                                                        Bao gồm
+                                                        <span style="text-transform: lowercase;">Bữa sáng</span>
+                                                    </li>
+
+                                                    <li>
+                                                        Có điều kiện hoàn hủy
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <strong class="price black">
+                                                    @Model.GiaKM.Value.ToString("#,###") đ
+                                                </strong>
+                                                <br>
+                                                <small>0 đ/ 1 đêm </small>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="color: red">Bấm để cập nhật tổng tiền hóa đơn</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /table-none-border list room-list -->
+                <div class="col-sm-12">
+                    <table class="table total-money mg-bt-0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Tổng tiền</strong>
+                                </td>
+                                <td class="text-right">
+                                    <strong class="price" id="m_price" onclick="getMoney()">
+                                        <button class="btn">Tính tiền</button>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- /total-money -->
+            </div>
+            <!-- /booking-bill -->
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#sTimeStart').datetimepicker({
+            format: 'DD-MM-YYYY HH:mm:ss'
+        });
+
+        $('#sTimeEnd').datetimepicker({
+            format: 'DD-MM-YYYY HH:mm:ss'
+        });
+    });
+
+    function getTime(s) {
+        try {
+            let x = s.split(' ');
+            let time = x[1].split(':');
+            let date = x[0].split('-');
+            return new Date(Number(date[2]), Number(date[1]) - 1, Number(date[0]), Number(time[0]), Number(time[1]), Number(time[2]));
+        } catch (e) {
+            return undefined;
+        }
+    }
+
+    function getMoney() {
+        let start = getTime($('#sTimeStart').val().trim());
+        let end = getTime($('#sTimeEnd').val().trim());
+        if (start && end) {
+            $('#sTimeStart').siblings('.re-check').text('');
+            $('#sTimeEnd').siblings('.re-check').text('');
+            var timeDiff = end.getTime() - start.getTime();
+            if(timeDiff<0){
+                $('#sTimeStart').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+                $('#sTimeEnd').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+                $("#m_price button").text('Tính tiền');
+            }else{
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600));
+                let price = @Model.GiaKM;
+                let money = diffDays * price
+                $("#m_price button").text(`${diffDays.toLocaleString()}h * ${price.toLocaleString() }đ/h = ${money.toLocaleString()} đ`);
+        }
+    }else{
+    $('#sTimeStart').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+    $('#sTimeEnd').siblings('.re-check').text('Vui lòng kiểm tra lại thời gian đặt phòng');
+    }
+    }
+</script>

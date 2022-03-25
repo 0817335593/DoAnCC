@@ -1,0 +1,118 @@
+﻿@using WebQLKhachSan.Areas.Admin.Models
+@model IEnumerable<DTO.DatPhongObject>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section style{
+    <link href="~/Areas/Admin/Content/css/list-khach-san.css" rel="stylesheet" />
+}
+
+<div class="panel panel-green" style="margin-top: 15px">
+    <div class="panel-heading">Danh sách các phòng</div>
+    <div class="panel-body">
+        <div>
+            <div>
+                <label for="basic-url" class="col-md-2" style="height: 34px; line-height: 34px">
+                    <i class="fa fa-filter"></i>
+                    Bộ lọc phòng
+                    <span>
+                        <img src="~/Areas/Admin/Content/images/loader.gif" id="loader-img" style="display: none; max-height: 34px" />
+                    </span>
+                </label>
+                <div class="col-md-10">
+                    <select onchange="filter(this)" class="form-control " id="basic-url">
+                        <option value="">Tất cả phòng</option>
+                        <option value="@TrangThaiPhongHelper.eTrangThai.SanSang.ToString()">Sẵn sàng sử dụng</option>
+                        <option value="@TrangThaiPhongHelper.eTrangThai.SuDung.ToString()">Đang sử dụng</option>
+                        <option value="@TrangThaiPhongHelper.eTrangThai.DonDep.ToString()">Đang dọn dẹp</option>
+                        <option value="@TrangThaiPhongHelper.eTrangThai.SuaChua.ToString()">Tạm dừng sửa chữa</option>
+                        <option value="@TrangThaiPhongHelper.eTrangThai.Khac.ToString()">Khác</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="result-filter">
+            @Html.Partial("DSPhong", Model)
+        </div>
+    </div>
+</div>
+
+
+@Html.Action("DichVu")
+
+@section script{
+    <script>
+        idDatPhong = 0;
+        function goiDichVu() {
+            data = $('#lstDichVu input:checked').map(function () {
+                return Number(this.value);
+            }).get();
+            lstSoLuong = [];
+            var oke = true;
+            $('#lstDichVu input:checked').each(function () {
+                let num = $(this).closest('p').find('input[type="number"]').val();
+                if (num && Number(num) >0)
+                    lstSoLuong.push(Number(num));
+                else {
+                    alert("Số lượng không hợp lệ");
+                    oke = false;
+                    return oke;
+                }
+            });
+            if (oke && data) {
+                $.ajax({
+                    url: '@Url.Action("GoiDichVu","GiaoDich")',
+                    type: 'POST',
+                    data: { idDatPhong: idDatPhong, lstDichVu: data, lstSoLuong: lstSoLuong },
+                    success: function (d) {
+                        $('#lstDichVu [type=checkbox]:checked').each(function () {
+                            this.checked = false;
+                        })
+                        $('#lstDichVu .input').val('');
+                        $('#lstDichVu .input').hide();
+
+                        alert(d ? "Gọi thành công" : "Gọi thất bại");
+                    }, error: function (e) {
+                        $('#lstDichVu [type=checkbox]:checked').each(function () {
+                            this.checked = false;
+                        })
+                        $('#lstDichVu .input').val('');
+                        $('#lstDichVu .input').hide();
+
+                        alert("Rất tiếc, đã có lỗi xảy ra");
+                        console.log(e);
+                    }
+                });
+                $('#myModal').modal('hide');
+                return true;
+            }
+            return false;
+        }
+
+        function toggleInput(e) {
+            $(e).closest('p').find('.input').css('display', e.checked ? 'inline' : 'none');
+            $(e).closest('p').find('.input').focus();
+        }
+
+        function filter(e) {
+            value = $(e).val();
+            $('#loader-img').show();
+            $.ajax({
+                url: '@Url.Action("Filter")',
+                type: 'POST',
+                data: { trangThai: value, IDKhachSan: '@ViewBag.IDKhachSan' },
+                success: function (d) {
+                    $('#loader-img').hide();
+                    $('#result-filter').html(d);
+                }, error: function (d) {
+                    $('#loader-img').hide();
+                    alert('Rất tiếc, đã xảy ra lỗi');
+                    console.log(d);
+                }
+            });
+        }
+    </script>
+}

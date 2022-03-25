@@ -1,0 +1,128 @@
+D:\Project\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\Project\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+D:\Project\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+D:\Project\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+D:\Project\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+D:\Project\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+D:\Project\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+D:\Project\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Project\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+D:\Project\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+E:\EPU\ks-final\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\EPU\ks-final\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\EPU\ks-final\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+E:\EPU\ks-final\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+D:\QLKS\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\QLKS\WebQLKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\QLKS\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+D:\QLKS\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+G:\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+G:\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+G:\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+G:\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+G:\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+G:\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+G:\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+G:\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\WebQLKhachSan\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+G:\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+G:\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CopyComplete
+G:\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+G:\WebQLKhachSan\DAL\obj\Debug\DAL.pdb
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\DAL.dll.config
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\DAL.dll
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\DAL.pdb
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\DTO.dll
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\EntityFramework.dll
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\DTO.pdb
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\EntityFramework.xml
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\obj\Debug\DAL.dll
+C:\Users\MR. DAT\Desktop\WebQLKhachSanddddddddddddddddddddddd\WebQLKhachSan\DAL\obj\Debug\DAL.pdb

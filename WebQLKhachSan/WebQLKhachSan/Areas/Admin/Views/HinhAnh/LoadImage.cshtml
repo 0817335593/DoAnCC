@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DTO.HinhAnhObject>
+
+<ul class="list-image">
+    @foreach (var item in Model)
+    {
+        <li>
+            <label>
+                <img src="@item.ImageLink" alt="@item.ImageLink">
+                <input type="hidden" name="link" value="@item.ImageLink" />
+                <span><input type="checkbox" name="delete" value="@item.IDHinhAnh" /> Chọn</span>
+            </label>
+        </li>
+    }
+</ul>

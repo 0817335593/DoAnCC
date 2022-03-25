@@ -1,0 +1,53 @@
+﻿@model int
+@{
+    ViewBag.Title = "thong_bao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .result {
+        padding: 80px 50px;
+    }
+
+    .panel {
+        margin-bottom: 0;
+    }
+
+    .code {
+        color: green;
+        font-size: 70px;
+        text-align: center;
+        display: inline-block;
+        min-width: 200px;
+    }
+
+    .message {
+        display: inline-block;
+        font-size: 18px;
+        max-width: 700px;
+        padding: 0px 20px;
+        line-height: 20px;
+    }
+</style>
+
+<div class="result">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <div class="panel panel-success">
+                    <div class="panel panel-heading"><h4>Thông báo</h4></div>
+
+                    <div class="panel panel-body">
+                        <div class="message">
+                            <h2 class="text-success">Đặt phòng thành công!!!</h2>
+                            <p>&nbsp;</p>
+                            <p>Cảm ơn bạn đã đặt phòng, chúng tôi sẽ gửi thông tin đặt phòng vào Hòm thư của bạn và liên lạc với bạn trong thời gian sớm nhất.</p>
+                            <p>&nbsp;</p>
+                            <p>Quay về <a href="/">Trang chủ</a> để xem các phòng khác.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

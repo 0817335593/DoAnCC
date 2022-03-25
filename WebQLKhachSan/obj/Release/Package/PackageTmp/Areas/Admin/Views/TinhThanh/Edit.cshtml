@@ -1,0 +1,194 @@
+﻿@model DTO.TinhThanhObject
+
+@{
+    string ViewName = Model.IDTinhThanh == 0 ? "Thêm mới Tỉnh thành" : "Chỉnh sửa Tỉnh thành";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .list-image {
+        display: block;
+        list-style-type: none;
+    }
+
+        .list-image li {
+            max-width: 230px;
+            float: left;
+            margin: 9px;
+        }
+
+            .list-image li img {
+                max-width: 100%;
+                height: 140px;
+                border: 1px solid silver;
+                padding: 3px;
+            }
+
+            .list-image li label > span {
+                display: block;
+            }
+
+    .drop {
+        width: 100%;
+        min-height: 200px;
+        background: #f2edf7;
+        text-align: center;
+        font-size: 22px;
+    }
+</style>
+
+@using (Html.BeginForm("Delete", "HinhAnh"))
+{
+    <div class="panel panel-primary" style="margin-top: 15px">
+        <div class="panel-heading">Thêm ảnh mới</div>
+        <div class="panel-body">
+            <input type="file" multiple name="name" value=" " class="hidden" id="fileUpload" onchange="uploadFile(this.files)" />
+            <div class="drop">
+                <p>Kéo thả hoặc click để tải ảnh lên...</p>
+            </div>
+            <div>
+                @*<div class="image-drop">
+                    @Html.Action("LoadImage", "HinhAnh")
+                </div>*@
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            
+        </div>
+    </div>
+    @*<div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title">Cảnh báo</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Sau khi xóa hình ảnh, các phòng sử dụng hình ảnh sẽ không có hình ảnh này nữa!</p>
+                    <p>Bạn có muốn xóa các hình đã chọn không?</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-warning" value=" Xác nhận" />
+                    <button type="button" class="btn" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+}
+
+<!--script upload-->
+<script>
+    var dropZone = document.getElementsByClassName('drop');
+
+    // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
+    dropZone[0].addEventListener('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+    });
+
+    // Get file data on drop
+    dropZone[0].addEventListener('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var files = e.dataTransfer.files; // Array of all files
+        uploadFile(files);
+    });
+
+    $('.drop').click(function () {
+        $('#fileUpload').click();
+    })
+
+    function uploadFile(files) {
+        if (files.length > 0) {
+            formData = new FormData();
+            for (var i = 0, file; file = files[i]; i++) {
+                if (file.type.match(/image.*/)) {
+                    formData.append("Files[]", file);
+                }
+            }
+            $.ajax({
+                url: '@Url.Action("UploadFile","HinhAnh")',
+                data: formData,
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                success: function (d) {
+                    //$('.image-drop').html(d);
+                    window.location.reload();
+                }, error: function () {
+                    alert("Đã xảy ra lỗi trong quá trình tải file");
+                }
+            })
+        }
+    }
+
+    function selectAll(checked,parent) {
+        $(parent).find('input[type=checkbox]').each(function () {
+            this.checked = checked;
+        })
+    }
+</script>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <b>@ViewName </b>
+    </div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(q => q.IDTinhThanh)
+                @Html.HiddenFor(q => q.IsDelete)
+                @Html.HiddenFor(q => q.IDHinhAnh)
+                @Html.HiddenFor(q => q.mHinhAnh.ImageLink)
+
+                <div class="form-group">
+                    @Html.Label("Hình ảnh", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <img src="@Model.mHinhAnh.ImageLink" style="max-height: 100px" alt="@Model.mHinhAnh.ImageLink" />
+                        <hr />
+                        <h4>hoặc chọn 01 ảnh khác</h4>
+                        @Html.Action("LoadImage", "HinhAnh")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Mã tỉnh", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.MaTinh, new { @class = "form-control", placeholder = "Mã tỉnh", required = "required" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Tên tỉnh", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.TenTinh, new { @class = "form-control", placeholder = "Tên tỉnh", required = "required" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Ghi chú", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.GhiChu, new { @class = "form-control", placeholder = "Ghi chú" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Hoàn thành" class="btn btn-success" />
+                        @Html.ActionLink("Quay về trang quản lí", "Index", new { }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

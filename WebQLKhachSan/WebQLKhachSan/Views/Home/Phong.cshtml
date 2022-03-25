@@ -1,0 +1,185 @@
+﻿@model IEnumerable<DTO.PhongObject>
+                          @{
+                              ViewBag.Title = "Khách sạn";
+                              Layout = "~/Views/Shared/_Layout.cshtml";
+                          }
+
+                          @Html.Partial("_seachHome")
+                          <div class="container">
+                              <div class="row">
+                                  <!-- content-right -->
+                                  <div class="col-md-9">
+                                      <div>
+                                          <h1>@ViewBag.Message</h1>
+                                      </div>
+                                      <!-- product -->
+                                      <div class="product" style="padding: 10px;">
+                                          <div id="data-hotels">
+                                              @foreach (var item in Model)
+                                              {
+                                                  <div class="product-item row">
+                                                      <div class="col-sm-9">
+                                                          <div class="deal-wrapper pull-right">
+                                                          </div>
+                                                          <h2 class="title-sm h3" title="@item.TenPhong">
+                                                              <a class="events-tracking product-name" href="@Url.Action("ChiTiet", new { id = item.IDPhong})" data-category="Listing" data-action="Hotel click" data-label="@item.TenPhong">
+                                                                  @item.TenPhong
+                                                              </a>
+                                                              <span class="star">
+                                                                  <span class="star-@item.Star"></span>
+                                                              </span>
+                                                          </h2>
+
+                                                          <p class="text-df mg-bt-5">
+                                                              <a class="events-tracking" title="@item.ViTriObjectJoin.TenViTri" href="javascript:;">
+                                                                  <i class="fa fa-map-marker"></i>
+                                                                  <span class="gray"> @item.ViTriObjectJoin.TenViTri</span>
+                                                                  <span class="mg-l-5"></span>
+                                                              </a>
+                                                          </p>
+
+                                                          <p>
+                                                              Phòng có đầy đủ tiện nghi, sạch sẽ, thoáng mát
+                                                          </p>
+
+                                                      </div>
+                                                      <div class="product-left-content col-sm-8">
+                                                          <div class="product-info">
+                                                              <div class="product-image">
+                                                                  <a href="@Url.Action("ChiTiet", new { id = item.IDPhong})">
+                                                                      <img src="@item.LinkImage" class="img-responsive" />
+                                                                  </a>
+                                                              </div>
+                                                              <!-- /.product-image -->
+                                                              <!-- product-content -->
+                                                              <div class="product-content">
+                                                                  <div class="attribute-hotel">
+                                                                      <i style="cursor: default;" class="ui-car" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Đưa đón khách sạn sân bay"></i>
+                                                                      <i style="cursor: default;" class="" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Khách sạn"></i>
+                                                                      <i style="cursor: default;" class="ui-parking" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Bãi đỗ xe"></i>
+                                                                      <i style="cursor: default;" class="ui-elevator" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Thang máy"></i>
+                                                                      <i style="cursor: default;" class="ui-tv" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Truyền hình cáp/vệ tinh"></i>
+                                                                      <i style="cursor: default;" class="ui-wifi" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Wifi miễn phí"></i>
+                                                                      <i style="cursor: default;" class="ui-laundry" data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="Giặt là"></i>
+                                                                      <i style="cursor: default;" class='ui-swim' data-container="body" data-toggle="tooltip" data-placement="bottom" data-original-title="bể bơi"></i>
+                                                                  </div>
+                                                                  <div class="review device-mb-none">
+                                                                      <small>
+
+                                                                      </small>
+                                                                  </div>
+
+
+                                                                  <ul class="nav nav-list-gray pull-left">
+                                                                      <li>
+                                                                          <a mytour-ext="ajax-modal" modal-name="modal-sure-back-money">
+                                                                              <i class="fa fa-check-circle green text-sm"></i>
+                                                                              Đảm bảo hoàn tiền
+                                                                          </a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a mytour-ext="ajax-modal" modal-name="modal-sure-good-price">
+                                                                              <i class="fa fa-check-circle green text-sm"></i>
+                                                                              Đảm bảo giá tốt nhất!
+                                                                          </a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <p class="notify-last-booking">@(new WebQLKhachSan.Areas.Admin.Models.TrangThaiPhongHelper().GetName(item.TrangThai))</p>
+                                                                      </li>
+                                                                  </ul>
+
+                                                              </div>
+                                                              <!-- /.product-content -->
+                                                          </div>
+                                                      </div>
+                                                      <!-- /.product-left-content -->
+
+                                                      <div class="product-right-content col-sm-4">
+                                                          <div class="box-review">
+                                                              <span class="rate">8</span>
+                                                              <span class="rate-info">Rất tốt</span>
+
+                                                              <div class="product">
+                                                                  <div class="product-content" style="margin: 5px">
+                                                                      <p class="notify-last-booking" style="margin-top: 5px">
+                                                                          <a href="@Url.Action("Phong",new { IDKhachSan = item.IDKhachSan})">@item.KhachSanObjectJoin.TenKhachSan</a>
+                                                                          <p>@item.KhachSanObjectJoin.DiaChi</p>
+                                                                      </p>
+                                                                      <p class="notify-last-booking" style="margin-top: 5px">
+                                                                          <a href="@Url.Action("KhachSan",new { id = item.TinhThanhObjectJoin.IDTinhThanh })"> @item.TinhThanhObjectJoin.TenTinh</a>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="listing-box-price box-price" id="checkGoodPrice">
+                                                              <div class="item-price">
+                                                                  <br>
+                                                                  <p class="price">
+                                                                      <strong>@item.GiaKM.Value.ToString("#,###") đ</strong>
+                                                                      <strike style="color: black"><sub><small>@item.GiaPhong.Value.ToString("#,###") đ</small></sub></strike>
+                                                                  </p>
+                                                              </div>
+
+
+                                                              <a class="events-tracking btn btn-yellow" href="@Url.Action("ChiTiet", new { id = item.IDPhong }) " data-category="Listing" data-action="Hotel click">
+                                                                  Xem phòng
+                                                              </a>
+                                                              <p class="red text-xs"><strong></strong></p>
+                                                          </div>
+                                                      </div>
+                                                      <!-- /.product-right-content -->
+                                                      <!-- /.product-bottom-content  -->
+                                                      <div class="col-xs-12">
+                                                          <hr class="dark">
+                                                      </div>
+                                                  </div>
+                                              }
+                                          </div>
+                                      </div>
+                                      <!-- /.product -->
+                                      <div class="box_paginator">
+                                          <!-- panigation-center -->
+                                          <div class="panigation-center">
+                                              <ul class="pagination mg-0">
+                                                  <li>
+                                                      <a href="?prev">
+                                                          <span aria-hidden="true">&laquo;</span>
+                                                          Trang trước
+                                                      </a>
+                                                  </li>
+                                                  <li class="active">
+                                                      <a href="?1">1</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="?next" aria-label="Next">
+                                                          Trang sau
+                                                          <span aria-hidden="true">&raquo;</span>
+                                                      </a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+
+                                          <!-- /.panigation-center -->
+                                      </div>
+                                  </div>
+                                  <!-- /.content-right -->
+                                  <div class="col-sm-3">
+                                      <a href="#">
+                                          <img src="~/Content/images/hotel-icon.png" style="width: 100%;margin: 9px" />
+                                      </a>
+                                      <a>
+                                          <img src="~/Content/images/bannerfpt.jpg" style="width: 100%;margin: 9px" />
+                                      </a>
+                                  </div>
+                                  <!-- Ẩn box với landing hạng sao và landing resort-->
+                                  @*<div class="col-sm-12">
+                        <div class="box device-mb-none mg-t-20 hide-for-seo">
+                            <div class="box-header">
+                                <h3 class="box-title"> Du lịch  </h3>
+                            </div>
+                            <div class="box-body box-list"><ul class="list-unstyled"><li class="col-xs-4"> <a href="/c65/463-an-gi-khi-du-lich-da-nang.html"> Ăn g&igrave; khi du lịch ? </a></li><li class="col-xs-4"> <a href="/c65/464-o-dau-khi-du-lich-da-nang.html"> Ở đ&acirc;u khi du lịch ? </a></li><li class="col-xs-4"> <a href="/c65/465-du-lich-da-nang-mua-gi-ve-lam-qua.html"> Du lịch  mua g&igrave; về l&agrave;m qu&agrave;? </a></li></ul><ul class="list-unstyled"><li class="col-xs-4"> <a href="/c65/466-du-lich-da-nang-ly-tuong-nhat-vao-luc-nao.html"> Du lịch  l&yacute; tưởng nhất v&agrave;o l&uacute;c n&agrave;o? </a></li><li class="col-xs-4"> <a href="/c65/467-di-chuyen-bang-gi-khi-du-lich-da-nang.html"> Di chuyển bằng g&igrave; khi du lịch ? </a></li><li class="col-xs-4"> <a href="/c65/468-da-nang-va-nhung-net-van-hoa-thu-vi.html">  v&agrave; những n&eacute;t văn h&oacute;a th&uacute; vị </a></li></ul><ul class="list-unstyled"><li class="col-xs-4"> <a href="/c65/469-nhung-dieu-can-luu-y-khi-du-lich-da-nang.html"> Những điều cần lưu &yacute; khi du lịch  </a></li><li class="col-xs-4"> <a href="/c65/470-choi-gi-khi-du-lich-da-nang.html"> Chơi g&igrave; khi du lịch ? </a></li><li class="col-xs-4"> <a href="/c65/472-cam-nang-du-lich-da-nang-tu-a-z.html"> Cẩm nang du lịch  từ A - Z </a></li></ul></div>
+                        </div>
+                    </div>*@
+
+                              </div>
+                          </div>

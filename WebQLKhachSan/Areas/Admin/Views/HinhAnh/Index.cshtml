@@ -1,0 +1,206 @@
+﻿@model IEnumerable<DTO.HinhAnhObject>
+
+@{
+    string ViewName = "Danh sách hình ảnh";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var phong = ViewBag.Phong as DTO.PhongObject;
+}
+
+<style>
+    .list-image {
+        display: block;
+        list-style-type: none;
+    }
+
+        .list-image li {
+            max-width: 230px;
+            float: left;
+            margin: 9px;
+        }
+
+            .list-image li img {
+                max-width: 100%;
+                height: 140px;
+                border: 1px solid silver;
+                padding: 3px;
+            }
+
+            .list-image li label > span {
+                display: block;
+            }
+
+    .drop {
+        width: 100%;
+        min-height: 200px;
+        background: #f2edf7;
+        text-align: center;
+        font-size: 22px;
+    }
+</style>
+
+@using (Html.BeginForm("Delete", "HinhAnh"))
+{
+    @Html.Hidden("IDPhong", phong.IDPhong)
+    <div class="panel panel-primary">
+        <div class="panel-heading">Danh sách các hình ảnh hiện có</div>
+        <div class="panel-body">
+            <input type="file" multiple name="name" value=" " class="hidden" id="fileUpload" onchange="uploadFile(this.files)" />
+            <div class="drop">
+                <p>Kéo thả hoặc click để tải ảnh lên...</p>
+            </div>
+            <div>
+                <div class="image-drop">
+                    @Html.Action("LoadImage", Model)
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <span class="btn btn-success" onclick="insert()">Thêm hình ảnh cho phòng</span>
+            <span class="btn btn-info" onclick="selectAll(true,'.image-drop')">Chọn tất cả</span>
+            <span class="btn btn-default" onclick="selectAll(false,'.image-drop')">Bỏ tất cả</span>
+            <span class="btn btn-warning" id="btnSubmit" data-toggle="modal" data-target="#myModal">Xóa hình ảnh</span>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title">Cảnh báo</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có muốn xóa các hình đã chọn không?</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-warning" value=" Xác nhận" />
+                    <button type="button" class="btn" data-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Hình ảnh của Phòng</div>
+    <div class="panel-body">
+        <div class="image-phong">
+            @Html.Action("ImagePhong", new { IDPhong = phong.IDPhong })
+        </div>
+    </div>
+    <div class="panel-footer">
+        <span class="btn btn-warning" onclick="delete_hinhAnh()">Xóa</span>
+        <span class="btn btn-info" onclick="selectAll(true,'.image-phong')">Chọn tất cả</span>
+        <span class="btn btn-default" onclick="selectAll(false,'.image-phong')">Bỏ tất cả</span>
+        @Html.ActionLink("Về quản lý phòng", "Index", "Phong", new { IDKhachSan = phong.IDKhachSan }, new { @class = "btn btn-default" })
+    </div>
+</div>
+
+<!--script upload-->
+<script>
+    var dropZone = document.getElementsByClassName('drop');
+
+    // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
+    dropZone[0].addEventListener('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+    });
+
+    // Get file data on drop
+    dropZone[0].addEventListener('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var files = e.dataTransfer.files; // Array of all files
+        uploadFile(files);
+        //for (var i = 0, file; file = files[i]; i++) {
+        //    if (file.type.match(/image.*/)) {
+        //        var reader = new FileReader();
+
+        //        reader.onload = function (e2) {
+        //            // finished reading file data.
+        //            $('.list-image').append("<li> <span> <span> <img src='' /> </span> <label><input type='checkbox' name='delete' value='' /> Chọn</label> </span> </li>");
+        //            $('.list-image img').last().attr("src", e2.target.result);
+        //        }
+        //        reader.readAsDataURL(file); // start reading the file data.
+        //    }
+        //}
+    });
+
+    $('.drop').click(function () {
+        $('#fileUpload').click();
+    })
+
+    function uploadFile(files) {
+        if (files.length > 0) {
+            formData = new FormData();
+            for (var i = 0, file; file = files[i]; i++) {
+                if (file.type.match(/image.*/)) {
+                    formData.append("Files[]", file);
+                }
+            }
+            $.ajax({
+                url: '@Url.Action("UploadFile")',
+                data: formData,
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                success: function (d) {
+                    $('.image-drop').html(d);
+                }, error: function () {
+                    alert("Đã xảy ra lỗi trong quá trình tải file");
+                }
+            })
+        }
+    }
+
+    function selectAll(checked,parent) {
+        $(parent).find('input[type=checkbox]').each(function () {
+            this.checked = checked;
+        })
+    }
+</script>
+
+<script>
+    function insert() {
+        ID_HinhAnh = [];
+        $('.list-image').find('input[type=checkbox]').each(function () {
+            if (this.checked == true) {
+                value = this.value;
+                ID_HinhAnh.push(value);
+            }
+        })
+        $.ajax({
+            url: '@Url.Action("Insert")',
+            type: 'POST',
+            data:  {IDPhong: @phong.IDPhong, ID_HinhAnh : ID_HinhAnh},
+            success: function (d) {
+                $('.image-phong').html(d);
+            }, error: function () {
+                alert("Đã xảy ra lỗi thêm hình ảnh cho phòng");
+            }
+        })
+    }
+
+    function delete_hinhAnh(){
+        ID_hinhAnh = [];
+        $('.image-phong input[type="checkbox"]').each(function(){
+            if(this.checked == true) ID_hinhAnh.push(this.value);
+        })
+        debugger
+        $.ajax({
+            url: '@Url.Action("Delete_PHA")',
+            type: 'POST',
+            data: { ID_PHA : ID_hinhAnh },
+            success: function(d){
+                for (var i = 0; i < d.length; i++) {
+                    $('.image-phong input[type="checkbox"][value="'+d[i]+'"]').closest('li').remove();
+                }
+            },error: function(){
+                alert("Đã có lỗi xảy ra trong luc xóa hình ảnh của phòng!");
+            }
+        })
+    }
+</script>

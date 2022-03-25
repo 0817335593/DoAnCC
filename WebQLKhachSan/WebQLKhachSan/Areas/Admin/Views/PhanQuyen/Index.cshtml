@@ -1,0 +1,130 @@
+﻿@model IEnumerable<DTO.TaiKhoanObject>
+
+@{
+    string ViewName = "Phân quyền người dùng";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .true {
+        color: green !important;
+    }
+
+    .default {
+        color: red;
+    }
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>@ViewName</h2>
+    </div>
+    <div class="panel-body">
+        @if (Model.Count() > 0)
+        {
+            <table class="table" id="table-data">
+                <thead>
+                    <tr>
+                        <th>
+                            Họ và tên
+                        </th>
+                        <th>
+                            Cho phép xem
+                        </th>
+                        <th>
+                            Cho phép Thêm - Sửa - Xóa
+                        </th>
+                        <th>
+                            Tên chức vụ
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (new WebQLKhachSan.Areas.Admin.Models.LoginHelper().GetTaiKhoan().IDTaiKhoan != item.IDTaiKhoan && new WebQLKhachSan.Areas.Admin.Models.LoginHelper().AllowThemSuaXoa())
+                        {
+                            <tr>
+                                <td>
+                                    @item.HoTen
+                                </td>
+                                <td onclick="change(@item.IDTaiKhoan,1,this)" data-allow="@((item.lstPhanQuyen[0] != null).ToString().ToLower())" class="default @((item.lstPhanQuyen[0] != null).ToString().ToLower())">
+                                    @(item.lstPhanQuyen[0] == null ? "Không cho phép" : "Cho phép")
+                                </td>
+                                <td onclick="change(@item.IDTaiKhoan,2,this)" data-allow="@((item.lstPhanQuyen[1] != null).ToString().ToLower())" class="default @((item.lstPhanQuyen[0] != null).ToString().ToLower())">
+                                    @(item.lstPhanQuyen[1] == null ? "Không cho phép" : "Cho phép")
+                                </td>
+                                <td>
+                                    @item.ChucVuObjectJoin.TenCV
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>
+                                    @item.HoTen
+                                </td>
+                                <td data-allow="@((item.lstPhanQuyen[0] != null).ToString().ToLower())" class="default @((item.lstPhanQuyen[0] != null).ToString().ToLower())">
+                                    @(item.lstPhanQuyen[0] == null ? "Không cho phép" : "Cho phép")
+                                </td>
+                                <td data-allow="@((item.lstPhanQuyen[1] != null).ToString().ToLower())" class="default @((item.lstPhanQuyen[0] != null).ToString().ToLower())">
+                                    @(item.lstPhanQuyen[1] == null ? "Không cho phép" : "Cho phép")
+                                </td>
+                                <td>
+                                    @item.ChucVuObjectJoin.TenCV
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+@section style{
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+}
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        var e_quyen = "";
+        function change(idTaiKhoan, value, target) {
+            if (value && idTaiKhoan) {
+                if (confirm('Bạn có muốn thay đổi?') != true) return;
+                e_quyen = target;
+                $.ajax({
+                    url: '@Url.Action("Change")',
+                    type: "POST",
+                    data: { idTaiKhoan: idTaiKhoan, value: value, isDelete: $(e_quyen).data('allow') },
+                    success: function (d) {
+                        $(e_quyen).text(d ? "Cho phép" : "Không cho phép");
+                        if (d) $(e_quyen).addClass('true');
+                        else $(e_quyen).removeClass('true');
+                        $(e_quyen).data('allow', '' + d);
+                        e_quyen = undefined;
+                    },
+                    error: function () {
+                        alert("Rất tiếc, đã có lỗi xảy ra.");
+                    }
+                });
+            } else {
+                alert("Rất tiếc, không thể xác định đối tượng cần thay đổi.")
+            }
+        }
+
+        $(document).ready(function () {
+            $('#table-data').DataTable({
+                responsive: true,
+                order: [[3, 'desc']]
+            });
+        });
+
+    </script>
+}

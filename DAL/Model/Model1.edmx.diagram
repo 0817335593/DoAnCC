@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a929e259afc247a786027ace69f49bae" Name="Diagram1">
+        <EntityTypeShape EntityType="dbKhachSanModel.ChucVu" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.DangKiDatPhong" Width="1.5" PointX="9.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.DatPhong" Width="1.5" PointX="12.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.DichVu" Width="1.5" PointX="12.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.GiaoDich" Width="1.5" PointX="15" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.HinhAnh" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.KhachHang" Width="1.5" PointX="10.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.KhachSan" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.LoaiPhong" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.Phong" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.Phong_HinhAnh" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.Quyen" Width="1.5" PointX="8.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.TaiKhoan" Width="1.5" PointX="10.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.TinhThanh" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbKhachSanModel.ViTri" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <AssociationConnector Association="dbKhachSanModel.FK_TaiKhoan_ChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_DangKiDatPhong_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_DatPhong_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_DatPhong_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_DatPhong_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_GiaoDich_DatPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_GiaoDich_DichVu" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_GiaoDich_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_KhachSan_HinhAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_Phong_HinhAnh_HinhAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_TinhThanh_HinhAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_KhachSan_TinhThanh" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_Phong_KhachSan" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_Phong_LoaiPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_Phong_HinhAnh_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.FK_Phong_ViTri" ManuallyRouted="false" />
+        <AssociationConnector Association="dbKhachSanModel.PhanQuyen" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

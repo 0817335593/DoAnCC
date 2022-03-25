@@ -1,0 +1,86 @@
+﻿@using WebQLKhachSan.Areas.Admin.Models
+@model IEnumerable<DTO.DatPhongObject>
+
+    <div class="list-phong">
+        @foreach (var item in Model)
+        {
+            var style = item.PhongObjectJoin.TrangThai;
+            var nameTrangThai = new TrangThaiPhongHelper().GetName(item.PhongObjectJoin.TrangThai);
+
+            if (item.KhachHangObjectJoin == null)
+            {
+                <div class="item trangthai-@style" style="width: 48%; height: 250px; padding: 5px">
+                    <div class="item-img">
+                        @if (string.IsNullOrWhiteSpace(item.PhongObjectJoin.LinkImage))
+                    {
+                            <img src="~/Areas/Admin/Content/images/phong-khach-san.jpg" />
+                        }
+                        else
+                        {
+                            <img src="@item.PhongObjectJoin.LinkImage" />
+                        }
+                        <span class="item-price">@string.Format("{0:#,###}", item.PhongObjectJoin.GiaPhong) đ</span>
+                    </div>
+                    <div class="item-info">
+                        <div class="name"><i class="fa fa-home"></i><a href="@Url.Action("Edit", "Phong", new { id = item.PhongObjectJoin.IDPhong })"><b> @item.PhongObjectJoin.TenPhong</b></a></div>
+                        <div class="location">
+                            <i class="fa fa-location-arrow"></i> @item.PhongObjectJoin.ViTriObjectJoin.TenViTri - <label class="label label-default">@item.PhongObjectJoin.LoaiPhongObjectJoin.TenLoai</label>
+                        </div>
+                        <div class="khach-hang">
+                            <i class="fa fa-user"></i>
+                            @if (item.PhongObjectJoin.TrangThai == "SanSang")
+                            {
+                                <a href="@Url.Action("Edit", "KhachHang", new { id = Guid.Empty, idPhong = item.PhongObjectJoin.IDPhong,back=1 })" class="btn btn-danger"> Đặt phòng</a>
+                            }
+                            else
+                            {
+                                <label>Phòng chưa sẵn sàng sử dụng</label>
+                            }
+                        </div>
+                        <div class="start-time"><i class="fa fa-clock-o"></i> @nameTrangThai</div>
+                        <div class="action">
+                            <span class="option">
+                                <a href="#" class="btn btn-primary"><i class="fa"> Tác vụ</i></a>
+                                <div class="select">
+                                    <div class="select-btn">
+                                        <a href="@Url.Action("SetTrangThai", "Phong", new { id = item.PhongObjectJoin.IDPhong, trangThai =TrangThaiPhongHelper.eTrangThai.DonDep.ToString() })" class="btn btn-warning"><i class="fa"></i>Dọn dẹp</a>
+                                        <a href="@Url.Action("SetTrangThai", "Phong", new { id = item.PhongObjectJoin.IDPhong, trangThai = TrangThaiPhongHelper.eTrangThai.SuaChua.ToString() })" class="btn btn-danger"><i class="fa"></i>Sửa chữa</a>
+                                    </div>
+                                </div>
+                            </span>
+                            <a href="@Url.Action("SetTrangThai", "Phong", new { id = item.PhongObjectJoin.IDPhong, trangThai = TrangThaiPhongHelper.eTrangThai.SanSang.ToString() })" class="btn btn-success"><i class="fa">Sẵn sàng sử dụng</i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="item trangthai-@style" style="width: 48%; height: 250px; padding: 5px">
+                    <div class="item-img">
+                        <img src="~/Areas/Admin/Content/images/phong-khach-san.jpg" />
+                        <span class="item-price">@string.Format("{0:#,###}", item.PhongObjectJoin.GiaPhong) đ/h</span>
+                    </div>
+                    <div class="item-info">
+                        <div class="name"><i class="fa fa-home"></i><a href="@Url.Action("Edit", "Phong", new { id = item.PhongObjectJoin.IDPhong })"><b> @item.PhongObjectJoin.TenPhong</b></a></div>
+                        <div class="location">
+                            <i class="fa fa-location-arrow"></i> @item.PhongObjectJoin.ViTriObjectJoin.TenViTri - <label class="label label-default">@item.PhongObjectJoin.LoaiPhongObjectJoin.TenLoai</label>
+                        </div>
+                        <div class="khach-hang">
+                            <i class="fa fa-user"></i>
+                            <a href="@Url.Action("Edit", "KhachHang", new { id = item.KhachHangObjectJoin.IDKhachHang })"> @item.KhachHangObjectJoin.HoTen</a>
+                        </div>
+                        <div class="start-time"><i class="fa fa-clock-o"></i> @item.BatDau.Value.ToString()</div>
+                        <div class="action">
+                            <a data-toggle="modal" data-target="#myModal" onclick="idDatPhong=@item.IDDatPhong" class="btn btn-success"><i class="fa">Gọi dịch vụ</i></a>
+                            <a href="@Url.Action("ThemPhong", "Phong", new { id = item.IDDatPhong  })" class="btn btn-danger"><i class="fa">Đặt thêm phòng</i></a>
+                            <a href="@Url.Action("TraPhong", "DatPhong", new { id = item.IDDatPhong, back = 1 })" class="btn btn-warning"><i class="fa">Trả phòng</i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        @if (Model.Count() <= 0)
+        {
+            <p style="text-align: center; color: red">Không có phòng nào phù hợp</p>
+        }
+    </div>

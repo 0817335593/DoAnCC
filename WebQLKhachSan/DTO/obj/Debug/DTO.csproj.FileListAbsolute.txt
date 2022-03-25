@@ -1,0 +1,42 @@
+D:\Project\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+D:\Project\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+D:\Project\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+D:\Project\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+D:\Project\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\File\KS-04\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+D:\File\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\File\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+D:\File\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\WF\save\save\KS-04\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+D:\PROJECT\C#\WF\KS-04\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+C:\Users\leduc\Downloads\KS-06-report\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+E:\EPU\ks-final\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+E:\EPU\ks-final\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+E:\EPU\ks-final\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\EPU\ks-final\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+E:\EPU\ks-final\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+D:\QLKS\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+D:\QLKS\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+D:\QLKS\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+D:\QLKS\WebQLKhachSan\DTO\obj\Debug\DTO.pdb
+D:\QLKS\WebQLKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\bin\Debug\DTO.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\bin\Debug\DTO.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\obj\Debug\DTO.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DTO\obj\Debug\DTO.pdb

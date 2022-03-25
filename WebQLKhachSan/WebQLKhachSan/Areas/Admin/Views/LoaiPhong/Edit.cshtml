@@ -1,0 +1,38 @@
+﻿@model DTO.LoaiPhongObject
+
+@{
+    string ViewName = Model.ID_LoaiPhong == 0 ? "Thêm mới Loại phòng" : "Chỉnh sửa Loại phòng";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <b>@ViewName </b>
+    </div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(q => q.ID_LoaiPhong)
+            @Html.HiddenFor(q => q.GhiChu)
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.Label("Tên Loại phòng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.TenLoai, new { @class = "form-control", required = "required", placeholder = "Phòng Vip" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Hoàn thành" class="btn btn-success" />
+                        @Html.ActionLink("Quay về trang quản lí", "Index", new { }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

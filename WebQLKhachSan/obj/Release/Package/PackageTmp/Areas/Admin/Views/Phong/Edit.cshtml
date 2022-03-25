@@ -1,0 +1,114 @@
+﻿@using WebQLKhachSan.Areas.Admin.Models
+@model DTO.PhongObject
+
+@{
+    string ViewName = Model.IDPhong == 0 ? "Thêm mới Phòng" : "Chỉnh sửa Phòng";
+    ViewBag.Title = ViewName;
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary" style="margin-top: 15px">
+    <div class="panel-heading">
+        <b>@ViewName </b>
+    </div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(q => q.IDPhong)
+            @Html.HiddenFor(q => q.IsDelete)
+            @Html.HiddenFor(q => q.IDKhachSan)
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.Label("Tên phòng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.TenPhong, new { @class = "form-control", required = "required", placeholder = "Tên phòng" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Trạng thái", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <select name="TrangThai" id="TrangThai" class="form-control" required>
+                            <option value="">Chọn một giá trị</option>
+                            <option value="@TrangThaiPhongHelper.eTrangThai.SanSang.ToString()">Sẵn sàng sử dụng</option>
+                            <option value="@TrangThaiPhongHelper.eTrangThai.SuDung.ToString()">Đang sử dụng</option>
+                            <option value="@TrangThaiPhongHelper.eTrangThai.DonDep.ToString()">Đang dọn dẹp</option>
+                            <option value="@TrangThaiPhongHelper.eTrangThai.SuaChua.ToString()">Tạm dừng sửa chữa</option>
+                            <option value="@TrangThaiPhongHelper.eTrangThai.Khac.ToString()">Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Vị trí", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(q => q.ID_ViTri, ViewBag.selectViTri as SelectList, "Chọn một vị trí", new { @class = "form-control", required = "required" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Loại phòng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(q => q.ID_LoaiPhong, ViewBag.selectLoaiPhong as SelectList, "Chọn một loại phòng", new { @class = "form-control", required = "required" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Giá phòng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.GiaPhong, new { @class = "form-control", required = "required", placeholder = "Giá phòng", min = "1000", step = "1000", type = "number" })
+                        <p>Đơn vị giá là VND</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Giá khuyến mãi", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.GiaKM, new { @class = "form-control", required = "required", placeholder = "Giá phòng", min = "1000", step = "1000", type = "number" })
+                        <p>Áp dụng khi đặt bằng phòng Email</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Đánh giá phòng", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <p><label><input type="radio" name="Star" value="2" />2 <i class="fa fa-star"></i></label></p>
+                        <p><label><input type="radio" name="Star" value="3" />3 <i class="fa fa-star"></i></label></p>
+                        <p><label><input type="radio" name="Star" value="4" />4 <i class="fa fa-star"></i></label></p>
+                        <p><label><input type="radio" name="Star" value="5" />5 <i class="fa fa-star"></i></label></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Trạng thái phòng", new { @class = "control-label col-md-2", required = "required" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <label>@Html.RadioButtonFor(q => q.Active, true) Cho phép sử dụng</label>
+                            <br />
+                            <label>@Html.RadioButtonFor(q => q.Active, false) Tạm ngừng sử dụng</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Hoàn thành" class="btn btn-success" />
+                        @Html.ActionLink("Quay về trang quản lí", "Index", new { IDKhachSan = Model.IDKhachSan as int? }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section style{
+    <style>
+        option:disabled {
+            color: red;
+            cursor: no-drop;
+        }
+    </style>
+}
+
+@section script{
+    <script>
+        $('#TrangThai').val('@Html.Raw(Model.TrangThai)');
+        $('input[name="Star"][value="@(Model.Star??5)"]')[0].checked = true;
+    </script>
+}

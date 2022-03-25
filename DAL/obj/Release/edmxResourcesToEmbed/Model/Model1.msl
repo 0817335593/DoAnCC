@@ -1,0 +1,862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbKhachSanModelStoreContainer" CdmEntityContainer="dbKhachSanEntities">
+    <EntitySetMapping Name="ChucVus">
+      <EntityTypeMapping TypeName="dbKhachSanModel.ChucVu">
+        <MappingFragment StoreEntitySet="ChucVu">
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DangKiDatPhongs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.DangKiDatPhong">
+        <MappingFragment StoreEntitySet="DangKiDatPhong">
+          <ScalarProperty Name="ID_DangKi" ColumnName="ID_DangKi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ID_Phong" ColumnName="ID_Phong" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatPhongs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.DatPhong">
+        <MappingFragment StoreEntitySet="DatPhong">
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="BatDau" ColumnName="BatDau" />
+          <ScalarProperty Name="KetThuc" ColumnName="KetThuc" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DichVus">
+      <EntityTypeMapping TypeName="dbKhachSanModel.DichVu">
+        <MappingFragment StoreEntitySet="DichVu">
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoDiches">
+      <EntityTypeMapping TypeName="dbKhachSanModel.GiaoDich">
+        <MappingFragment StoreEntitySet="GiaoDich">
+          <ScalarProperty Name="IDGiaoDich" ColumnName="IDGiaoDich" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HinhAnhs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.HinhAnh">
+        <MappingFragment StoreEntitySet="HinhAnh">
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="CMT" ColumnName="CMT" />
+          <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachSans">
+      <EntityTypeMapping TypeName="dbKhachSanModel.KhachSan">
+        <MappingFragment StoreEntitySet="KhachSan">
+          <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
+          <ScalarProperty Name="IDTinhThanh" ColumnName="IDTinhThanh" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="MaKhachSan" ColumnName="MaKhachSan" />
+          <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GioiThieu" ColumnName="GioiThieu" />
+          <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiPhongs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.LoaiPhong">
+        <MappingFragment StoreEntitySet="LoaiPhong">
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phongs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.Phong">
+        <MappingFragment StoreEntitySet="Phong">
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="GiaPhong" ColumnName="GiaPhong" />
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
+          <ScalarProperty Name="GiaKM" ColumnName="GiaKM" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phong_HinhAnh">
+      <EntityTypeMapping TypeName="dbKhachSanModel.Phong_HinhAnh">
+        <MappingFragment StoreEntitySet="Phong_HinhAnh">
+          <ScalarProperty Name="IDPhong_HinhAnh" ColumnName="IDPhong_HinhAnh" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quyens">
+      <EntityTypeMapping TypeName="dbKhachSanModel.Quyen">
+        <MappingFragment StoreEntitySet="Quyen">
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbKhachSanModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="dbKhachSanModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhThanhs">
+      <EntityTypeMapping TypeName="dbKhachSanModel.TinhThanh">
+        <MappingFragment StoreEntitySet="TinhThanh">
+          <ScalarProperty Name="IDTinhThanh" ColumnName="IDTinhThanh" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+          <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViTris">
+      <EntityTypeMapping TypeName="dbKhachSanModel.ViTri">
+        <MappingFragment StoreEntitySet="ViTri">
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="TenViTri" ColumnName="TenViTri" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PhanQuyen" TypeName="dbKhachSanModel.PhanQuyen" StoreEntitySet="PhanQuyen">
+      <EndProperty Name="Quyen">
+        <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+      </EndProperty>
+      <EndProperty Name="TaiKhoan">
+        <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="dbKhachSanModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_ChucVu_Delete" FunctionName="dbKhachSanModel.Store.SP_ChucVu_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_ChucVu_GetAll" FunctionName="dbKhachSanModel.Store.SP_ChucVu_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_ChucVu_GetAll_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ChucVu_GetByIDChucVu" FunctionName="dbKhachSanModel.Store.SP_ChucVu_GetByIDChucVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_ChucVu_GetByIDChucVu_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ChucVu_Insert" FunctionName="dbKhachSanModel.Store.SP_ChucVu_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_ChucVu_Update" FunctionName="dbKhachSanModel.Store.SP_ChucVu_Update" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="dbKhachSanModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="SP_DangKiDatPhong_Delete" FunctionName="dbKhachSanModel.Store.SP_DangKiDatPhong_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_DangKiDatPhong_GetAll" FunctionName="dbKhachSanModel.Store.SP_DangKiDatPhong_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DangKiDatPhong_GetAll_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="ID_DangKi" ColumnName="ID_DangKi" />
+          <ScalarProperty Name="ID_Phong" ColumnName="ID_Phong" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DangKiDatPhong_GetByID_DangKi" FunctionName="dbKhachSanModel.Store.SP_DangKiDatPhong_GetByID_DangKi">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DangKiDatPhong_GetByID_DangKi_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="ID_DangKi" ColumnName="ID_DangKi" />
+          <ScalarProperty Name="ID_Phong" ColumnName="ID_Phong" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DangKiDatPhong_Insert" FunctionName="dbKhachSanModel.Store.SP_DangKiDatPhong_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_DangKiDatPhong_Update" FunctionName="dbKhachSanModel.Store.SP_DangKiDatPhong_Update" />
+    <FunctionImportMapping FunctionImportName="SP_DatPhong_Delete" FunctionName="dbKhachSanModel.Store.SP_DatPhong_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_DatPhong_GetAll" FunctionName="dbKhachSanModel.Store.SP_DatPhong_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DatPhong_GetAll_Result">
+          <ScalarProperty Name="BatDau" ColumnName="BatDau" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="KetThuc" ColumnName="KetThuc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="CMT_KhachHangJoin" ColumnName="CMT_KhachHangJoin" />
+          <ScalarProperty Name="DiaChi_KhachHangJoin" ColumnName="DiaChi_KhachHangJoin" />
+          <ScalarProperty Name="GhiChu_KhachHangJoin" ColumnName="GhiChu_KhachHangJoin" />
+          <ScalarProperty Name="HoTen_KhachHangJoin" ColumnName="HoTen_KhachHangJoin" />
+          <ScalarProperty Name="IsDelete_KhachHangJoin" ColumnName="IsDelete_KhachHangJoin" />
+          <ScalarProperty Name="IsMale_KhachHangJoin" ColumnName="IsMale_KhachHangJoin" />
+          <ScalarProperty Name="NgaySinh_KhachHangJoin" ColumnName="NgaySinh_KhachHangJoin" />
+          <ScalarProperty Name="SDT_KhachHangJoin" ColumnName="SDT_KhachHangJoin" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="IDKhachSan_PhongJoin" ColumnName="IDKhachSan_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+          <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
+          <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+          <ScalarProperty Name="TenViTri" ColumnName="TenViTri" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DatPhong_GetByIDDatPhong" FunctionName="dbKhachSanModel.Store.SP_DatPhong_GetByIDDatPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DatPhong_GetByIDDatPhong_Result">
+          <ScalarProperty Name="BatDau" ColumnName="BatDau" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="KetThuc" ColumnName="KetThuc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="CMT_KhachHangJoin" ColumnName="CMT_KhachHangJoin" />
+          <ScalarProperty Name="DiaChi_KhachHangJoin" ColumnName="DiaChi_KhachHangJoin" />
+          <ScalarProperty Name="GhiChu_KhachHangJoin" ColumnName="GhiChu_KhachHangJoin" />
+          <ScalarProperty Name="HoTen_KhachHangJoin" ColumnName="HoTen_KhachHangJoin" />
+          <ScalarProperty Name="IsDelete_KhachHangJoin" ColumnName="IsDelete_KhachHangJoin" />
+          <ScalarProperty Name="IsMale_KhachHangJoin" ColumnName="IsMale_KhachHangJoin" />
+          <ScalarProperty Name="NgaySinh_KhachHangJoin" ColumnName="NgaySinh_KhachHangJoin" />
+          <ScalarProperty Name="SDT_KhachHangJoin" ColumnName="SDT_KhachHangJoin" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+          <ScalarProperty Name="IDKhachSan_PhongJoin" ColumnName="IDKhachSan_PhongJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+          <ScalarProperty Name="TenViTri" ColumnName="TenViTri" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DatPhong_Insert" FunctionName="dbKhachSanModel.Store.SP_DatPhong_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_DatPhong_Update" FunctionName="dbKhachSanModel.Store.SP_DatPhong_Update" />
+    <FunctionImportMapping FunctionImportName="SP_DichVu_Delete" FunctionName="dbKhachSanModel.Store.SP_DichVu_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_DichVu_GetAll" FunctionName="dbKhachSanModel.Store.SP_DichVu_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DichVu_GetAll_Result">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DichVu_GetByIDDichVu" FunctionName="dbKhachSanModel.Store.SP_DichVu_GetByIDDichVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_DichVu_GetByIDDichVu_Result">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DichVu_Insert" FunctionName="dbKhachSanModel.Store.SP_DichVu_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_DichVu_Update" FunctionName="dbKhachSanModel.Store.SP_DichVu_Update" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="dbKhachSanModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_Delete" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_GetAll" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_GiaoDich_GetAll_Result">
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="IDGiaoDich" ColumnName="IDGiaoDich" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="BatDau_DatPhongJoin" ColumnName="BatDau_DatPhongJoin" />
+          <ScalarProperty Name="IDKhachHang_DatPhongJoin" ColumnName="IDKhachHang_DatPhongJoin" />
+          <ScalarProperty Name="IDPhong_DatPhongJoin" ColumnName="IDPhong_DatPhongJoin" />
+          <ScalarProperty Name="IDTaiKhoan_DatPhongJoin" ColumnName="IDTaiKhoan_DatPhongJoin" />
+          <ScalarProperty Name="KetThuc_DatPhongJoin" ColumnName="KetThuc_DatPhongJoin" />
+          <ScalarProperty Name="Status_DatPhongJoin" ColumnName="Status_DatPhongJoin" />
+          <ScalarProperty Name="ThanhToan_DatPhongJoin" ColumnName="ThanhToan_DatPhongJoin" />
+          <ScalarProperty Name="TongTien_DatPhongJoin" ColumnName="TongTien_DatPhongJoin" />
+          <ScalarProperty Name="Active_DichVuJoin" ColumnName="Active_DichVuJoin" />
+          <ScalarProperty Name="DonVi_DichVuJoin" ColumnName="DonVi_DichVuJoin" />
+          <ScalarProperty Name="GhiChu_DichVuJoin" ColumnName="GhiChu_DichVuJoin" />
+          <ScalarProperty Name="GiaTien_DichVuJoin" ColumnName="GiaTien_DichVuJoin" />
+          <ScalarProperty Name="IsDelete_DichVuJoin" ColumnName="IsDelete_DichVuJoin" />
+          <ScalarProperty Name="TenDichVu_DichVuJoin" ColumnName="TenDichVu_DichVuJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_GetBy_IDDatPhong" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_GetBy_IDDatPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_GiaoDich_GetBy_IDDatPhong_Result">
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="IDGiaoDich" ColumnName="IDGiaoDich" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="BatDau_DatPhongJoin" ColumnName="BatDau_DatPhongJoin" />
+          <ScalarProperty Name="IDKhachHang_DatPhongJoin" ColumnName="IDKhachHang_DatPhongJoin" />
+          <ScalarProperty Name="IDPhong_DatPhongJoin" ColumnName="IDPhong_DatPhongJoin" />
+          <ScalarProperty Name="IDTaiKhoan_DatPhongJoin" ColumnName="IDTaiKhoan_DatPhongJoin" />
+          <ScalarProperty Name="KetThuc_DatPhongJoin" ColumnName="KetThuc_DatPhongJoin" />
+          <ScalarProperty Name="Status_DatPhongJoin" ColumnName="Status_DatPhongJoin" />
+          <ScalarProperty Name="ThanhToan_DatPhongJoin" ColumnName="ThanhToan_DatPhongJoin" />
+          <ScalarProperty Name="TongTien_DatPhongJoin" ColumnName="TongTien_DatPhongJoin" />
+          <ScalarProperty Name="Active_DichVuJoin" ColumnName="Active_DichVuJoin" />
+          <ScalarProperty Name="DonVi_DichVuJoin" ColumnName="DonVi_DichVuJoin" />
+          <ScalarProperty Name="GhiChu_DichVuJoin" ColumnName="GhiChu_DichVuJoin" />
+          <ScalarProperty Name="GiaTien_DichVuJoin" ColumnName="GiaTien_DichVuJoin" />
+          <ScalarProperty Name="IsDelete_DichVuJoin" ColumnName="IsDelete_DichVuJoin" />
+          <ScalarProperty Name="TenDichVu_DichVuJoin" ColumnName="TenDichVu_DichVuJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_GetByIDGiaoDich" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_GetByIDGiaoDich">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_GiaoDich_GetByIDGiaoDich_Result">
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="IDDatPhong" ColumnName="IDDatPhong" />
+          <ScalarProperty Name="IDDichVu" ColumnName="IDDichVu" />
+          <ScalarProperty Name="IDGiaoDich" ColumnName="IDGiaoDich" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="BatDau_DatPhongJoin" ColumnName="BatDau_DatPhongJoin" />
+          <ScalarProperty Name="IDKhachHang_DatPhongJoin" ColumnName="IDKhachHang_DatPhongJoin" />
+          <ScalarProperty Name="IDPhong_DatPhongJoin" ColumnName="IDPhong_DatPhongJoin" />
+          <ScalarProperty Name="IDTaiKhoan_DatPhongJoin" ColumnName="IDTaiKhoan_DatPhongJoin" />
+          <ScalarProperty Name="KetThuc_DatPhongJoin" ColumnName="KetThuc_DatPhongJoin" />
+          <ScalarProperty Name="Status_DatPhongJoin" ColumnName="Status_DatPhongJoin" />
+          <ScalarProperty Name="ThanhToan_DatPhongJoin" ColumnName="ThanhToan_DatPhongJoin" />
+          <ScalarProperty Name="TongTien_DatPhongJoin" ColumnName="TongTien_DatPhongJoin" />
+          <ScalarProperty Name="Active_DichVuJoin" ColumnName="Active_DichVuJoin" />
+          <ScalarProperty Name="DonVi_DichVuJoin" ColumnName="DonVi_DichVuJoin" />
+          <ScalarProperty Name="GhiChu_DichVuJoin" ColumnName="GhiChu_DichVuJoin" />
+          <ScalarProperty Name="GiaTien_DichVuJoin" ColumnName="GiaTien_DichVuJoin" />
+          <ScalarProperty Name="IsDelete_DichVuJoin" ColumnName="IsDelete_DichVuJoin" />
+          <ScalarProperty Name="TenDichVu_DichVuJoin" ColumnName="TenDichVu_DichVuJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_Insert" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_GiaoDich_Update" FunctionName="dbKhachSanModel.Store.SP_GiaoDich_Update" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="dbKhachSanModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="dbKhachSanModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_HinhAnh_Delete" FunctionName="dbKhachSanModel.Store.SP_HinhAnh_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_HinhAnh_GetAll" FunctionName="dbKhachSanModel.Store.SP_HinhAnh_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_HinhAnh_GetAll_Result">
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_HinhAnh_GetByIDHinhAnh" FunctionName="dbKhachSanModel.Store.SP_HinhAnh_GetByIDHinhAnh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_HinhAnh_GetByIDHinhAnh_Result">
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_HinhAnh_Insert" FunctionName="dbKhachSanModel.Store.SP_HinhAnh_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_HinhAnh_Update" FunctionName="dbKhachSanModel.Store.SP_HinhAnh_Update" />
+    <FunctionImportMapping FunctionImportName="SP_KhachHang_Delete" FunctionName="dbKhachSanModel.Store.SP_KhachHang_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_KhachHang_GetAll" FunctionName="dbKhachSanModel.Store.SP_KhachHang_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_KhachHang_GetAll_Result">
+          <ScalarProperty Name="CMT" ColumnName="CMT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KhachHang_GetByIDKhachHang" FunctionName="dbKhachSanModel.Store.SP_KhachHang_GetByIDKhachHang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_KhachHang_GetByIDKhachHang_Result">
+          <ScalarProperty Name="CMT" ColumnName="CMT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_KhachHang_Insert" FunctionName="dbKhachSanModel.Store.SP_KhachHang_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_KhachHang_Update" FunctionName="dbKhachSanModel.Store.SP_KhachHang_Update" />
+    <FunctionImportMapping FunctionImportName="SP_LoaiPhong_Delete" FunctionName="dbKhachSanModel.Store.SP_LoaiPhong_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_LoaiPhong_GetAll" FunctionName="dbKhachSanModel.Store.SP_LoaiPhong_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_LoaiPhong_GetAll_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LoaiPhong_GetByID_LoaiPhong" FunctionName="dbKhachSanModel.Store.SP_LoaiPhong_GetByID_LoaiPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_LoaiPhong_GetByID_LoaiPhong_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LoaiPhong_Insert" FunctionName="dbKhachSanModel.Store.SP_LoaiPhong_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_LoaiPhong_Update" FunctionName="dbKhachSanModel.Store.SP_LoaiPhong_Update" />
+    <FunctionImportMapping FunctionImportName="SP_PhanQuyen_Delete" FunctionName="dbKhachSanModel.Store.SP_PhanQuyen_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_PhanQuyen_GetAll" FunctionName="dbKhachSanModel.Store.SP_PhanQuyen_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_PhanQuyen_GetAll_Result">
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="GhiChu_QuyenJoin" ColumnName="GhiChu_QuyenJoin" />
+          <ScalarProperty Name="TenQuyen_QuyenJoin" ColumnName="TenQuyen_QuyenJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PhanQuyen_GetByIDQuyen" FunctionName="dbKhachSanModel.Store.SP_PhanQuyen_GetByIDQuyen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_PhanQuyen_GetByIDQuyen_Result">
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="GhiChu_QuyenJoin" ColumnName="GhiChu_QuyenJoin" />
+          <ScalarProperty Name="TenQuyen_QuyenJoin" ColumnName="TenQuyen_QuyenJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PhanQuyen_GetByIDTaiKhoan" FunctionName="dbKhachSanModel.Store.SP_PhanQuyen_GetByIDTaiKhoan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_PhanQuyen_GetByIDTaiKhoan_Result">
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="GhiChu_QuyenJoin" ColumnName="GhiChu_QuyenJoin" />
+          <ScalarProperty Name="TenQuyen_QuyenJoin" ColumnName="TenQuyen_QuyenJoin" />
+          <ScalarProperty Name="HoTen_TaiKhoanJoin" ColumnName="HoTen_TaiKhoanJoin" />
+          <ScalarProperty Name="IDChucVu_TaiKhoanJoin" ColumnName="IDChucVu_TaiKhoanJoin" />
+          <ScalarProperty Name="IsDelete_TaiKhoanJoin" ColumnName="IsDelete_TaiKhoanJoin" />
+          <ScalarProperty Name="MatKhau_TaiKhoanJoin" ColumnName="MatKhau_TaiKhoanJoin" />
+          <ScalarProperty Name="NgaySinh_TaiKhoanJoin" ColumnName="NgaySinh_TaiKhoanJoin" />
+          <ScalarProperty Name="SDT_TaiKhoanJoin" ColumnName="SDT_TaiKhoanJoin" />
+          <ScalarProperty Name="TenDangNhap_TaiKhoanJoin" ColumnName="TenDangNhap_TaiKhoanJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PhanQuyen_Insert" FunctionName="dbKhachSanModel.Store.SP_PhanQuyen_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_Delete" FunctionName="dbKhachSanModel.Store.SP_Phong_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_GetAll" FunctionName="dbKhachSanModel.Store.SP_Phong_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Phong_GetAll_Result">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="GiaPhong" ColumnName="GiaPhong" />
+          <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="GiaKM" ColumnName="GiaKM" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
+          <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+          <ScalarProperty Name="GhiChu_LoaiPhongJoin" ColumnName="GhiChu_LoaiPhongJoin" />
+          <ScalarProperty Name="TenLoai_LoaiPhongJoin" ColumnName="TenLoai_LoaiPhongJoin" />
+          <ScalarProperty Name="GhiChu_ViTriJoin" ColumnName="GhiChu_ViTriJoin" />
+          <ScalarProperty Name="TenViTri_ViTriJoin" ColumnName="TenViTri_ViTriJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Phong_GetByIDPhong" FunctionName="dbKhachSanModel.Store.SP_Phong_GetByIDPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Phong_GetByIDPhong_Result">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="GiaPhong" ColumnName="GiaPhong" />
+          <ScalarProperty Name="IDKhachSan" ColumnName="IDKhachSan" />
+          <ScalarProperty Name="ID_LoaiPhong" ColumnName="ID_LoaiPhong" />
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="GiaKM" ColumnName="GiaKM" />
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
+          <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+          <ScalarProperty Name="GhiChu_LoaiPhongJoin" ColumnName="GhiChu_LoaiPhongJoin" />
+          <ScalarProperty Name="TenLoai_LoaiPhongJoin" ColumnName="TenLoai_LoaiPhongJoin" />
+          <ScalarProperty Name="GhiChu_ViTriJoin" ColumnName="GhiChu_ViTriJoin" />
+          <ScalarProperty Name="TenViTri_ViTriJoin" ColumnName="TenViTri_ViTriJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_Delete" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_GetAll" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Phong_HinhAnh_GetAll_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDPhong_HinhAnh" ColumnName="IDPhong_HinhAnh" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="ImageLink_HinhAnhJoin" ColumnName="ImageLink_HinhAnhJoin" />
+          <ScalarProperty Name="IsDelete_HinhAnhJoin" ColumnName="IsDelete_HinhAnhJoin" />
+          <ScalarProperty Name="Rank_HinhAnhJoin" ColumnName="Rank_HinhAnhJoin" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_GetByIDPhong" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_GetByIDPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Phong_HinhAnh_GetByIDPhong_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDPhong_HinhAnh" ColumnName="IDPhong_HinhAnh" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="ImageLink_HinhAnhJoin" ColumnName="ImageLink_HinhAnhJoin" />
+          <ScalarProperty Name="IsDelete_HinhAnhJoin" ColumnName="IsDelete_HinhAnhJoin" />
+          <ScalarProperty Name="Rank_HinhAnhJoin" ColumnName="Rank_HinhAnhJoin" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_GetByIDPhong_HinhAnh" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_GetByIDPhong_HinhAnh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Phong_HinhAnh_GetByIDPhong_HinhAnh_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="IDPhong" ColumnName="IDPhong" />
+          <ScalarProperty Name="IDPhong_HinhAnh" ColumnName="IDPhong_HinhAnh" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="ImageLink_HinhAnhJoin" ColumnName="ImageLink_HinhAnhJoin" />
+          <ScalarProperty Name="IsDelete_HinhAnhJoin" ColumnName="IsDelete_HinhAnhJoin" />
+          <ScalarProperty Name="Rank_HinhAnhJoin" ColumnName="Rank_HinhAnhJoin" />
+          <ScalarProperty Name="Active_PhongJoin" ColumnName="Active_PhongJoin" />
+          <ScalarProperty Name="GiaPhong_PhongJoin" ColumnName="GiaPhong_PhongJoin" />
+          <ScalarProperty Name="ID_LoaiPhong_PhongJoin" ColumnName="ID_LoaiPhong_PhongJoin" />
+          <ScalarProperty Name="ID_ViTri_PhongJoin" ColumnName="ID_ViTri_PhongJoin" />
+          <ScalarProperty Name="IsDelete_PhongJoin" ColumnName="IsDelete_PhongJoin" />
+          <ScalarProperty Name="TenPhong_PhongJoin" ColumnName="TenPhong_PhongJoin" />
+          <ScalarProperty Name="TrangThai_PhongJoin" ColumnName="TrangThai_PhongJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_Insert" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_HinhAnh_Update" FunctionName="dbKhachSanModel.Store.SP_Phong_HinhAnh_Update" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_Insert" FunctionName="dbKhachSanModel.Store.SP_Phong_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_Phong_Update" FunctionName="dbKhachSanModel.Store.SP_Phong_Update" />
+    <FunctionImportMapping FunctionImportName="SP_Quyen_Delete" FunctionName="dbKhachSanModel.Store.SP_Quyen_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_Quyen_GetAll" FunctionName="dbKhachSanModel.Store.SP_Quyen_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Quyen_GetAll_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Quyen_GetByIDQuyen" FunctionName="dbKhachSanModel.Store.SP_Quyen_GetByIDQuyen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_Quyen_GetByIDQuyen_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Quyen_Insert" FunctionName="dbKhachSanModel.Store.SP_Quyen_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_Quyen_Update" FunctionName="dbKhachSanModel.Store.SP_Quyen_Update" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="dbKhachSanModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_CheckLogin" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_TaiKhoan_CheckLogin_Result">
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_Delete" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_DoiMatKhau" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_DoiMatKhau">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_TaiKhoan_DoiMatKhau_Result">
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="GhiChu_ChucVuJoin" ColumnName="GhiChu_ChucVuJoin" />
+          <ScalarProperty Name="IsDelete_ChucVuJoin" ColumnName="IsDelete_ChucVuJoin" />
+          <ScalarProperty Name="TenCV_ChucVuJoin" ColumnName="TenCV_ChucVuJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_GetAll" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_TaiKhoan_GetAll_Result">
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="GhiChu_ChucVuJoin" ColumnName="GhiChu_ChucVuJoin" />
+          <ScalarProperty Name="IsDelete_ChucVuJoin" ColumnName="IsDelete_ChucVuJoin" />
+          <ScalarProperty Name="TenCV_ChucVuJoin" ColumnName="TenCV_ChucVuJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_GetByIDTaiKhoan" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_GetByIDTaiKhoan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_TaiKhoan_GetByIDTaiKhoan_Result">
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="IDChucVu" ColumnName="IDChucVu" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="GhiChu_ChucVuJoin" ColumnName="GhiChu_ChucVuJoin" />
+          <ScalarProperty Name="IsDelete_ChucVuJoin" ColumnName="IsDelete_ChucVuJoin" />
+          <ScalarProperty Name="TenCV_ChucVuJoin" ColumnName="TenCV_ChucVuJoin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_Insert" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_TaiKhoan_Update" FunctionName="dbKhachSanModel.Store.SP_TaiKhoan_Update" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="dbKhachSanModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_ViTri_Delete" FunctionName="dbKhachSanModel.Store.SP_ViTri_Delete" />
+    <FunctionImportMapping FunctionImportName="SP_ViTri_GetAll" FunctionName="dbKhachSanModel.Store.SP_ViTri_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_ViTri_GetAll_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="TenViTri" ColumnName="TenViTri" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ViTri_GetByID_ViTri" FunctionName="dbKhachSanModel.Store.SP_ViTri_GetByID_ViTri">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbKhachSanModel.SP_ViTri_GetByID_ViTri_Result">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="ID_ViTri" ColumnName="ID_ViTri" />
+          <ScalarProperty Name="TenViTri" ColumnName="TenViTri" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ViTri_Insert" FunctionName="dbKhachSanModel.Store.SP_ViTri_Insert" />
+    <FunctionImportMapping FunctionImportName="SP_ViTri_Update" FunctionName="dbKhachSanModel.Store.SP_ViTri_Update" />
+  </EntityContainerMapping>
+</Mapping>

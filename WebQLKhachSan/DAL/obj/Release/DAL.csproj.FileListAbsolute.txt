@@ -1,0 +1,14 @@
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\DAL.dll.config
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\DAL.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\DAL.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\DTO.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\EntityFramework.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\DTO.pdb
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\EntityFramework.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Release\DAL.dll
+C:\Users\Gia Dinh\Desktop\WebQLKhachSan\DAL\obj\Release\DAL.pdb

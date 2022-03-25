@@ -1,0 +1,96 @@
+﻿@model IEnumerable<DTO.DatPhongObject>
+@{
+    ViewBag.Title = "BÁO CÁO DOANH THU";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-default" style="margin-top: 15px">
+    <div class="panel-heading">@ViewBag.Title</div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i> Từ ngày</span>
+                        <input value="@ViewBag.stimeStart" name="timeStart" type="date" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i> Đến ngày</span>
+                        <input value="@ViewBag.stimeEnd" name="timeEnd" type="date" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary" name="filter" value="filter"> <i class="fa fa-filter"></i> Lọc</button>
+                    <button class="btn btn-success" name="excel" value="excel"> <i class="fa fa-file-excel-o"></i> Xuất Excel</button>
+                </div>
+            </div>
+        }
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>
+                        THỜI GIAN
+                    </td>
+                    <td>
+                        HỌ TÊN KHÁCH HÀNG
+                    </td>
+                    <td>
+                        PHÒNG
+                    </td>
+                    <td>
+                        KHÁCH SẠN
+                    </td>
+                    <td>
+                        TỈNH THÀNH
+                    </td>
+                    <td>
+                        TỔNG THU
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.KetThuc
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.KhachHangObjectJoin.HoTen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.TenPhong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.KhachSanObjectJoin.TenKhachSan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhongObjectJoin.TinhThanhObjectJoin.TenTinh)
+                        </td>
+                        <td>
+                            @item.TongTien.Value.ToString("#,###") đ
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="4"></td>
+                    <td>TỔNG TIỀN</td>
+                    <td>@ViewBag.Total đ</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @*<div id="placeholder" style="width:100%;height:300px"></div>*@
+    </div>
+</div>
+
+@section script{
+    <script src="~/Areas/Admin/Content/theme/vendor/flot/jquery.flot.js"></script>
+    <script>
+        $.plot($("#placeholder"), [[[0, 0], [1, 1]]], { yaxis: { max: 1 } });
+    </script>
+}

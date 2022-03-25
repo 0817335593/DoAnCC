@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DTO.PhongObject>
+@{
+    ViewBag.Title = "ChonKhach";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var khach = ViewBag.Khach as DTO.KhachHangObject;
+}
+
+<div class="panel panel-default" style="margin-top: 15px">
+    <div class="panel-heading"><h2>Chọn thêm phòng mới cho khách hàng: <b class="text-danger">@khach.HoTen</b> số CMT: <b class="text-danger">@khach.CMT</b> SDT: <b class="text-danger">@khach.SDT</b></h2></div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            @Html.Hidden("IDKhachHang", khach.IDKhachHang)
+            @Html.Hidden("IDKhachSan", ViewBag.IDKhachSan as int?)
+
+            foreach (var item in Model)
+            {
+                <h3><label><input type="checkbox" name="Selected" value="@item.IDPhong" /> @item.TenPhong - @item.TenViTri_ViTriJoin - @item.GiaPhong.Value.ToString("d")</label>đ</h3>
+            }
+            if (Model.Count() <= 0)
+            {
+                <p>Không có phòng nào sẵn sàng để đặt.</p>
+            }
+            <div>
+                <input type="submit" name="name" value="Hoàn thành" class="btn btn-success" />
+                @Html.ActionLink("Quay về trang chủ", "Index", "Homes", new { IDKhachSan = ViewBag.IDKhachSan as int? }, new { @class = "btn btn-default" })
+            </div>
+        }
+    </div>
+</div>
